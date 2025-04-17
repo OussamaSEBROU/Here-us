@@ -22,7 +22,7 @@ model_text = genai.GenerativeModel(
     )
 )
 
-# Enhanced prompt template for Palestine-related questions
+# Enhanced prompt template for Palestine-related questions with more reliable sources
 def build_palestine_prompt(user_question):
     return f"""
 You are an expert assistant dedicated to providing accurate, in-depth, and highly informative answers specifically about Palestine and related issues.
@@ -34,13 +34,23 @@ Respond to the user question with:
 - Structure your response like a professional news article or academic report with clear sections
 - Base your information on trusted sources such as:
   * Al Jazeera (aljazeera.com) - Known for comprehensive coverage of Middle East issues
+  * Middle East Eye (middleeasteye.net) - Independent coverage of Middle East affairs
   * Metras (https://metras.co/) - Provides in-depth analysis on Palestinian affairs
-  * https://www.aa.com.tr/ar
-  * Academic books and peer-reviewed articles on Palestinian history and politics
-  * Reports from human rights organizations (B'Tselem, Human Rights Watch, Amnesty International)
-  * United Nations documents and resolutions
+  * Electronic Intifada (electronicintifada.net) - News and analysis on Palestine
+  * Anadolu Agency (aa.com.tr) - Turkish state-run news agency with Middle East coverage
+  * Palestine Chronicle (palestinechronicle.com) - Palestinian perspective on news
+  * Institute for Palestine Studies (palestine-studies.org) - Academic research
+  * B'Tselem (btselem.org) - Israeli human rights organization documenting abuses
+  * Human Rights Watch (hrw.org) - International human rights monitoring
+  * Amnesty International (amnesty.org) - Global human rights organization
+  * United Nations Relief and Works Agency (unrwa.org) - UN agency for Palestinian refugees
+  * UN Office for the Coordination of Humanitarian Affairs (ochaopt.org) - UN humanitarian reports
+  * Academic books by scholars like Ilan Pappé, Edward Said, Rashid Khalidi, and Noam Chomsky
+  * Peer-reviewed journals on Middle Eastern studies and international relations
   * Palestinian academic institutions and research centers
-- Include specific citations when possible (e.g., "According to Al Jazeera's reporting on [date]...")
+  * Historical archives and primary source documents
+
+- Include specific citations when possible (e.g., "According to Al Jazeera's reporting on [date]..." or "As documented by Human Rights Watch in their 2023 report...")
 - Provide factual, well-researched information on current events with accurate reporting
 - Include relevant statistics and data from credible sources when discussing the humanitarian situation
 - The answer should be in the same language as the input (be careful with this point)
@@ -139,39 +149,39 @@ def get_boycott_data():
             "companies": [
                 {
                     "name": "Starbucks",
-                    "reason": "Howard Schultz, fondateur et actionnaire principal de Starbucks, est un fervent soutien d'Israël qui investit massivement dans l'économie israélienne, notamment un récent investissement de 1,7 milliard de dollars dans la startup de cybersécurité Wiz.",
-                    "action": "Ne pas acheter de produits Starbucks. Ne pas vendre de produits Starbucks. Ne pas travailler pour Starbucks.",
-                    "alternatives": ["Caffe Nero", "Cafés indépendants locaux", "Cafés arabes locaux"]
+                    "reason": "Howard Schultz, founder and major shareholder of Starbucks, is a staunch supporter of Israel who invests heavily in Israel's economy, including a recent $1.7 billion investment in cybersecurity startup Wiz.",
+                    "action": "Don't buy Starbucks products. Don't sell Starbucks products. Don't work for Starbucks.",
+                    "alternatives": ["Caffe Nero", "Local independent cafes", "Local Arab cafes"]
                 },
                 {
                     "name": "Coca-Cola",
-                    "reason": "Coca-Cola possède une usine d'embouteillage dans la zone industrielle d'Atarot, une colonie israélienne illégale à Jérusalem-Est occupée. L'entreprise continue de soutenir l'économie israélienne malgré les violations des droits humains.",
-                    "action": "Boycotter tous les produits Coca-Cola, y compris Sprite, Fanta et autres marques associées.",
-                    "alternatives": ["Marques de boissons locales", "Eau gazeuse maison", "Jus naturels"]
+                    "reason": "Coca-Cola has a bottling plant in the Atarot Industrial Zone, an illegal Israeli settlement in occupied East Jerusalem. The company continues to support Israel's economy despite human rights violations.",
+                    "action": "Boycott all Coca-Cola products, including Sprite, Fanta, and other associated brands.",
+                    "alternatives": ["Local beverage brands", "Homemade sparkling water", "Natural juices"]
                 },
                 {
                     "name": "McDonald's",
-                    "reason": "McDonald's Israël a fourni des milliers de repas gratuits aux soldats israéliens pendant les opérations militaires à Gaza. La franchise israélienne a ouvertement soutenu les actions militaires contre les Palestiniens.",
-                    "action": "Ne pas manger chez McDonald's.",
-                    "alternatives": ["Restaurants locaux", "Chaînes de restauration rapide locales"]
+                    "reason": "McDonald's Israel provided thousands of free meals to Israeli soldiers during military operations in Gaza. The Israeli franchise has openly supported military actions against Palestinians.",
+                    "action": "Don't eat at McDonald's.",
+                    "alternatives": ["Local restaurants", "Local fast food chains"]
                 },
                 {
                     "name": "Nestlé",
-                    "reason": "Nestlé opère en Israël depuis 1995 et possède des installations de production dans des zones contestées. L'entreprise a été critiquée pour son exploitation des ressources en eau palestiniennes.",
-                    "action": "Éviter les produits Nestlé, y compris l'eau en bouteille, les céréales et les produits laitiers.",
-                    "alternatives": ["Marques locales", "Produits artisanaux", "Eau du robinet filtrée"]
+                    "reason": "Nestlé has been operating in Israel since 1995 and has production facilities in contested areas. The company has been criticized for exploiting Palestinian water resources.",
+                    "action": "Avoid Nestlé products, including bottled water, cereals, and dairy products.",
+                    "alternatives": ["Local brands", "Artisanal products", "Filtered tap water"]
                 },
                 {
                     "name": "PepsiCo",
-                    "reason": "PepsiCo opère en Israël et a des installations dans des territoires contestés. L'entreprise continue ses activités malgré les appels au boycott.",
-                    "action": "Éviter tous les produits PepsiCo, y compris les chips Lay's, Doritos, et les boissons Pepsi.",
-                    "alternatives": ["Boissons locales", "Snacks de fabrication locale"]
+                    "reason": "PepsiCo operates in Israel and has facilities in contested territories. The company continues its activities despite calls for boycott.",
+                    "action": "Avoid all PepsiCo products, including Lay's chips, Doritos, and Pepsi beverages.",
+                    "alternatives": ["Local beverages", "Locally manufactured snacks"]
                 },
                 {
                     "name": "Sabra Hummus",
-                    "reason": "Sabra est une coentreprise entre PepsiCo et le Groupe Strauss, une entreprise israélienne qui fournit des soutiens aux unités d'élite de l'armée israélienne impliquées dans des violations des droits humains.",
-                    "action": "Ne pas acheter de houmous Sabra.",
-                    "alternatives": ["Houmous fait maison", "Marques arabes locales de houmous"]
+                    "reason": "Sabra is a joint venture between PepsiCo and the Strauss Group, an Israeli company that provides support to elite units of the Israeli military involved in human rights violations.",
+                    "action": "Don't buy Sabra hummus.",
+                    "alternatives": ["Homemade hummus", "Local Arab hummus brands"]
                 }
             ]
         },
@@ -179,33 +189,33 @@ def get_boycott_data():
             "companies": [
                 {
                     "name": "HP (Hewlett-Packard)",
-                    "reason": "HP fournit des technologies utilisées dans le système de contrôle et de surveillance d'Israël, notamment pour les points de contrôle militaires. Ses technologies sont utilisées pour maintenir le système d'apartheid et de ségrégation.",
-                    "action": "Ne pas acheter de produits HP, y compris les ordinateurs, imprimantes et fournitures.",
-                    "alternatives": ["Lenovo", "Brother", "Epson", "Marques asiatiques"]
+                    "reason": "HP provides technologies used in Israel's control and surveillance system, including for military checkpoints. Its technologies are used to maintain the apartheid and segregation system.",
+                    "action": "Don't buy HP products, including computers, printers, and supplies.",
+                    "alternatives": ["Lenovo", "Brother", "Epson", "Asian brands"]
                 },
                 {
                     "name": "Microsoft",
-                    "reason": "Microsoft a investi 1,5 milliard de dollars dans une entreprise israélienne d'IA et possède un important centre de R&D en Israël. L'entreprise collabore étroitement avec l'armée israélienne pour le développement de technologies militaires.",
-                    "action": "Utiliser des alternatives open source dans la mesure du possible.",
-                    "alternatives": ["Linux", "LibreOffice", "Alternatives open source"]
+                    "reason": "Microsoft invested $1.5 billion in an Israeli AI company and has a major R&D center in Israel. The company works closely with the Israeli military to develop military technologies.",
+                    "action": "Use open source alternatives when possible.",
+                    "alternatives": ["Linux", "LibreOffice", "Open source alternatives"]
                 },
                 {
                     "name": "Google",
-                    "reason": "Google a signé un contrat de cloud computing de 1,2 milliard de dollars avec le gouvernement israélien (Projet Nimbus). Cette technologie est utilisée pour la surveillance et le ciblage des Palestiniens.",
-                    "action": "Utiliser des moteurs de recherche et des services alternatifs.",
+                    "reason": "Google signed a $1.2 billion cloud computing contract with the Israeli government (Project Nimbus). This technology is used for surveillance and targeting of Palestinians.",
+                    "action": "Use alternative search engines and services.",
                     "alternatives": ["DuckDuckGo", "ProtonMail", "Firefox"]
                 },
                 {
                     "name": "Apple",
-                    "reason": "Apple a d'importants investissements en Israël et collabore avec des entreprises israéliennes impliquées dans la surveillance et la technologie militaire.",
-                    "action": "Envisager des alternatives aux produits Apple.",
-                    "alternatives": ["Samsung", "Xiaomi", "Huawei", "Téléphones Android"]
+                    "reason": "Apple has significant investments in Israel and collaborates with Israeli companies involved in surveillance and military technology.",
+                    "action": "Consider alternatives to Apple products.",
+                    "alternatives": ["Samsung", "Xiaomi", "Huawei", "Android phones"]
                 },
                 {
                     "name": "Intel",
-                    "reason": "Intel est l'un des plus grands employeurs dans le secteur technologique israélien avec plusieurs usines et centres de R&D. L'entreprise contribue significativement à l'économie israélienne.",
-                    "action": "Privilégier les processeurs AMD lorsque possible.",
-                    "alternatives": ["AMD", "ARM", "Autres fabricants de processeurs"]
+                    "reason": "Intel is one of the largest employers in the Israeli tech sector with several plants and R&D centers. The company contributes significantly to Israel's economy.",
+                    "action": "Prefer AMD processors when possible.",
+                    "alternatives": ["AMD", "ARM", "Other processor manufacturers"]
                 }
             ]
         },
@@ -213,33 +223,33 @@ def get_boycott_data():
             "companies": [
                 {
                     "name": "Puma",
-                    "reason": "Puma sponsorise l'Association israélienne de football, qui inclut des équipes dans des colonies illégales. Ce soutien légitime l'occupation et les violations du droit international.",
-                    "action": "Ne pas acheter de produits Puma.",
-                    "alternatives": ["Adidas", "New Balance", "Marques locales", "Li-Ning"]
+                    "reason": "Puma sponsors the Israel Football Association, which includes teams in illegal settlements. This support legitimizes the occupation and violations of international law.",
+                    "action": "Don't buy Puma products.",
+                    "alternatives": ["Adidas", "New Balance", "Local brands", "Li-Ning"]
                 },
                 {
                     "name": "Skechers",
-                    "reason": "Skechers possède des magasins dans des colonies israéliennes illégales et maintient des partenariats commerciaux en Israël, contribuant à l'économie de l'occupation.",
-                    "action": "Boycotter les chaussures et vêtements Skechers.",
-                    "alternatives": ["Brooks", "ASICS", "Marques éthiques"]
+                    "reason": "Skechers has stores in illegal Israeli settlements and maintains business partnerships in Israel, contributing to the occupation economy.",
+                    "action": "Boycott Skechers shoes and clothing.",
+                    "alternatives": ["Brooks", "ASICS", "Ethical brands"]
                 },
                 {
                     "name": "H&M",
-                    "reason": "H&M opère des magasins en Israël, y compris dans des zones contestées. L'entreprise a ignoré les appels à cesser ses activités dans les territoires occupés.",
-                    "action": "Ne pas faire ses achats chez H&M.",
-                    "alternatives": ["Marques de mode éthiques", "Vêtements d'occasion"]
+                    "reason": "H&M operates stores in Israel, including in contested areas. The company has ignored calls to cease operations in occupied territories.",
+                    "action": "Don't shop at H&M.",
+                    "alternatives": ["Ethical fashion brands", "Second-hand clothing"]
                 },
                 {
                     "name": "Zara",
-                    "reason": "Zara possède des magasins en Israël et s'approvisionne auprès de fournisseurs israéliens. La marque a été critiquée pour son manque de position éthique concernant l'occupation.",
-                    "action": "Éviter de faire ses achats chez Zara.",
-                    "alternatives": ["Marques locales", "Boutiques indépendantes"]
+                    "reason": "Zara has stores in Israel and sources from Israeli suppliers. The brand has been criticized for its lack of ethical stance regarding the occupation.",
+                    "action": "Avoid shopping at Zara.",
+                    "alternatives": ["Local brands", "Independent boutiques"]
                 },
                 {
                     "name": "Victoria's Secret",
-                    "reason": "Victoria's Secret est détenue par L Brands, qui a des investissements significatifs en Israël et des magasins dans des zones contestées.",
-                    "action": "Boycotter les produits Victoria's Secret.",
-                    "alternatives": ["Marques de lingerie éthiques", "Marques locales"]
+                    "reason": "Victoria's Secret is owned by L Brands, which has significant investments in Israel and stores in contested areas.",
+                    "action": "Boycott Victoria's Secret products.",
+                    "alternatives": ["Ethical lingerie brands", "Local brands"]
                 }
             ]
         },
@@ -247,27 +257,27 @@ def get_boycott_data():
             "companies": [
                 {
                     "name": "L'Oréal",
-                    "reason": "L'Oréal opère en Israël et a acquis des entreprises cosmétiques israéliennes. L'entreprise a des installations dans des territoires contestés et bénéficie de l'occupation.",
-                    "action": "Boycotter les produits L'Oréal et ses marques associées.",
-                    "alternatives": ["The Body Shop", "Lush", "Marques naturelles", "Cosmétiques halal"]
+                    "reason": "L'Oréal operates in Israel and has acquired Israeli cosmetics companies. The company has facilities in contested territories and benefits from the occupation.",
+                    "action": "Boycott L'Oréal products and its associated brands.",
+                    "alternatives": ["The Body Shop", "Lush", "Natural brands", "Halal cosmetics"]
                 },
                 {
                     "name": "Estée Lauder",
-                    "reason": "Le président d'Estée Lauder, Ronald Lauder, est un fervent soutien d'Israël et finance des organisations pro-israéliennes. Il a publiquement défendu les actions militaires israéliennes contre les Palestiniens.",
-                    "action": "Ne pas acheter de produits Estée Lauder et ses marques associées.",
-                    "alternatives": ["Marques de cosmétiques éthiques", "Produits naturels"]
+                    "reason": "Estée Lauder chairman, Ronald Lauder, is a strong supporter of Israel and funds pro-Israel organizations. He has publicly defended Israeli military actions against Palestinians.",
+                    "action": "Don't buy Estée Lauder products and its associated brands.",
+                    "alternatives": ["Ethical cosmetics brands", "Natural products"]
                 },
                 {
                     "name": "Yves Saint Laurent Beauty / YSL Beauty",
-                    "reason": "YSL Beauty appartient au Groupe L'Oréal, qui opère en Israël et a des liens avec des entreprises israéliennes impliquées dans l'occupation.",
-                    "action": "Éviter les produits YSL Beauty.",
-                    "alternatives": ["Marques de cosmétiques éthiques", "Produits naturels"]
+                    "reason": "YSL Beauty is owned by L'Oréal Group, which operates in Israel and has ties to Israeli companies involved in the occupation.",
+                    "action": "Avoid YSL Beauty products.",
+                    "alternatives": ["Ethical cosmetics brands", "Natural products"]
                 },
                 {
                     "name": "Garnier",
-                    "reason": "Garnier est une filiale de L'Oréal qui a fourni des produits gratuits aux soldats israéliens pendant les opérations militaires à Gaza.",
-                    "action": "Ne pas acheter de produits Garnier.",
-                    "alternatives": ["Produits capillaires naturels", "Marques locales"]
+                    "reason": "Garnier is a subsidiary of L'Oréal that provided free products to Israeli soldiers during military operations in Gaza.",
+                    "action": "Don't buy Garnier products.",
+                    "alternatives": ["Natural hair products", "Local brands"]
                 }
             ]
         },
@@ -275,21 +285,21 @@ def get_boycott_data():
             "companies": [
                 {
                     "name": "eToro",
-                    "reason": "eToro est une entreprise israélienne de trading en ligne qui soutient l'économie israélienne et contribue aux taxes qui financent l'occupation.",
-                    "action": "Utiliser d'autres plateformes de trading et d'investissement.",
-                    "alternatives": ["Plateformes de trading alternatives", "Banques éthiques"]
+                    "reason": "eToro is an Israeli online trading company that supports Israel's economy and contributes to taxes that fund the occupation.",
+                    "action": "Use other trading and investment platforms.",
+                    "alternatives": ["Alternative trading platforms", "Ethical banks"]
                 },
                 {
                     "name": "PayPal",
-                    "reason": "PayPal opère en Israël mais refuse de fournir ses services aux Palestiniens dans les territoires occupés, créant une discrimination économique flagrante.",
-                    "action": "Utiliser des alternatives à PayPal dans la mesure du possible.",
-                    "alternatives": ["Wise", "Services bancaires locaux", "Virement bancaire"]
+                    "reason": "PayPal operates in Israel but refuses to provide its services to Palestinians in the occupied territories, creating blatant economic discrimination.",
+                    "action": "Use alternatives to PayPal when possible.",
+                    "alternatives": ["Wise", "Local banking services", "Bank transfers"]
                 },
                 {
                     "name": "Citibank",
-                    "reason": "Citibank a d'importants investissements en Israël et finance des projets dans les territoires occupés, contribuant à l'expansion des colonies illégales.",
-                    "action": "Éviter d'utiliser les services de Citibank.",
-                    "alternatives": ["Banques locales", "Coopératives de crédit", "Banques éthiques"]
+                    "reason": "Citibank has significant investments in Israel and finances projects in occupied territories, contributing to the expansion of illegal settlements.",
+                    "action": "Avoid using Citibank services.",
+                    "alternatives": ["Local banks", "Credit unions", "Ethical banks"]
                 }
             ]
         },
@@ -297,33 +307,33 @@ def get_boycott_data():
             "companies": [
                 {
                     "name": "SodaStream",
-                    "reason": "SodaStream a exploité une usine dans une colonie israélienne illégale en Cisjordanie occupée avant de déménager suite à des pressions. L'entreprise continue de bénéficier de politiques discriminatoires.",
-                    "action": "Ne pas acheter de produits SodaStream.",
-                    "alternatives": ["Eau gazeuse en bouteille", "Autres systèmes de carbonatation"]
+                    "reason": "SodaStream operated a factory in an illegal Israeli settlement in the occupied West Bank before relocating due to pressure. The company continues to benefit from discriminatory policies.",
+                    "action": "Don't buy SodaStream products.",
+                    "alternatives": ["Bottled sparkling water", "Other carbonation systems"]
                 },
                 {
                     "name": "Volvo Heavy Machinery",
-                    "reason": "Les équipements lourds Volvo sont utilisés pour démolir des maisons palestiniennes et construire des colonies illégales. Ces machines sont des outils essentiels de l'occupation.",
-                    "action": "Sensibiliser à l'utilisation des équipements Volvo dans les territoires occupés.",
-                    "alternatives": ["Autres fabricants d'équipements lourds"]
+                    "reason": "Volvo heavy equipment is used for demolishing Palestinian homes and building illegal settlements. These machines are essential tools of the occupation.",
+                    "action": "Raise awareness about the use of Volvo equipment in occupied territories.",
+                    "alternatives": ["Other heavy equipment manufacturers"]
                 },
                 {
                     "name": "Caterpillar",
-                    "reason": "Les bulldozers Caterpillar sont utilisés pour démolir des maisons palestiniennes et construire le mur de séparation illégal. Ces machines sont spécialement modifiées pour les démolitions militaires.",
-                    "action": "Boycotter les produits Caterpillar et sensibiliser à leur utilisation.",
-                    "alternatives": ["Autres fabricants d'équipements de construction"]
+                    "reason": "Caterpillar bulldozers are used to demolish Palestinian homes and build the illegal separation wall. These machines are specially modified for military demolitions.",
+                    "action": "Boycott Caterpillar products and raise awareness about their use.",
+                    "alternatives": ["Other construction equipment manufacturers"]
                 },
                 {
                     "name": "Airbnb",
-                    "reason": "Airbnb liste des propriétés dans des colonies israéliennes illégales en territoire palestinien occupé, légitimant ainsi l'occupation et profitant des terres volées.",
-                    "action": "Ne pas utiliser Airbnb pour vos réservations de voyage.",
-                    "alternatives": ["Booking.com (avec vigilance)", "Hôtels locaux", "Auberges indépendantes"]
+                    "reason": "Airbnb lists properties in illegal Israeli settlements in occupied Palestinian territory, thus legitimizing the occupation and profiting from stolen land.",
+                    "action": "Don't use Airbnb for your travel bookings.",
+                    "alternatives": ["Booking.com (with vigilance)", "Local hotels", "Independent hostels"]
                 },
                 {
                     "name": "TripAdvisor",
-                    "reason": "TripAdvisor promeut des attractions touristiques dans des colonies illégales sans mentionner leur statut illégal selon le droit international.",
-                    "action": "Éviter d'utiliser TripAdvisor, particulièrement pour des voyages au Moyen-Orient.",
-                    "alternatives": ["Guides de voyage indépendants", "Recommandations locales"]
+                    "reason": "TripAdvisor promotes tourist attractions in illegal settlements without mentioning their illegal status under international law.",
+                    "action": "Avoid using TripAdvisor, particularly for Middle East travel.",
+                    "alternatives": ["Independent travel guides", "Local recommendations"]
                 }
             ]
         }
@@ -334,188 +344,188 @@ def get_boycott_data():
 # Function to get educational resources about Palestine
 def get_educational_resources():
     resources = {
-        "Histoire": [
+        "History": [
             {
-                "title": "La Nakba : L'exode palestinien de 1948",
-                "description": "La Nakba (catastrophe en arabe) fait référence à l'expulsion massive et à la dépossession des Palestiniens lors de la création de l'État d'Israël en 1948. Plus de 750 000 Palestiniens ont été forcés de quitter leurs foyers, et plus de 500 villages palestiniens ont été détruits.",
-                "sources": ["Institut d'études palestiniennes", "Archives de l'ONU", "Témoignages de survivants"],
+                "title": "The Nakba: Palestinian Exodus of 1948",
+                "description": "The Nakba (catastrophe in Arabic) refers to the mass expulsion and dispossession of Palestinians during the creation of the State of Israel in 1948. Over 750,000 Palestinians were forced to leave their homes, and more than 500 Palestinian villages were destroyed.",
+                "sources": ["Institute for Palestine Studies", "UN Archives", "Survivor testimonies"],
                 "key_facts": [
-                    "Plus de 750 000 Palestiniens déplacés",
-                    "Plus de 500 villages palestiniens détruits",
-                    "Confiscation de 78% des terres palestiniennes historiques",
-                    "Création de la plus longue crise de réfugiés non résolue au monde"
+                    "Over 750,000 Palestinians displaced",
+                    "More than 500 Palestinian villages destroyed",
+                    "Confiscation of 78% of historical Palestinian lands",
+                    "Creation of the world's longest unresolved refugee crisis"
                 ]
             },
             {
-                "title": "L'occupation de 1967 et ses conséquences",
-                "description": "En juin 1967, Israël a occupé la Cisjordanie, Jérusalem-Est, la bande de Gaza, le plateau du Golan et la péninsule du Sinaï lors de la guerre des Six Jours. Cette occupation, qui se poursuit aujourd'hui (sauf pour le Sinaï), a entraîné l'expansion des colonies israéliennes illégales et un système de contrôle militaire sur la population palestinienne.",
-                "sources": ["Nations Unies", "B'Tselem", "Human Rights Watch"],
+                "title": "The 1967 Occupation and Its Consequences",
+                "description": "In June 1967, Israel occupied the West Bank, East Jerusalem, the Gaza Strip, the Golan Heights, and the Sinai Peninsula during the Six-Day War. This occupation, which continues today (except for Sinai), has led to the expansion of illegal Israeli settlements and a system of military control over the Palestinian population.",
+                "sources": ["United Nations", "B'Tselem", "Human Rights Watch"],
                 "key_facts": [
-                    "Plus de 600 000 colons israéliens vivent illégalement en Cisjordanie et à Jérusalem-Est",
-                    "Plus de 60% de la Cisjordanie est sous contrôle total israélien (Zone C)",
-                    "Plus de 700 km de mur de séparation, déclaré illégal par la Cour internationale de Justice",
-                    "Plus de 65 résolutions de l'ONU condamnant l'occupation, toutes ignorées par Israël"
+                    "Over 600,000 Israeli settlers live illegally in the West Bank and East Jerusalem",
+                    "More than 60% of the West Bank is under full Israeli control (Area C)",
+                    "Over 700 km of separation wall, declared illegal by the International Court of Justice",
+                    "More than 65 UN resolutions condemning the occupation, all ignored by Israel"
                 ]
             },
             {
-                "title": "Les accords d'Oslo et l'échec du processus de paix",
-                "description": "Les accords d'Oslo, signés en 1993-1995, étaient censés mener à une solution à deux États dans un délai de cinq ans. Cependant, ils ont échoué en raison de l'expansion continue des colonies israéliennes, des violations des accords et de l'absence de volonté politique pour résoudre les questions fondamentales comme Jérusalem, les réfugiés et les frontières.",
-                "sources": ["Documents des accords d'Oslo", "Nations Unies", "Analyses diplomatiques"],
+                "title": "The Oslo Accords and the Failure of the Peace Process",
+                "description": "The Oslo Accords, signed in 1993-1995, were supposed to lead to a two-state solution within a five-year timeframe. However, they failed due to continued Israeli settlement expansion, violations of the agreements, and lack of political will to resolve fundamental issues such as Jerusalem, refugees, and borders.",
+                "sources": ["Oslo Accords documents", "United Nations", "Diplomatic analyses"],
                 "key_facts": [
-                    "Division de la Cisjordanie en zones A, B et C avec différents niveaux de contrôle",
-                    "Création de l'Autorité palestinienne comme gouvernement intérimaire",
-                    "Triplement du nombre de colons israéliens depuis les accords d'Oslo",
-                    "Fragmentation territoriale rendant un État palestinien viable de plus en plus impossible"
+                    "Division of the West Bank into Areas A, B, and C with different levels of control",
+                    "Creation of the Palestinian Authority as an interim government",
+                    "Tripling of Israeli settler numbers since the Oslo Accords",
+                    "Territorial fragmentation making a viable Palestinian state increasingly impossible"
                 ]
             },
             {
-                "title": "Le blocus de Gaza depuis 2007",
-                "description": "Depuis 2007, la bande de Gaza est soumise à un blocus terrestre, aérien et maritime imposé par Israël et l'Égypte. Ce blocus a créé une crise humanitaire catastrophique, limitant l'accès à la nourriture, aux médicaments, à l'électricité et à l'eau potable pour plus de 2 millions de Palestiniens vivant dans cette enclave côtière.",
-                "sources": ["UNRWA", "OMS", "OCHA", "Oxfam"],
+                "title": "The Gaza Blockade Since 2007",
+                "description": "Since 2007, the Gaza Strip has been under a land, air, and sea blockade imposed by Israel and Egypt. This blockade has created a catastrophic humanitarian crisis, limiting access to food, medicine, electricity, and clean water for more than 2 million Palestinians living in this coastal enclave.",
+                "sources": ["UNRWA", "WHO", "OCHA", "Oxfam"],
                 "key_facts": [
-                    "Plus de 2 millions de personnes vivent dans une zone de 365 km²",
-                    "Plus de 95% de l'eau est impropre à la consommation",
-                    "Taux de chômage dépassant 45%, l'un des plus élevés au monde",
-                    "Électricité disponible seulement 4-12 heures par jour en moyenne",
-                    "Plus de 80% de la population dépend de l'aide humanitaire"
+                    "Over 2 million people live in an area of 365 km²",
+                    "More than 95% of water is unfit for human consumption",
+                    "Unemployment rate exceeding 45%, one of the highest in the world",
+                    "Electricity available only 4-12 hours per day on average",
+                    "More than 80% of the population depends on humanitarian aid"
                 ]
             }
         ],
-        "Droits humains": [
+        "Human Rights": [
             {
-                "title": "Le système d'apartheid en Palestine occupée",
-                "description": "De nombreuses organisations de défense des droits humains, dont Amnesty International, Human Rights Watch et B'Tselem, ont conclu qu'Israël pratique l'apartheid contre les Palestiniens. Ce système comprend des lois discriminatoires, la ségrégation territoriale, les restrictions de mouvement, et l'allocation inégale des ressources.",
+                "title": "The Apartheid System in Occupied Palestine",
+                "description": "Numerous human rights organizations, including Amnesty International, Human Rights Watch, and B'Tselem, have concluded that Israel practices apartheid against Palestinians. This system includes discriminatory laws, territorial segregation, movement restrictions, and unequal allocation of resources.",
                 "sources": ["Amnesty International", "Human Rights Watch", "B'Tselem", "Al-Haq"],
                 "key_facts": [
-                    "Deux systèmes juridiques distincts en Cisjordanie: droit civil pour les colons, droit militaire pour les Palestiniens",
-                    "Plus de 65 lois discriminatoires contre les citoyens palestiniens d'Israël",
-                    "Système de permis complexe limitant la liberté de mouvement des Palestiniens",
-                    "Accès inégal à l'eau: les colons reçoivent 3 à 5 fois plus d'eau que les Palestiniens"
+                    "Two separate legal systems in the West Bank: civil law for settlers, military law for Palestinians",
+                    "More than 65 discriminatory laws against Palestinian citizens of Israel",
+                    "Complex permit system limiting Palestinians' freedom of movement",
+                    "Unequal access to water: settlers receive 3-5 times more water than Palestinians"
                 ]
             },
             {
-                "title": "Détention administrative et prisonniers politiques",
-                "description": "Israël utilise largement la détention administrative pour emprisonner des Palestiniens sans inculpation ni procès, sur la base de 'preuves secrètes'. Des milliers de Palestiniens, y compris des enfants, sont détenus dans des conditions qui violent souvent le droit international.",
-                "sources": ["Addameer", "Comité international de la Croix-Rouge", "UNICEF"],
+                "title": "Administrative Detention and Political Prisoners",
+                "description": "Israel extensively uses administrative detention to imprison Palestinians without charge or trial, based on 'secret evidence.' Thousands of Palestinians, including children, are detained in conditions that often violate international law.",
+                "sources": ["Addameer", "International Committee of the Red Cross", "UNICEF"],
                 "key_facts": [
-                    "Plus de 800 000 Palestiniens détenus depuis 1967",
-                    "Environ 500-700 enfants palestiniens arrêtés chaque année",
-                    "Taux de condamnation de 99,7% devant les tribunaux militaires israéliens",
-                    "Torture et mauvais traitements systématiques documentés par les organisations de droits humains"
+                    "More than 800,000 Palestinians detained since 1967",
+                    "Approximately 500-700 Palestinian children arrested each year",
+                    "99.7% conviction rate in Israeli military courts",
+                    "Systematic torture and mistreatment documented by human rights organizations"
                 ]
             },
             {
-                "title": "Restrictions à la liberté de mouvement",
-                "description": "Les Palestiniens font face à un système complexe de restrictions de mouvement comprenant des checkpoints, le mur de séparation, des routes réservées aux colons, et un système de permis qui limite sévèrement leur capacité à se déplacer librement sur leur propre territoire.",
+                "title": "Restrictions on Freedom of Movement",
+                "description": "Palestinians face a complex system of movement restrictions including checkpoints, the separation wall, settler-only roads, and a permit system that severely limits their ability to move freely in their own territory.",
                 "sources": ["OCHA", "B'Tselem", "Machsom Watch"],
                 "key_facts": [
-                    "Plus de 700 obstacles physiques en Cisjordanie (checkpoints, barrières routières, etc.)",
-                    "Le mur de séparation s'étend sur 712 km, dont 85% à l'intérieur de la Cisjordanie",
-                    "Des milliers de Palestiniens séparés de leurs terres agricoles par le mur",
-                    "Système de permis complexe nécessaire pour entrer à Jérusalem-Est, voyager entre Gaza et la Cisjordanie, ou accéder aux 'zones de jointure'"
+                    "More than 700 physical obstacles in the West Bank (checkpoints, roadblocks, etc.)",
+                    "The separation wall extends for 712 km, 85% of which is inside the West Bank",
+                    "Thousands of Palestinians separated from their agricultural lands by the wall",
+                    "Complex permit system required to enter East Jerusalem, travel between Gaza and the West Bank, or access 'seam zones'"
                 ]
             },
             {
-                "title": "Démolitions de maisons et déplacements forcés",
-                "description": "Israël pratique régulièrement la démolition de maisons palestiniennes, soit comme mesure punitive, soit sous prétexte d'absence de permis de construire (qui sont systématiquement refusés aux Palestiniens). Ces pratiques constituent des violations graves du droit international humanitaire.",
+                "title": "Home Demolitions and Forced Displacement",
+                "description": "Israel regularly practices Palestinian home demolitions, either as punitive measures or under the pretext of lacking building permits (which are systematically denied to Palestinians). These practices constitute serious violations of international humanitarian law.",
                 "sources": ["OCHA", "B'Tselem", "Al-Haq", "Norwegian Refugee Council"],
                 "key_facts": [
-                    "Plus de 55 000 maisons palestiniennes démolies depuis 1967",
-                    "Moins de 2% des demandes de permis de construire approuvées pour les Palestiniens en Zone C",
-                    "Jérusalem-Est particulièrement ciblée pour les démolitions et l'expansion des colonies",
-                    "Politique de 'transfert silencieux' visant à réduire la présence palestinienne dans certaines zones stratégiques"
+                    "More than 55,000 Palestinian homes demolished since 1967",
+                    "Less than 2% of building permit applications approved for Palestinians in Area C",
+                    "East Jerusalem particularly targeted for demolitions and settlement expansion",
+                    "'Silent transfer' policy aimed at reducing Palestinian presence in strategic areas"
                 ]
             }
         ],
-        "Culture et société": [
+        "Culture and Society": [
             {
-                "title": "Patrimoine culturel palestinien",
-                "description": "La culture palestinienne est riche et diverse, avec des traditions remontant à des milliers d'années. Elle comprend une cuisine distinctive, des arts traditionnels comme la broderie, la poterie et la calligraphie, ainsi qu'une riche tradition littéraire et musicale.",
-                "sources": ["Institut du monde arabe", "Musée palestinien", "UNESCO"],
+                "title": "Palestinian Cultural Heritage",
+                "description": "Palestinian culture is rich and diverse, with traditions dating back thousands of years. It includes distinctive cuisine, traditional arts such as embroidery, pottery, and calligraphy, as well as a rich literary and musical tradition.",
+                "sources": ["Arab World Institute", "Palestinian Museum", "UNESCO"],
                 "key_facts": [
-                    "La broderie palestinienne (tatreez) est inscrite au patrimoine culturel immatériel de l'UNESCO",
-                    "L'olivier est un symbole central de l'identité et de la résistance palestiniennes",
-                    "La dabke est une danse traditionnelle pratiquée lors des célébrations",
-                    "La poésie de résistance est une forme d'expression culturelle importante, avec des poètes comme Mahmoud Darwich"
+                    "Palestinian embroidery (tatreez) is inscribed on UNESCO's Intangible Cultural Heritage list",
+                    "The olive tree is a central symbol of Palestinian identity and resistance",
+                    "Dabke is a traditional dance performed at celebrations",
+                    "Resistance poetry is an important form of cultural expression, with poets like Mahmoud Darwish"
                 ]
             },
             {
-                "title": "Diaspora palestinienne",
-                "description": "Suite à la Nakba de 1948 et à l'occupation continue, une importante diaspora palestinienne s'est formée à travers le monde. Ces communautés maintiennent des liens forts avec leur patrie et jouent un rôle crucial dans la préservation de l'identité palestinienne et la défense des droits des Palestiniens.",
-                "sources": ["UNRWA", "Institut d'études palestiniennes", "Badil"],
+                "title": "Palestinian Diaspora",
+                "description": "Following the 1948 Nakba and ongoing occupation, a significant Palestinian diaspora has formed worldwide. These communities maintain strong ties to their homeland and play a crucial role in preserving Palestinian identity and advocating for Palestinian rights.",
+                "sources": ["UNRWA", "Institute for Palestine Studies", "Badil"],
                 "key_facts": [
-                    "Plus de 7 millions de réfugiés et déplacés palestiniens dans le monde",
-                    "Importantes communautés palestiniennes en Jordanie, Liban, Syrie, Chili et États-Unis",
-                    "La clé (miftah) est un symbole du droit au retour des réfugiés",
-                    "Transmission intergénérationnelle de la mémoire et de l'identité palestiniennes"
+                    "More than 7 million Palestinian refugees and displaced persons worldwide",
+                    "Significant Palestinian communities in Jordan, Lebanon, Syria, Chile, and the United States",
+                    "The key (miftah) is a symbol of refugees' right of return",
+                    "Intergenerational transmission of Palestinian memory and identity"
                 ]
             },
             {
-                "title": "Résistance culturelle et artistique",
-                "description": "Face à l'occupation, les Palestiniens ont développé diverses formes de résistance culturelle et artistique. L'art, la musique, la littérature et le cinéma palestiniens servent à préserver l'identité nationale, documenter les réalités de l'occupation et exprimer les aspirations à la liberté et à l'autodétermination.",
-                "sources": ["Festival du film palestinien", "Dar Yusuf Nasri Jacir pour l'Art et la Recherche", "Institut Edward Said"],
+                "title": "Cultural and Artistic Resistance",
+                "description": "In the face of occupation, Palestinians have developed various forms of cultural and artistic resistance. Palestinian art, music, literature, and cinema serve to preserve national identity, document the realities of occupation, and express aspirations for freedom and self-determination.",
+                "sources": ["Palestinian Film Festival", "Dar Yusuf Nasri Jacir for Art and Research", "Edward Said Institute"],
                 "key_facts": [
-                    "Émergence d'un cinéma palestinien reconnu internationalement (Elia Suleiman, Hany Abu-Assad)",
-                    "Street art et graffiti sur le mur de séparation comme forme de protestation visuelle",
-                    "Développement de festivals culturels comme Palest'In & Out et le Festival de littérature palestinienne",
-                    "Utilisation des médias sociaux pour documenter et partager les réalités de l'occupation"
+                    "Emergence of internationally recognized Palestinian cinema (Elia Suleiman, Hany Abu-Assad)",
+                    "Street art and graffiti on the separation wall as a form of visual protest",
+                    "Development of cultural festivals such as Palest'In & Out and the Palestine Literature Festival",
+                    "Use of social media to document and share occupation realities"
                 ]
             },
             {
-                "title": "Éducation et résistance académique",
-                "description": "Malgré les obstacles imposés par l'occupation, les Palestiniens accordent une grande valeur à l'éducation. Les universités palestiniennes sont des centres de production de connaissances et de résistance intellectuelle, bien qu'elles soient souvent ciblées par les forces israéliennes.",
-                "sources": ["Université de Birzeit", "Right to Education Campaign", "PACBI"],
+                "title": "Education and Academic Resistance",
+                "description": "Despite obstacles imposed by the occupation, Palestinians place high value on education. Palestinian universities are centers of knowledge production and intellectual resistance, although they are often targeted by Israeli forces.",
+                "sources": ["Birzeit University", "Right to Education Campaign", "PACBI"],
                 "key_facts": [
-                    "Taux d'alphabétisation parmi les plus élevés du monde arabe malgré l'occupation",
-                    "Universités palestiniennes régulièrement soumises à des raids, fermetures et restrictions",
-                    "Développement des études palestiniennes comme discipline académique",
-                    "Mouvement de boycott académique contre les institutions complices de l'occupation"
+                    "Literacy rates among the highest in the Arab world despite occupation",
+                    "Palestinian universities regularly subjected to raids, closures, and restrictions",
+                    "Development of Palestine Studies as an academic discipline",
+                    "Academic boycott movement against institutions complicit in the occupation"
                 ]
             }
         ],
-        "Résistance et solidarité": [
+        "Resistance and Solidarity": [
             {
-                "title": "Le mouvement BDS (Boycott, Désinvestissement, Sanctions)",
-                "description": "Lancé en 2005 par la société civile palestinienne, le mouvement BDS appelle à des mesures non-violentes pour faire pression sur Israël afin qu'il respecte le droit international et les droits des Palestiniens. Inspiré par le mouvement anti-apartheid sud-africain, il a gagné un soutien mondial significatif.",
-                "sources": ["Comité national BDS", "Campagne palestinienne pour le boycott académique et culturel d'Israël (PACBI)"],
+                "title": "The BDS Movement (Boycott, Divestment, Sanctions)",
+                "description": "Launched in 2005 by Palestinian civil society, the BDS movement calls for non-violent measures to pressure Israel to comply with international law and Palestinian rights. Inspired by the South African anti-apartheid movement, it has gained significant global support.",
+                "sources": ["BDS National Committee", "Palestinian Campaign for the Academic and Cultural Boycott of Israel (PACBI)"],
                 "key_facts": [
-                    "Trois demandes principales: fin de l'occupation, égalité pour les Palestiniens citoyens d'Israël, droit au retour des réfugiés",
-                    "Succès notables incluant le désinvestissement de fonds de pension et d'universités",
-                    "Soutenu par des syndicats, églises, mouvements sociaux et personnalités du monde entier",
-                    "Cible les institutions complices de l'occupation, non les individus"
+                    "Three main demands: end of occupation, equality for Palestinian citizens of Israel, right of return for refugees",
+                    "Notable successes including divestment by pension funds and universities",
+                    "Supported by unions, churches, social movements, and personalities worldwide",
+                    "Targets institutions complicit in the occupation, not individuals"
                 ]
             },
             {
-                "title": "Résistance populaire non-violente",
-                "description": "Les Palestiniens ont une longue tradition de résistance populaire non-violente contre l'occupation, incluant des manifestations pacifiques, des sit-ins, et des actions directes non-violentes. Ces mouvements sont souvent réprimés violemment par les forces israéliennes.",
+                "title": "Non-violent Popular Resistance",
+                "description": "Palestinians have a long tradition of non-violent popular resistance against occupation, including peaceful demonstrations, sit-ins, and non-violent direct actions. These movements are often violently suppressed by Israeli forces.",
                 "sources": ["Popular Struggle Coordination Committee", "Stop the Wall Campaign", "Al-Haq"],
                 "key_facts": [
-                    "Villages comme Bil'in, Ni'lin et Nabi Saleh connus pour leurs manifestations hebdomadaires contre le mur",
-                    "Utilisation de la documentation vidéo et des médias sociaux pour exposer les violations",
-                    "Participation internationale via des mouvements comme l'International Solidarity Movement",
-                    "Répression systématique incluant arrestations, détentions et parfois tirs à balles réelles contre manifestants non armés"
+                    "Villages like Bil'in, Ni'lin, and Nabi Saleh known for their weekly demonstrations against the wall",
+                    "Use of video documentation and social media to expose violations",
+                    "International participation through movements like the International Solidarity Movement",
+                    "Systematic repression including arrests, detentions, and sometimes live fire against unarmed protesters"
                 ]
             },
             {
-                "title": "Solidarité internationale",
-                "description": "Le mouvement de solidarité avec la Palestine s'est développé à l'échelle mondiale, impliquant des organisations de la société civile, des syndicats, des groupes religieux, des étudiants et des militants des droits humains qui soutiennent la lutte palestinienne pour la justice et l'autodétermination.",
+                "title": "International Solidarity",
+                "description": "The solidarity movement with Palestine has developed globally, involving civil society organizations, unions, religious groups, students, and human rights activists who support the Palestinian struggle for justice and self-determination.",
                 "sources": ["Palestine Solidarity Campaign", "Jewish Voice for Peace", "BDS Movement"],
                 "key_facts": [
-                    "Journée internationale de solidarité avec le peuple palestinien célébrée le 29 novembre",
-                    "Campagnes de désinvestissement dans les universités et institutions religieuses",
-                    "Flottilles pour Gaza tentant de briser le blocus maritime",
-                    "Mouvements de solidarité incluant des juifs progressistes opposés aux politiques israéliennes"
+                    "International Day of Solidarity with the Palestinian People celebrated on November 29",
+                    "Divestment campaigns in universities and religious institutions",
+                    "Gaza flotillas attempting to break the maritime blockade",
+                    "Solidarity movements including progressive Jews opposed to Israeli policies"
                 ]
             },
             {
-                "title": "Reconnaissance internationale de l'État de Palestine",
-                "description": "La lutte diplomatique pour la reconnaissance de l'État de Palestine est une forme importante de résistance politique. À ce jour, plus de 140 pays ont reconnu l'État de Palestine, bien que la plupart des puissances occidentales ne l'aient pas encore fait.",
-                "sources": ["Nations Unies", "Organisation de libération de la Palestine", "Ministère palestinien des Affaires étrangères"],
+                "title": "International Recognition of the State of Palestine",
+                "description": "The diplomatic struggle for recognition of the State of Palestine is an important form of political resistance. To date, more than 140 countries have recognized the State of Palestine, although most Western powers have not yet done so.",
+                "sources": ["United Nations", "Palestine Liberation Organization", "Palestinian Ministry of Foreign Affairs"],
                 "key_facts": [
-                    "En 2012, la Palestine a obtenu le statut d'État observateur non-membre à l'ONU",
-                    "Adhésion à diverses organisations internationales, dont la Cour pénale internationale",
-                    "Reconnaissance par plus de 140 pays sur 193 États membres de l'ONU",
-                    "Campagnes continues pour la reconnaissance par les pays occidentaux"
+                    "In 2012, Palestine obtained non-member observer state status at the UN",
+                    "Membership in various international organizations, including the International Criminal Court",
+                    "Recognition by more than 140 countries out of 193 UN member states",
+                    "Ongoing campaigns for recognition by Western countries"
                 ]
             }
         ]
@@ -531,16 +541,16 @@ def get_boycott_companies():
                 "Dell", "Nvidia", "PayPal", "Wix", "Fiverr", "Monday.com", "Check Point", "Mobileye", "Waze", "Zoom"
             ],
             "Alternatives": [
-                "DuckDuckGo au lieu de Google Search", 
-                "Huawei/Samsung au lieu d'Apple", 
-                "Linux/Ubuntu au lieu de Windows", 
-                "Telegram/Signal au lieu de WhatsApp", 
-                "AliExpress/eBay au lieu d'Amazon", 
-                "AMD au lieu d'Intel", 
-                "Lenovo/Acer au lieu de HP", 
-                "LibreOffice au lieu de Microsoft Office",
-                "ProtonMail au lieu de Gmail",
-                "Firefox/Brave au lieu de Chrome"
+                "DuckDuckGo instead of Google Search", 
+                "Huawei/Samsung instead of Apple", 
+                "Linux/Ubuntu instead of Windows", 
+                "Telegram/Signal instead of WhatsApp", 
+                "AliExpress/eBay instead of Amazon", 
+                "AMD instead of Intel", 
+                "Lenovo/Acer instead of HP", 
+                "LibreOffice instead of Microsoft Office",
+                "ProtonMail instead of Gmail",
+                "Firefox/Brave instead of Chrome"
             ]
         },
         "Food & Beverage": {
@@ -550,12 +560,12 @@ def get_boycott_companies():
                 "Häagen-Dazs", "Sabra Hummus", "Strauss Group"
             ],
             "Alternatives": [
-                "Restaurants de burgers locaux au lieu de McDonald's/Burger King", 
-                "Cafés locaux au lieu de Starbucks", 
-                "Eau locale ou jus au lieu de Coca-Cola/Pepsi", 
-                "Boulangeries locales au lieu des chaînes de restauration",
-                "Produits laitiers locaux au lieu de Danone/Nestlé",
-                "Chocolat et snacks locaux au lieu de Mars/Mondelez"
+                "Local burger restaurants instead of McDonald's/Burger King", 
+                "Local coffee shops instead of Starbucks", 
+                "Local water or juice instead of Coca-Cola/Pepsi", 
+                "Local bakeries instead of chain restaurants",
+                "Local dairy products instead of Danone/Nestlé",
+                "Local chocolate and snacks instead of Mars/Mondelez"
             ]
         },
         "Fashion & Retail": {
@@ -565,12 +575,12 @@ def get_boycott_companies():
                 "Ralph Lauren", "Lacoste", "Hugo Boss", "Uniqlo"
             ],
             "Alternatives": [
-                "Marques de vêtements locales", 
-                "Marques de mode éthiques", 
-                "Achats de seconde main/friperies", 
-                "Li-Ning/Anta Sports au lieu de Nike/Adidas",
-                "Decathlon pour l'équipement sportif",
-                "Fabricants de chaussures locaux"
+                "Local clothing brands", 
+                "Ethical fashion brands", 
+                "Second-hand/thrift shopping", 
+                "Li-Ning/Anta Sports instead of Nike/Adidas",
+                "Decathlon for sports equipment",
+                "Local shoe manufacturers"
             ]
         },
         "Entertainment & Media": {
@@ -580,12 +590,12 @@ def get_boycott_companies():
                 "CNN", "BBC", "New York Times", "The Washington Post", "The Guardian"
             ],
             "Alternatives": [
-                "Services de streaming indépendants", 
-                "Productions cinématographiques locales", 
-                "YouTube pour les créateurs de contenu indépendants",
-                "Anghami au lieu de Spotify dans les régions arabes",
-                "Sources d'information indépendantes et journalistes",
-                "Al Jazeera, TRT World pour les actualités"
+                "Independent streaming services", 
+                "Local film productions", 
+                "YouTube for independent content creators",
+                "Anghami instead of Spotify in Arab regions",
+                "Independent news sources and journalists",
+                "Al Jazeera, TRT World for news"
             ]
         },
         "Sports": {
@@ -595,8 +605,8 @@ def get_boycott_companies():
             ],
             "Alternatives": [
                 "Li-Ning", "Anta Sports", "Asics", "Fila", "Mizuno",
-                "Fabricants locaux d'équipements sportifs",
-                "Applications de fitness indépendantes au lieu de celles des grandes entreprises"
+                "Local sports equipment manufacturers",
+                "Independent fitness apps instead of corporate ones"
             ]
         },
         "Cosmetics & Personal Care": {
@@ -605,10 +615,10 @@ def get_boycott_companies():
                 "Garnier", "Dove", "Nivea", "Johnson & Johnson", "Colgate-Palmolive", "Procter & Gamble"
             ],
             "Alternatives": [
-                "Marques locales de cosmétiques naturels", 
-                "Marques de cosmétiques halal", 
-                "Alternatives éthiques et sans cruauté",
-                "Savons artisanaux et produits naturels"
+                "Local natural cosmetics brands", 
+                "Halal cosmetics brands", 
+                "Ethical and cruelty-free alternatives",
+                "Handmade soaps and natural products"
             ]
         },
         "Travel & Hospitality": {
@@ -617,10 +627,10 @@ def get_boycott_companies():
                 "InterContinental", "Hyatt", "Delta Airlines", "American Airlines", "United Airlines"
             ],
             "Alternatives": [
-                "Réservations directes auprès des hôtels", 
-                "Agences de voyage locales", 
-                "Plateformes alternatives d'hébergement",
-                "Compagnies aériennes locales quand c'est possible"
+                "Direct hotel bookings", 
+                "Local travel agencies", 
+                "Alternative accommodation platforms",
+                "Local airlines when possible"
             ]
         }
     }
@@ -629,249 +639,318 @@ def get_boycott_companies():
 # App UI with enhanced professional features
 def main():
     st.set_page_config(
-        page_title="Palestina-ai", 
+        page_title="Palestine-AI", 
         page_icon="🕊️", 
         layout="wide"
     )
 
-    # Custom CSS for a more professional look
+    # Custom CSS for a more professional look with dark mode compatibility
     st.markdown("""
     <style>
     .main {
-        background-color: #f8f9fa;
+        background-color: var(--background-color);
+        color: var(--text-color);
     }
+    
+    :root {
+        --primary-color: #1f77b4;
+        --secondary-color: #2ca02c;
+        --danger-color: #d62728;
+        --background-color: #ffffff;
+        --card-background: #ffffff;
+        --text-color: #333333;
+        --border-color: #e6e6e6;
+        --quote-color: #1f77b4;
+        --footer-color: #666666;
+    }
+    
+    [data-theme="dark"] {
+        --primary-color: #4a9ced;
+        --secondary-color: #5fd35f;
+        --danger-color: #ff5b5b;
+        --background-color: #0e1117;
+        --card-background: #1e2129;
+        --text-color: #f0f2f6;
+        --border-color: #4a4a4a;
+        --quote-color: #4a9ced;
+        --footer-color: #cccccc;
+    }
+    
     .stApp {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+    
     .stTextInput > div > div > input {
         border-radius: 10px;
     }
+    
     .stButton > button {
         border-radius: 10px;
-        background-color: #1f77b4;
+        background-color: var(--primary-color);
         color: white;
         font-weight: bold;
     }
+    
     .stExpander {
         border-radius: 10px;
-        border: 1px solid #e6e6e6;
+        border: 1px solid var(--border-color);
+        background-color: var(--card-background);
     }
+    
     h1, h2, h3 {
-        color: #1f77b4;
+        color: var(--primary-color);
     }
+    
     .quote-box {
-        border-left: 4px solid #1f77b4;
+        border-left: 4px solid var(--quote-color);
         padding-left: 15px;
         margin-top: 20px;
         font-size: 1.2em;
         font-weight: bold;
-        color: #1f77b4;
+        color: var(--quote-color);
     }
+    
     .quote-author {
         text-align: right;
-        color: #555555;
+        color: var(--text-color);
         font-style: italic;
     }
+    
     .team-member {
         padding: 5px 0;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-color);
     }
+    
     .boycott-category {
         font-weight: bold;
-        color: #d62728;
+        color: var(--danger-color);
         margin-top: 10px;
     }
+    
     .boycott-company {
         margin-left: 15px;
         padding: 2px 0;
+        color: var(--text-color);
     }
+    
     .boycott-alternative {
         margin-left: 15px;
         padding: 2px 0;
-        color: #2ca02c;
+        color: var(--secondary-color);
     }
+    
     .footer {
         text-align: center;
         margin-top: 30px;
         padding: 10px;
         font-size: 0.8em;
-        color: #666;
+        color: var(--footer-color);
     }
-    .user-message {
-        background-color: #f7f7f8;
-        padding: 1rem 15%;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        display: flex;
-        align-items: flex-start;
-    }
-    .assistant-message {
-        background-color: #ffffff;
-        padding: 1rem 15%;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        display: flex;
-        align-items: flex-start;
-    }
-    .message-avatar {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin-right: 15px;
-        flex-shrink: 0;
-    }
-    .message-content {
-        flex-grow: 1;
-        overflow-wrap: break-word;
-    }
+    
     .company-card {
-        background-color: #f9f9f9;
+        background-color: var(--card-background);
         border-radius: 10px;
         padding: 15px;
         margin-bottom: 15px;
-        border-left: 4px solid #d62728;
+        border-left: 4px solid var(--danger-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    
     .company-name {
         font-weight: bold;
         font-size: 1.1em;
         margin-bottom: 5px;
+        color: var(--text-color);
     }
+    
     .company-reason {
         margin-bottom: 10px;
         font-style: italic;
+        color: var(--text-color);
     }
+    
     .company-action {
         font-weight: bold;
-        color: #d62728;
+        color: var(--danger-color);
         margin-bottom: 5px;
     }
+    
     .company-alternatives {
-        color: #2ca02c;
+        color: var(--secondary-color);
     }
-    .education-section {
-        background-color: #f0f7fb;
-        border-radius: 10px;
-        padding: 20px;
-        margin-top: 20px;
-        border-left: 5px solid #1f77b4;
-    }
-    .source-card {
-        background-color: #ffffff;
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 10px;
-        border: 1px solid #e0e0e0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    .source-title {
-        font-weight: bold;
-        color: #1f77b4;
-        margin-bottom: 5px;
-    }
-    .source-snippet {
-        font-size: 0.9em;
-        color: #555;
-        margin-bottom: 10px;
-    }
-    .source-link {
-        font-size: 0.8em;
-        color: #1f77b4;
-    }
-    .source-name {
-        font-size: 0.8em;
-        color: #888;
-        font-style: italic;
-    }
-    .image-generation {
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    .main-button {
-        background-color: #1f77b4;
-        color: white;
-        border-radius: 10px;
-        padding: 15px 25px;
-        font-weight: bold;
-        margin: 10px 0;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-    .main-button:hover {
-        background-color: #145a8d;
-        transform: translateY(-2px);
-    }
+    
     .resource-card {
-        background-color: #ffffff;
+        background-color: var(--card-background);
         border-radius: 10px;
         padding: 20px;
         margin-bottom: 20px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        border-left: 5px solid #1f77b4;
+        border-left: 5px solid var(--primary-color);
     }
+    
     .resource-title {
-        color: #1f77b4;
+        color: var(--primary-color);
         font-size: 1.3em;
         margin-bottom: 10px;
     }
+    
     .resource-description {
         margin-bottom: 15px;
         line-height: 1.6;
+        color: var(--text-color);
     }
+    
     .resource-facts {
-        background-color: #f0f7fb;
+        background-color: rgba(31, 119, 180, 0.1);
         padding: 15px;
         border-radius: 8px;
         margin-bottom: 10px;
+        color: var(--text-color);
     }
+    
     .resource-sources {
         font-style: italic;
-        color: #666;
+        color: var(--footer-color);
         font-size: 0.9em;
     }
+    
     .fact-item {
         margin-bottom: 5px;
         padding-left: 20px;
         position: relative;
+        color: var(--text-color);
     }
+    
     .fact-item:before {
         content: "•";
         position: absolute;
         left: 0;
-        color: #1f77b4;
+        color: var(--primary-color);
     }
+    
     .section-title {
-        color: #1f77b4;
+        color: var(--primary-color);
         font-size: 2em;
         margin: 30px 0 20px 0;
         padding-bottom: 10px;
-        border-bottom: 2px solid #e6e6e6;
+        border-bottom: 2px solid var(--border-color);
     }
+    
     .subsection-title {
-        color: #333;
+        color: var(--text-color);
         font-size: 1.5em;
         margin: 25px 0 15px 0;
     }
+    
     .chat-container {
-        background-color: #ffffff;
+        background-color: var(--card-background);
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         margin-bottom: 30px;
     }
+    
+    /* Improved sidebar button styling */
+    .sidebar-button {
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 10px;
+        padding: 12px 20px;
+        font-weight: bold;
+        margin: 8px 0;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        border: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    
+    .sidebar-button:hover {
+        background-color: #145a8d;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Language selector styling */
+    .language-selector {
+        margin-top: 15px;
+        margin-bottom: 25px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
+    }
+    
+    .language-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
     </style>
     """, unsafe_allow_html=True)
+
+    # Create session state variables if they don't exist
+    if 'show_chat' not in st.session_state:
+        st.session_state.show_chat = True
+    if 'show_boycott' not in st.session_state:
+        st.session_state.show_boycott = False
+    if 'show_education' not in st.session_state:
+        st.session_state.show_education = False
+    if 'language' not in st.session_state:
+        st.session_state.language = 'english'
 
     # Sidebar
     with st.sidebar:
         st.image("https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg", width=250)
         st.title("Palestine AI")
         
+        # Language selector
+        st.markdown('<div class="language-title">Select Language / اختر اللغة</div>', unsafe_allow_html=True)
+        language_options = {
+            'english': 'English / الإنجليزية',
+            'arabic': 'Arabic / العربية'
+        }
+        
+        # Create language buttons
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button('English', key='en_button', use_container_width=True):
+                st.session_state.language = 'english'
+        with col2:
+            if st.button('العربية', key='ar_button', use_container_width=True):
+                st.session_state.language = 'arabic'
+        
+        st.markdown("---")
+        
+        # Navigation buttons for main area with improved styling
+        st.markdown("### Navigation")
+        
+        # Button to show chat
+        if st.button('💬 Chat with AI', key='chat_button', use_container_width=True):
+            st.session_state.show_chat = True
+            st.session_state.show_boycott = False
+            st.session_state.show_education = False
+        
+        # Button to show boycott information
+        if st.button('🚫 Boycott Information', key='boycott_button', use_container_width=True):
+            st.session_state.show_chat = False
+            st.session_state.show_boycott = True
+            st.session_state.show_education = False
+        
+        # Button to show educational resources
+        if st.button('📚 Educational Resources', key='education_button', use_container_width=True):
+            st.session_state.show_chat = False
+            st.session_state.show_boycott = False
+            st.session_state.show_education = True
+        
         # Team Section
-        with st.expander("Notre Équipe", expanded=False):
+        with st.expander("Our Team", expanded=False):
             st.markdown("### Elkalem-Imrou Height School")
-            st.markdown("En collaboration avec Erinov Company")
-            st.markdown("#### Membres de l'équipe:")
+            st.markdown("In collaboration with Erinov Company")
+            st.markdown("#### Team Members:")
             
             team_members = [
                 "Nchachebi Abdelghani",
@@ -896,125 +975,141 @@ def main():
             for member in team_members:
                 st.markdown(f"<div class='team-member'>• {member}</div>", unsafe_allow_html=True)
         
-        # Navigation buttons for main area
-        st.markdown("### Navigation")
-        
-        # Create session state variables if they don't exist
-        if 'show_chat' not in st.session_state:
-            st.session_state.show_chat = True
-        if 'show_boycott' not in st.session_state:
-            st.session_state.show_boycott = False
-        if 'show_education' not in st.session_state:
-            st.session_state.show_education = False
-        
-        # Button to show chat
-        if st.button("💬 Discuter avec l'IA"):
-            st.session_state.show_chat = True
-            st.session_state.show_boycott = False
-            st.session_state.show_education = False
-        
-        # Button to show boycott information
-        if st.button("🚫 Informations sur le Boycott"):
-            st.session_state.show_chat = False
-            st.session_state.show_boycott = True
-            st.session_state.show_education = False
-        
-        # Button to show educational resources
-        if st.button("📚 Ressources Éducatives"):
-            st.session_state.show_chat = False
-            st.session_state.show_boycott = False
-            st.session_state.show_education = True
-        
         # Help Section
-        with st.expander("Aide", expanded=True):
-            st.markdown("### Comment utiliser l'application")
+        with st.expander("Help", expanded=True):
+            st.markdown("### How to Use the App")
             st.markdown("""
-            - Poser des questions : Vous pouvez poser n'importe quelle question liée à l'histoire de la Palestine, aux événements actuels ou aux questions humanitaires.
-            - Multilinguisme : Vous pouvez poser des questions dans n'importe quelle langue.
-            - Mode sombre : Pour passer en mode sombre, allez dans Paramètres > Choisir le thème de l'application > Mode sombre.
-            - Fonctionnalités de l'application :
-              - Réponses approfondies axées uniquement sur la Palestine.
-              - Réponses contextuelles adaptées à votre question.
-              - Informations précises et détaillées soutenues par l'IA.
-              - Ressources éducatives : Accédez à des informations fiables sur la Palestine.
-              - Informations sur le boycott : Découvrez les entreprises qui soutiennent Israël et les alternatives.
+            - Ask Questions: You can ask anything related to Palestine's history, current events, or humanitarian issues.
+            - Multi-Languages Supported: You can ask in English or Arabic.
+            - Dark Mode: To switch to dark mode, go to Settings > Choose app theme > Dark Mode.
+            - App Features:
+              - In-depth answers focused only on Palestine.
+              - Context-aware responses tailored to your question.
+              - Accurate, detailed information backed by AI.
+              - Educational Resources: Access reliable information about Palestine.
+              - Boycott Information: Learn about companies supporting Israel and alternatives.
             """)
         st.markdown("---")
         
         # About Us Section
-        with st.expander("À propos", expanded=False):
+        with st.expander("About Us", expanded=False):
             st.markdown("#### Palestine AI Chat")
-            st.markdown("Cette application a été développée pour fournir des informations approfondies sur la cause palestinienne, alimentées par l'IA.")
+            st.markdown("This app was developed to provide in-depth, AI-powered insights into the Palestinian cause.")
             st.markdown("""
             Version: 1.2.0
             
-            #### Fonctionnalités
-            - Informations sur la Palestine alimentées par l'IA
-            - Focus sur l'histoire, les questions humanitaires et les événements actuels
-            - Support multilingue
-            - Réponses précises et contextuelles
-            - Informations sur le boycott et ressources de soutien
-            - Ressources éducatives
+            #### Features
+            - AI-Powered Insights about Palestine
+            - Focus on History, Humanitarian Issues, and Current Events
+            - Multi-Language Support
+            - Accurate and Context-Aware Responses
+            - Boycott Information and Support Resources
+            - Educational Resources
             
-            © 2025 Palestine AI Team. Tous droits réservés.
+            © 2025 Palestine AI Team. All rights reserved.
             
-            [Contactez-nous](mailto:your-email@example.com?subject=Palestine%20Info%20Bot%20Inquiry&body=Dear%20Palestine%20Info%20Bot%20Team,%0A%0AWe%20are%20writing%20to%20inquire%20about%20[your%20inquiry]%2C%20specifically%20[details%20of%20your%20inquiry].%0A%0A[Provide%20additional%20context%20and%20details%20here].%0A%0APlease%20let%20us%20know%20if%20you%20require%20any%20further%20information%20from%20our%20end.%0A%0ASincerely,%0A[Your%20Company%20Name]%0A[Your%20Name]%0A[Your%20Title]%0A[Your%20Phone%20Number]%0A[Your%20Email%20Address])
+            [Contact Us](mailto:your-email@example.com?subject=Palestine%20Info%20Bot%20Inquiry&body=Dear%20Palestine%20Info%20Bot%20Team,%0A%0AWe%20are%20writing%20to%20inquire%20about%20[your%20inquiry]%2C%20specifically%20[details%20of%20your%20inquiry].%0A%0A[Provide%20additional%20context%20and%20details%20here].%0A%0APlease%20let%20us%20know%20if%20you%20require%20any%20further%20information%20from%20our%20end.%0A%0ASincerely,%0A[Your%20Company%20Name]%0A[Your%20Name]%0A[Your%20Title]%0A[Your%20Phone%20Number]%0A[Your%20Email%20Address])
             """)
 
     # Main content area
-    st.title("Palestine AI - De la rivière à la mer")
-
-    # Quote of the Day section in a professional style
-    st.markdown("""
-    <div class="quote-box">
-        "La question de la Palestine est une épreuve par laquelle Dieu a testé votre conscience, votre détermination, votre richesse et votre unité."
-    </div>
-    <div class="quote-author">
-        — Al-Bashir Al-Ibrahimi
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Information cards in a grid layout
-    col1, col2 = st.columns(2)
-    
-    with col1:
+    if st.session_state.language == 'english':
+        st.title("Palestine AI - From the river to the sea")
+        
+        # Quote of the Day section in a professional style
         st.markdown("""
-        ### Contexte historique
-        La Palestine est une terre avec une histoire profondément enracinée s'étendant sur des milliers d'années, et les documents historiques affirment que le peuple palestinien est le propriétaire légitime de cette terre. La Palestine a été le foyer de sa population autochtone, qui a préservé sa présence et sa culture malgré les tentatives d'effacement et de déplacement à travers les âges.
-        """)
-    
-    with col2:
+        <div class="quote-box">
+            "The issue of Palestine is a trial that God has tested your conscience, resolve, wealth, and unity with."
+        </div>
+        <div class="quote-author">
+            — Al-Bashir Al-Ibrahimi
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Information cards in a grid layout
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            ### Historical Context
+            Palestine is a land with a deep-rooted history spanning thousands of years, and historical documents affirm that the Palestinian people are the rightful owners of this land. Palestine has been home to its indigenous population, who have preserved their presence and culture despite attempts at erasure and displacement throughout the ages.
+            """)
+        
+        with col2:
+            st.markdown("""
+            ### Current Situation
+            The Palestinian people continue to face severe humanitarian challenges due to ongoing occupation and blockade, particularly in the Gaza Strip, where residents are deprived of access to essential resources and services. These actions constitute clear violations of human rights and international law, which guarantee the right of peoples to live freely and with dignity in their homeland.
+            """)
+    else:  # Arabic
+        st.title("فلسطين الذكاء الاصطناعي - من النهر إلى البحر")
+        
+        # Quote of the Day section in Arabic
         st.markdown("""
-        ### Situation actuelle
-        Le peuple palestinien continue de faire face à de graves défis humanitaires en raison de l'occupation continue et du blocus, particulièrement dans la bande de Gaza, où les résidents sont privés d'accès aux ressources et services essentiels. Ces actions constituent des violations flagrantes des droits humains et du droit international, qui garantissent le droit des peuples à vivre librement et avec dignité dans leur patrie.
-        """)
+        <div class="quote-box" dir="rtl">
+            "قضية فلسطين هي اختبار اختبر الله به ضميرك وعزيمتك وثروتك ووحدتك."
+        </div>
+        <div class="quote-author" dir="rtl">
+            — البشير الإبراهيمي
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Information cards in a grid layout in Arabic
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            <div dir="rtl">
+            ### السياق التاريخي
+            فلسطين أرض ذات تاريخ عريق يمتد لآلاف السنين، وتؤكد الوثائق التاريخية أن الشعب الفلسطيني هو المالك الشرعي لهذه الأرض. كانت فلسطين موطنًا لسكانها الأصليين، الذين حافظوا على وجودهم وثقافتهم رغم محاولات المحو والتهجير على مر العصور.
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown("""
+            <div dir="rtl">
+            ### الوضع الحالي
+            يستمر الشعب الفلسطيني في مواجهة تحديات إنسانية خطيرة بسبب الاحتلال المستمر والحصار، خاصة في قطاع غزة، حيث يُحرم السكان من الوصول إلى الموارد والخدمات الأساسية. تشكل هذه الإجراءات انتهاكات واضحة لحقوق الإنسان والقانون الدولي، الذي يضمن حق الشعوب في العيش بحرية وكرامة في وطنهم.
+            </div>
+            """, unsafe_allow_html=True)
 
     # Display content based on session state
     if st.session_state.show_chat:
-        st.markdown("<div class='section-title'>Discuter avec l'IA sur la Palestine</div>", unsafe_allow_html=True)
-        
-        # User input section with enhanced styling
-        st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-        st.markdown("### Posez votre question")
-        st.markdown("Obtenez des informations précises et détaillées sur l'histoire de la Palestine, les événements actuels et les questions humanitaires.")
-        
-        user_question = st.text_input("", placeholder="Tapez votre question sur la Palestine ici...", key="text_question")
-        
-        # Add a submit button for better UX
-        submit_button = st.button("Obtenir une réponse")
+        if st.session_state.language == 'english':
+            st.markdown("<div class='section-title'>Chat with AI about Palestine</div>", unsafe_allow_html=True)
+            
+            # User input section with enhanced styling
+            st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
+            st.markdown("### Ask Your Question")
+            st.markdown("Get accurate, detailed information about Palestine's history, current events, and humanitarian issues.")
+            
+            user_question = st.text_input("", placeholder="Type your question about Palestine here...", key="text_question")
+            
+            # Add a submit button for better UX
+            submit_button = st.button("Get Answer")
+        else:  # Arabic
+            st.markdown("<div class='section-title' dir='rtl'>تحدث مع الذكاء الاصطناعي حول فلسطين</div>", unsafe_allow_html=True)
+            
+            # User input section with enhanced styling
+            st.markdown("<div class='chat-container' dir='rtl'>", unsafe_allow_html=True)
+            st.markdown("<h3>اطرح سؤالك</h3>", unsafe_allow_html=True)
+            st.markdown("احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضايا الإنسانية.", unsafe_allow_html=True)
+            
+            user_question = st.text_input("", placeholder="اكتب سؤالك عن فلسطين هنا...", key="text_question_ar")
+            
+            # Add a submit button for better UX
+            submit_button = st.button("الحصول على إجابة")
 
         # Process the question when submitted
         if user_question and submit_button:
             # Check if the question is related to Palestine
             is_palestine = is_palestine_related(user_question)
             
-            with st.spinner("Génération d'une réponse complète..."):
+            with st.spinner("Generating comprehensive answer..." if st.session_state.language == 'english' else "جاري إنشاء إجابة شاملة..."):
                 answer = ask_about_palestine(user_question)
                 
                 # Create a container with better styling for the answer
                 answer_container = st.container()
                 with answer_container:
-                    st.markdown("<div style='background-color: #f0f7fb; padding: 20px; border-radius: 10px; border-left: 5px solid #1f77b4;'>", unsafe_allow_html=True)
+                    st.markdown("<div style='background-color: rgba(31, 119, 180, 0.1); padding: 20px; border-radius: 10px; border-left: 5px solid var(--primary-color);'>", unsafe_allow_html=True)
                     # Typing effect for response
                     with st.empty():  # Create an empty placeholder to display the typing effect
                         typing_effect(answer)
@@ -1022,138 +1117,282 @@ def main():
         st.markdown("</div>", unsafe_allow_html=True)
     
     elif st.session_state.show_boycott:
-        st.markdown("<div class='section-title'>Informations sur le Boycott</div>", unsafe_allow_html=True)
-        
-        st.markdown("""
-        Le mouvement de boycott vise à exercer une pression économique et politique sur Israël pour qu'il se conforme au droit international et respecte les droits des Palestiniens. 
-        Cette forme de résistance non-violente s'inspire du mouvement anti-apartheid sud-africain et a gagné un soutien mondial significatif.
-        
-        Voici une liste détaillée des entreprises qui soutiennent Israël, avec des explications sur leurs implications et des alternatives que vous pouvez utiliser à la place.
-        """)
-        
-        # Get boycott data
-        boycott_data = get_boycott_data()
-        
-        # Create tabs for different categories
-        boycott_tabs = st.tabs(list(boycott_data.keys()))
-        
-        # Display detailed boycott information for each category
-        for i, (category, tab) in enumerate(zip(boycott_data.keys(), boycott_tabs)):
-            with tab:
-                st.markdown(f"### {category}")
-                
-                for company in boycott_data[category]["companies"]:
-                    st.markdown(f"""
-                    <div class="company-card">
-                        <div class="company-name">{company['name']}</div>
-                        <div class="company-reason">{company['reason']}</div>
-                        <div class="company-action">Action recommandée: {company['action']}</div>
-                        <div class="company-alternatives">
-                            <strong>Alternatives:</strong> {', '.join(company['alternatives'])}
-                        </div>
-                    </div>
-                    """, unsafe_allow_html=True)
-        
-        st.markdown("""
-        ### Comment soutenir Gaza
-        
-        1. **Boycotter les produits**: Évitez d'acheter des produits des entreprises qui soutiennent Israël
-        2. **Choisir des alternatives**: Utilisez les alternatives suggérées ou trouvez des options locales
-        3. **Sensibiliser**: Partagez des informations sur la situation à Gaza
-        4. **Faire des dons**: Soutenez les organisations humanitaires travaillant à Gaza
-        5. **Plaider**: Contactez vos représentants pour exiger des actions
-        6. **Participer aux manifestations**: Participez à des manifestations pacifiques
-        
-        N'oubliez pas que la pression économique par le biais des boycotts a historiquement été une stratégie de résistance non-violente efficace.
-        """)
-        
-        # Add information about the BDS movement
-        st.markdown("""
-        ### Le mouvement BDS (Boycott, Désinvestissement, Sanctions)
-        
-        Le mouvement BDS a été lancé en 2005 par la société civile palestinienne. Il appelle à trois actions principales:
-        
-        1. **Boycott**: Refuser d'acheter des produits et services des entreprises complices de l'occupation
-        2. **Désinvestissement**: Retirer les investissements des entreprises et institutions qui profitent de l'occupation
-        3. **Sanctions**: Faire pression pour des sanctions contre Israël jusqu'à ce qu'il respecte le droit international
-        
-        Le mouvement BDS a trois demandes fondamentales:
-        1. Mettre fin à l'occupation et à la colonisation de toutes les terres arabes
-        2. Reconnaître les droits fondamentaux des citoyens arabes-palestiniens d'Israël à une pleine égalité
-        3. Respecter, protéger et promouvoir les droits des réfugiés palestiniens à retourner dans leurs foyers et propriétés
-        
-        Pour plus d'informations, visitez [le site officiel du mouvement BDS](https://bdsmovement.net/).
-        """)
-    
-    elif st.session_state.show_education:
-        st.markdown("<div class='section-title'>Ressources Éducatives sur la Palestine</div>", unsafe_allow_html=True)
-        
-        st.markdown("""
-        Cette section fournit des ressources éducatives pour vous aider à en apprendre davantage sur la Palestine, son histoire, sa culture et sa situation actuelle.
-        Les informations présentées ici sont basées sur des sources fiables, notamment des rapports d'organisations de défense des droits humains, des documents des Nations Unies, des études académiques et des témoignages directs.
-        """)
-        
-        # Get educational resources
-        resources = get_educational_resources()
-        
-        # Create tabs for different categories
-        education_tabs = st.tabs(list(resources.keys()))
-        
-        # Display educational resources for each category
-        for i, (category, tab) in enumerate(zip(resources.keys(), education_tabs)):
-            with tab:
-                st.markdown(f"### {category}")
-                
-                for resource in resources[category]:
-                    st.markdown(f"""
-                    <div class="resource-card">
-                        <div class="resource-title">{resource['title']}</div>
-                        <div class="resource-description">{resource['description']}</div>
-                        <div class="resource-facts">
-                            <strong>Faits clés:</strong>
-                            <div style="margin-top: 10px;">
-                    """, unsafe_allow_html=True)
+        if st.session_state.language == 'english':
+            st.markdown("<div class='section-title'>Boycott Information</div>", unsafe_allow_html=True)
+            
+            st.markdown("""
+            The boycott movement aims to apply economic and political pressure on Israel to comply with international law and Palestinian rights. 
+            This form of non-violent resistance is inspired by the South African anti-apartheid movement and has gained significant global support.
+            
+            Below is a detailed list of companies that support Israel, with explanations of their involvement and alternatives you can use instead.
+            """)
+            
+            # Get boycott data
+            boycott_data = get_boycott_data()
+            
+            # Create tabs for different categories
+            boycott_tabs = st.tabs(list(boycott_data.keys()))
+            
+            # Display detailed boycott information for each category
+            for i, (category, tab) in enumerate(zip(boycott_data.keys(), boycott_tabs)):
+                with tab:
+                    st.markdown(f"### {category}")
                     
-                    for fact in resource['key_facts']:
-                        st.markdown(f'<div class="fact-item">{fact}</div>', unsafe_allow_html=True)
-                    
-                    st.markdown(f"""
+                    for company in boycott_data[category]["companies"]:
+                        st.markdown(f"""
+                        <div class="company-card">
+                            <div class="company-name">{company['name']}</div>
+                            <div class="company-reason">{company['reason']}</div>
+                            <div class="company-action">Recommended action: {company['action']}</div>
+                            <div class="company-alternatives">
+                                <strong>Alternatives:</strong> {', '.join(company['alternatives'])}
                             </div>
                         </div>
-                        <div class="resource-sources">
-                            <strong>Sources:</strong> {', '.join(resource['sources'])}
+                        """, unsafe_allow_html=True)
+            
+            st.markdown("""
+            ### How to Support Gaza
+            
+            1. **Boycott Products**: Avoid purchasing products from companies supporting Israel
+            2. **Choose Alternatives**: Use the suggested alternatives or find local options
+            3. **Raise Awareness**: Share information about the situation in Gaza
+            4. **Donate**: Support humanitarian organizations working in Gaza
+            5. **Advocate**: Contact your representatives to demand action
+            6. **Join Protests**: Participate in peaceful demonstrations
+            
+            Remember that economic pressure through boycotts has historically been an effective non-violent resistance strategy.
+            """)
+            
+            # Add information about the BDS movement
+            st.markdown("""
+            ### The BDS Movement (Boycott, Divestment, Sanctions)
+            
+            The BDS movement was launched in 2005 by Palestinian civil society. It calls for three main actions:
+            
+            1. **Boycott**: Refusing to purchase products and services from companies complicit in the occupation
+            2. **Divestment**: Withdrawing investments from companies and institutions that profit from the occupation
+            3. **Sanctions**: Pressuring for sanctions against Israel until it complies with international law
+            
+            The BDS movement has three fundamental demands:
+            1. End the occupation and colonization of all Arab lands
+            2. Recognize the fundamental rights of Arab-Palestinian citizens of Israel to full equality
+            3. Respect, protect, and promote the rights of Palestinian refugees to return to their homes and properties
+            
+            For more information, visit [the official BDS movement website](https://bdsmovement.net/).
+            """)
+        else:  # Arabic
+            st.markdown("<div class='section-title' dir='rtl'>معلومات المقاطعة</div>", unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div dir="rtl">
+            تهدف حركة المقاطعة إلى ممارسة ضغط اقتصادي وسياسي على إسرائيل للامتثال للقانون الدولي وحقوق الفلسطينيين.
+            هذا الشكل من المقاومة اللاعنفية مستوحى من حركة مناهضة الفصل العنصري في جنوب أفريقيا وقد اكتسب دعمًا عالميًا كبيرًا.
+            
+            فيما يلي قائمة مفصلة بالشركات التي تدعم إسرائيل، مع شرح لتورطها والبدائل التي يمكنك استخدامها بدلاً منها.
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Get boycott data
+            boycott_data = get_boycott_data()
+            
+            # Create tabs for different categories
+            boycott_tabs = st.tabs(list(boycott_data.keys()))
+            
+            # Display detailed boycott information for each category
+            for i, (category, tab) in enumerate(zip(boycott_data.keys(), boycott_tabs)):
+                with tab:
+                    st.markdown(f"<h3 dir='rtl'>{category}</h3>", unsafe_allow_html=True)
+                    
+                    for company in boycott_data[category]["companies"]:
+                        st.markdown(f"""
+                        <div class="company-card" dir="rtl">
+                            <div class="company-name">{company['name']}</div>
+                            <div class="company-reason">{company['reason']}</div>
+                            <div class="company-action">الإجراء الموصى به: {company['action']}</div>
+                            <div class="company-alternatives">
+                                <strong>البدائل:</strong> {', '.join(company['alternatives'])}
+                            </div>
                         </div>
-                    </div>
-                    """, unsafe_allow_html=True)
-        
-        # Add recommended reading and viewing section
-        st.markdown("""
-        ### Lectures et visionnages recommandés
-        
-        #### Livres
-        - **"La Question de Palestine"** par Edward Said
-        - **"Palestine: Une histoire moderne"** par Ilan Pappé
-        - **"Le Nettoyage ethnique de la Palestine"** par Ilan Pappé
-        - **"Gaza en crise"** par Noam Chomsky et Ilan Pappé
-        - **"Un Siècle de colonialisme en Palestine"** par Rashid Khalidi
-        
-        #### Documentaires
-        - **"5 Caméras Brisées"** (2011) de Emad Burnat et Guy Davidi
-        - **"Le Sel de la mer"** (2008) de Annemarie Jacir
-        - **"Gaza Fight for Freedom"** (2019) de Abby Martin
-        - **"Occupation 101"** (2006) de Sufyan Omeish et Abdallah Omeish
-        - **"The Wanted 18"** (2014) de Amer Shomali et Paul Cowan
-        
-        #### Sites web fiables
-        - [Al Jazeera](https://www.aljazeera.com/palestine-israel-conflict/) - Couverture complète des questions du Moyen-Orient
-        - [B'Tselem](https://www.btselem.org/) - Centre d'information israélien pour les droits humains dans les territoires occupés
-        - [Institut d'études palestiniennes](https://www.palestine-studies.org/) - Recherche académique sur la Palestine
-        - [UNRWA](https://www.unrwa.org/) - Office de secours et de travaux des Nations Unies pour les réfugiés de Palestine
-        - [Electronic Intifada](https://electronicintifada.net/) - Actualités, commentaires et analyses sur la Palestine
-        """)
+                        """, unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div dir="rtl">
+            ### كيفية دعم غزة
+            
+            1. **مقاطعة المنتجات**: تجنب شراء منتجات من الشركات التي تدعم إسرائيل
+            2. **اختيار البدائل**: استخدم البدائل المقترحة أو ابحث عن خيارات محلية
+            3. **نشر الوعي**: شارك المعلومات حول الوضع في غزة
+            4. **التبرع**: دعم المنظمات الإنسانية العاملة في غزة
+            5. **المناصرة**: اتصل بممثليك للمطالبة باتخاذ إجراءات
+            6. **الانضمام إلى الاحتجاجات**: المشاركة في المظاهرات السلمية
+            
+            تذكر أن الضغط الاقتصادي من خلال المقاطعة كان تاريخياً استراتيجية مقاومة لاعنفية فعالة.
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Add information about the BDS movement in Arabic
+            st.markdown("""
+            <div dir="rtl">
+            ### حركة المقاطعة وسحب الاستثمارات وفرض العقوبات (BDS)
+            
+            تم إطلاق حركة المقاطعة في عام 2005 من قبل المجتمع المدني الفلسطيني. وهي تدعو إلى ثلاثة إجراءات رئيسية:
+            
+            1. **المقاطعة**: رفض شراء المنتجات والخدمات من الشركات المتواطئة في الاحتلال
+            2. **سحب الاستثمارات**: سحب الاستثمارات من الشركات والمؤسسات التي تستفيد من الاحتلال
+            3. **العقوبات**: الضغط من أجل فرض عقوبات على إسرائيل حتى تمتثل للقانون الدولي
+            
+            لحركة المقاطعة ثلاثة مطالب أساسية:
+            1. إنهاء الاحتلال والاستعمار لجميع الأراضي العربية
+            2. الاعتراف بالحقوق الأساسية للمواطنين العرب الفلسطينيين في إسرائيل للمساواة الكاملة
+            3. احترام وحماية وتعزيز حقوق اللاجئين الفلسطينيين في العودة إلى ديارهم وممتلكاتهم
+            
+            لمزيد من المعلومات، قم بزيارة [الموقع الرسمي لحركة المقاطعة](https://bdsmovement.net/).
+            </div>
+            """, unsafe_allow_html=True)
+    
+    elif st.session_state.show_education:
+        if st.session_state.language == 'english':
+            st.markdown("<div class='section-title'>Educational Resources on Palestine</div>", unsafe_allow_html=True)
+            
+            st.markdown("""
+            This section provides educational resources to help you learn more about Palestine, its history, culture, and current situation.
+            The information presented here is based on reliable sources, including reports from human rights organizations, United Nations documents, academic studies, and direct testimonies.
+            """)
+            
+            # Get educational resources
+            resources = get_educational_resources()
+            
+            # Create tabs for different categories
+            education_tabs = st.tabs(list(resources.keys()))
+            
+            # Display educational resources for each category
+            for i, (category, tab) in enumerate(zip(resources.keys(), education_tabs)):
+                with tab:
+                    st.markdown(f"### {category}")
+                    
+                    for resource in resources[category]:
+                        st.markdown(f"""
+                        <div class="resource-card">
+                            <div class="resource-title">{resource['title']}</div>
+                            <div class="resource-description">{resource['description']}</div>
+                            <div class="resource-facts">
+                                <strong>Key Facts:</strong>
+                                <div style="margin-top: 10px;">
+                        """, unsafe_allow_html=True)
+                        
+                        for fact in resource['key_facts']:
+                            st.markdown(f'<div class="fact-item">{fact}</div>', unsafe_allow_html=True)
+                        
+                        st.markdown(f"""
+                                </div>
+                            </div>
+                            <div class="resource-sources">
+                                <strong>Sources:</strong> {', '.join(resource['sources'])}
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+            
+            # Add recommended reading and viewing section
+            st.markdown("""
+            ### Recommended Reading and Viewing
+            
+            #### Books
+            - **"The Question of Palestine"** by Edward Said
+            - **"Palestine: A Modern History"** by Ilan Pappé
+            - **"The Ethnic Cleansing of Palestine"** by Ilan Pappé
+            - **"Gaza in Crisis"** by Noam Chomsky and Ilan Pappé
+            - **"The Hundred Years' War on Palestine"** by Rashid Khalidi
+            
+            #### Documentaries
+            - **"5 Broken Cameras"** (2011) by Emad Burnat and Guy Davidi
+            - **"The Salt of This Sea"** (2008) by Annemarie Jacir
+            - **"Gaza Fight for Freedom"** (2019) by Abby Martin
+            - **"Occupation 101"** (2006) by Sufyan Omeish and Abdallah Omeish
+            - **"The Wanted 18"** (2014) by Amer Shomali and Paul Cowan
+            
+            #### Reliable Websites
+            - [Al Jazeera](https://www.aljazeera.com/palestine-israel-conflict/) - Comprehensive coverage of Middle East issues
+            - [B'Tselem](https://www.btselem.org/) - Israeli Information Center for Human Rights in the Occupied Territories
+            - [Institute for Palestine Studies](https://www.palestine-studies.org/) - Academic research on Palestine
+            - [UNRWA](https://www.unrwa.org/) - UN Relief and Works Agency for Palestine Refugees
+            - [Electronic Intifada](https://electronicintifada.net/) - News, commentary, analysis, and reference materials about Palestine
+            """)
+        else:  # Arabic
+            st.markdown("<div class='section-title' dir='rtl'>موارد تعليمية عن فلسطين</div>", unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div dir="rtl">
+            يوفر هذا القسم موارد تعليمية لمساعدتك على معرفة المزيد عن فلسطين وتاريخها وثقافتها ووضعها الحالي.
+            تستند المعلومات المقدمة هنا إلى مصادر موثوقة، بما في ذلك تقارير من منظمات حقوق الإنسان، ووثائق الأمم المتحدة، والدراسات الأكاديمية، والشهادات المباشرة.
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Get educational resources
+            resources = get_educational_resources()
+            
+            # Create tabs for different categories
+            education_tabs = st.tabs(list(resources.keys()))
+            
+            # Display educational resources for each category
+            for i, (category, tab) in enumerate(zip(resources.keys(), education_tabs)):
+                with tab:
+                    st.markdown(f"<h3 dir='rtl'>{category}</h3>", unsafe_allow_html=True)
+                    
+                    for resource in resources[category]:
+                        st.markdown(f"""
+                        <div class="resource-card" dir="rtl">
+                            <div class="resource-title">{resource['title']}</div>
+                            <div class="resource-description">{resource['description']}</div>
+                            <div class="resource-facts">
+                                <strong>حقائق رئيسية:</strong>
+                                <div style="margin-top: 10px;">
+                        """, unsafe_allow_html=True)
+                        
+                        for fact in resource['key_facts']:
+                            st.markdown(f'<div class="fact-item">{fact}</div>', unsafe_allow_html=True)
+                        
+                        st.markdown(f"""
+                                </div>
+                            </div>
+                            <div class="resource-sources">
+                                <strong>المصادر:</strong> {', '.join(resource['sources'])}
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+            
+            # Add recommended reading and viewing section in Arabic
+            st.markdown("""
+            <div dir="rtl">
+            ### قراءات ومشاهدات موصى بها
+            
+            #### كتب
+            - **"مسألة فلسطين"** لإدوارد سعيد
+            - **"فلسطين: تاريخ حديث"** لإيلان بابيه
+            - **"التطهير العرقي في فلسطين"** لإيلان بابيه
+            - **"غزة في أزمة"** لنعوم تشومسكي وإيلان بابيه
+            - **"حرب المائة عام على فلسطين"** لرشيد الخالدي
+            
+            #### أفلام وثائقية
+            - **"خمس كاميرات محطمة"** (2011) لعماد برناط وغاي دافيدي
+            - **"ملح هذا البحر"** (2008) لآن ماري جاسر
+            - **"غزة تقاتل من أجل الحرية"** (2019) لآبي مارتن
+            - **"احتلال 101"** (2006) لسفيان عميش وعبد الله عميش
+            - **"المطلوبون الـ18"** (2014) لعامر الشوملي وبول كوان
+            
+            #### مواقع موثوقة
+            - [الجزيرة](https://www.aljazeera.com/palestine-israel-conflict/) - تغطية شاملة لقضايا الشرق الأوسط
+            - [بتسيلم](https://www.btselem.org/) - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة
+            - [معهد الدراسات الفلسطينية](https://www.palestine-studies.org/) - أبحاث أكاديمية حول فلسطين
+            - [الأونروا](https://www.unrwa.org/) - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين
+            - [الانتفاضة الإلكترونية](https://electronicintifada.net/) - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين
+            </div>
+            """, unsafe_allow_html=True)
 
     # Footer
-    st.markdown("<div class='footer'>Palestine AI - Développé par Elkalem-Imrou Height School en collaboration avec Erinov Company</div>", unsafe_allow_html=True)
+    if st.session_state.language == 'english':
+        st.markdown("<div class='footer'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+    else:  # Arabic
+        st.markdown("<div class='footer' dir='rtl'>الذكاء الاصطناعي لفلسطين - تم تطويره بواسطة مدرسة الكلم-إمرؤ هايت بالتعاون مع شركة إرينوف</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
