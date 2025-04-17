@@ -910,7 +910,8 @@ def main():
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-               
+                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">تحدث مع الذكاء الاصطناعي حول فلسطين</h2>
+                <h3 style="font-weight: 600; margin-top: 15px; margin-bottom: 10px;">اطرح سؤالك</h3>
                 <p style="font-size: 1.05em;">احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضايا الإنسانية.</p>
             </div>
             """, unsafe_allow_html=True)
@@ -1042,46 +1043,36 @@ def main():
                             </div>
                             """, unsafe_allow_html=True)
             
-            st.markdown("""
-            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h3 style="font-weight: 700; color: #1f77b4; margin: 20px 0 15px 0;">كيفية دعم غزة</h3>
-                
-                <ol style="padding-right: 20px; margin-bottom: 20px;">
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">مقاطعة المنتجات:</strong> تجنب شراء منتجات من الشركات التي تدعم إسرائيل</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">اختيار البدائل:</strong> استخدم البدائل المقترحة أو ابحث عن خيارات محلية</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">نشر الوعي:</strong> شارك المعلومات حول الوضع في غزة</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">التبرع:</strong> دعم المنظمات الإنسانية العاملة في غزة</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">المناصرة:</strong> اتصل بممثليك للمطالبة باتخاذ إجراءات</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">الانضمام إلى الاحتجاجات:</strong> المشاركة في المظاهرات السلمية</li>
-                </ol>
-                
-                <p style="font-size: 1.05em; text-align: justify; font-style: italic;">تذكر أن الضغط الاقتصادي من خلال المقاطعة كان تاريخياً استراتيجية مقاومة لاعنفية فعالة.</p>
-            </div>
-            """, unsafe_allow_html=True)
+            # Utiliser des composants Streamlit natifs pour la section "Comment soutenir Gaza" en arabe
+            st.markdown("<h3 style='font-weight: 700; color: #1f77b4; margin: 20px 0 15px 0; text-align: right;'>كيفية دعم غزة</h3>", unsafe_allow_html=True)
             
-            # Add information about the BDS movement in Arabic
-            st.markdown("""
-            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h3 style="font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0;">حركة المقاطعة وسحب الاستثمارات وفرض العقوبات (BDS)</h3>
-                
-                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">تم إطلاق حركة المقاطعة في عام 2005 من قبل المجتمع المدني الفلسطيني. وهي تدعو إلى ثلاثة إجراءات رئيسية:</p>
-                
-                <ol style="padding-right: 20px; margin-bottom: 20px;">
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">المقاطعة:</strong> رفض شراء المنتجات والخدمات من الشركات المتواطئة في الاحتلال</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">سحب الاستثمارات:</strong> سحب الاستثمارات من الشركات والمؤسسات التي تستفيد من الاحتلال</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">العقوبات:</strong> الضغط من أجل فرض عقوبات على إسرائيل حتى تمتثل للقانون الدولي</li>
-                </ol>
-                
-                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">لحركة المقاطعة ثلاثة مطالب أساسية:</p>
-                <ol style="padding-right: 20px; margin-bottom: 20px;">
-                    <li style="margin-bottom: 8px;">إنهاء الاحتلال والاستعمار لجميع الأراضي العربية</li>
-                    <li style="margin-bottom: 8px;">الاعتراف بالحقوق الأساسية للمواطنين العرب الفلسطينيين في إسرائيل للمساواة الكاملة</li>
-                    <li style="margin-bottom: 8px;">احترام وحماية وتعزيز حقوق اللاجئين الفلسطينيين في العودة إلى ديارهم وممتلكاتهم</li>
-                </ol>
-                
-                <p style="font-size: 1.05em; text-align: justify;">لمزيد من المعلومات، قم بزيارة <a href="https://bdsmovement.net/" style="color: #1f77b4; font-weight: 600;">الموقع الرسمي لحركة المقاطعة</a>.</p>
-            </div>
-            """, unsafe_allow_html=True)
+            # Utiliser des composants Streamlit natifs pour les listes
+            st.markdown("<p style='text-align: right; font-weight: 600;'>١. <span style='color: #1f77b4;'>مقاطعة المنتجات:</span> تجنب شراء منتجات من الشركات التي تدعم إسرائيل</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٢. <span style='color: #1f77b4;'>اختيار البدائل:</span> استخدم البدائل المقترحة أو ابحث عن خيارات محلية</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٣. <span style='color: #1f77b4;'>نشر الوعي:</span> شارك المعلومات حول الوضع في غزة</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٤. <span style='color: #1f77b4;'>التبرع:</span> دعم المنظمات الإنسانية العاملة في غزة</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٥. <span style='color: #1f77b4;'>المناصرة:</span> اتصل بممثليك للمطالبة باتخاذ إجراءات</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٦. <span style='color: #1f77b4;'>الانضمام إلى الاحتجاجات:</span> المشاركة في المظاهرات السلمية</p>", unsafe_allow_html=True)
+            
+            st.markdown("<p style='font-size: 1.05em; text-align: right; font-style: italic;'>تذكر أن الضغط الاقتصادي من خلال المقاطعة كان تاريخياً استراتيجية مقاومة لاعنفية فعالة.</p>", unsafe_allow_html=True)
+            
+            # Add information about the BDS movement in Arabic with improved formatting
+            st.markdown("<h3 style='font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0; text-align: right;'>حركة المقاطعة وسحب الاستثمارات وفرض العقوبات (BDS)</h3>", unsafe_allow_html=True)
+            
+            st.markdown("<p style='font-size: 1.05em; text-align: right; margin-bottom: 15px;'>تم إطلاق حركة المقاطعة في عام 2005 من قبل المجتمع المدني الفلسطيني. وهي تدعو إلى ثلاثة إجراءات رئيسية:</p>", unsafe_allow_html=True)
+            
+            # Utiliser des paragraphes individuels pour les éléments de liste
+            st.markdown("<p style='text-align: right; font-weight: 600;'>١. <span style='color: #1f77b4;'>المقاطعة:</span> رفض شراء المنتجات والخدمات من الشركات المتواطئة في الاحتلال</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٢. <span style='color: #1f77b4;'>سحب الاستثمارات:</span> سحب الاستثمارات من الشركات والمؤسسات التي تستفيد من الاحتلال</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٣. <span style='color: #1f77b4;'>العقوبات:</span> الضغط من أجل فرض عقوبات على إسرائيل حتى تمتثل للقانون الدولي</p>", unsafe_allow_html=True)
+            
+            st.markdown("<p style='font-size: 1.05em; text-align: right; margin: 15px 0;'>لحركة المقاطعة ثلاثة مطالب أساسية:</p>", unsafe_allow_html=True)
+            
+            st.markdown("<p style='text-align: right; font-weight: 600;'>١. إنهاء الاحتلال والاستعمار لجميع الأراضي العربية</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٢. الاعتراف بالحقوق الأساسية للمواطنين العرب الفلسطينيين في إسرائيل للمساواة الكاملة</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; font-weight: 600;'>٣. احترام وحماية وتعزيز حقوق اللاجئين الفلسطينيين في العودة إلى ديارهم وممتلكاتهم</p>", unsafe_allow_html=True)
+            
+            st.markdown("<p style='font-size: 1.05em; text-align: right;'>لمزيد من المعلومات، قم بزيارة <a href='https://bdsmovement.net/' style='color: #1f77b4; font-weight: 600;'>الموقع الرسمي لحركة المقاطعة</a>.</p>", unsafe_allow_html=True)
     
     elif st.session_state.show_education:
         if st.session_state.language == 'english':
@@ -1197,74 +1188,47 @@ def main():
                         with st.expander(f"{resource['title']}", expanded=False):
                             st.markdown(f"""
                             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">{resource['description']}</p>
-                                
-                                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">حقائق رئيسية:</h4>
-                                <ul style="padding-right: 20px; margin-bottom: 15px;">
+                                <p style="font-size: 1.05em; text-align: right; margin-bottom: 15px;">{resource['description']}</p>
+                            </div>
                             """, unsafe_allow_html=True)
+                            
+                            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>حقائق رئيسية:</h4>", unsafe_allow_html=True)
                             
                             for fact in resource['key_facts']:
-                                st.markdown(f"""
-                                <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                                    <li style="margin-bottom: 5px;">{fact}</li>
-                                </div>
-                                """, unsafe_allow_html=True)
+                                st.markdown(f"<p style='text-align: right; margin-bottom: 5px;'>• {fact}</p>", unsafe_allow_html=True)
                             
-                            st.markdown(f"""
-                            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                                </ul>
-                                
-                                <h4 style="font-weight: 600; color: #1f77b4; margin: 15px 0 10px 0;">المصادر:</h4>
-                                <ul style="padding-right: 20px;">
-                            </div>
-                            """, unsafe_allow_html=True)
+                            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>المصادر:</h4>", unsafe_allow_html=True)
                             
                             for source in resource['sources']:
-                                st.markdown(f"""
-                                <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                                    <li style="margin-bottom: 5px;"><a href="{source['url']}" style="color: #1f77b4; text-decoration: underline;">{source['name']}</a></li>
-                                </div>
-                                """, unsafe_allow_html=True)
-                                
-                            st.markdown("""
-                            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                                </ul>
-                            </div>
-                            """, unsafe_allow_html=True)
+                                st.markdown(f"<p style='text-align: right; margin-bottom: 5px;'>• <a href='{source['url']}' style='color: #1f77b4; text-decoration: underline;'>{source['name']}</a></p>", unsafe_allow_html=True)
             
             # Add recommended reading and viewing section in Arabic
-            st.markdown("""
-            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h3 style="font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0;">قراءات ومشاهدات موصى بها</h3>
-                
-                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">كتب</h4>
-                <ul style="padding-right: 20px; margin-bottom: 20px;">
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"مسألة فلسطين"</strong> لإدوارد سعيد</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"الموسوعة اليهودية والصهيونية وإسرائيل"</strong> لعبد الوهاب المسيري</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"التطهير العرقي في فلسطين"</strong> لإيلان بابيه</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"غزة في أزمة"</strong> لنعوم تشومسكي وإيلان بابيه</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"حرب المائة عام على فلسطين"</strong> لرشيد الخالدي</li>
-                </ul>
-                
-                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">أفلام وثائقية</h4>
-                <ul style="padding-right: 20px; margin-bottom: 20px;">
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"خمس كاميرات محطمة"</strong> (2011) لعماد برناط وغاي دافيدي</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"ملح هذا البحر"</strong> (2008) لآن ماري جاسر</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"غزة تقاتل من أجل الحرية"</strong> (2019) لآبي مارتن</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"احتلال 101"</strong> (2006) لسفيان عميش وعبد الله عميش</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"المطلوبون الـ18"</strong> (2014) لعامر الشوملي وبول كوان</li>
-                </ul>
-                
-                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">مواقع موثوقة</h4>
-                <ul style="padding-right: 20px; margin-bottom: 20px;">
-                    <li style="margin-bottom: 8px;"><a href="https://www.aljazeera.com/palestine-israel-conflict/" style="color: #1f77b4; text-decoration: underline;">الجزيرة</a> - تغطية شاملة لقضايا الشرق الأوسط</li>
-                    <li style="margin-bottom: 8px;"><a href="https://www.btselem.org/" style="color: #1f77b4; text-decoration: underline;">بتسيلم</a> - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة</li>
-                    <li style="margin-bottom: 8px;"><a href="https://www.palestine-studies.org/" style="color: #1f77b4; text-decoration: underline;">معهد الدراسات الفلسطينية</a> - أبحاث أكاديمية حول فلسطين</li>
-                    <li style="margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</li>
-                    <li style="margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</li>
-                </ul>
-            </div>
-            """, unsafe_allow_html=True)
+            # Recommended reading section with improved formatting for mobile
+            st.markdown("<h3 style='font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0; text-align: right;'>قراءات ومشاهدات موصى بها</h3>", unsafe_allow_html=True)
+            
+            # Books section
+            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>كتب</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"مسألة فلسطين"</strong> لإدوارد سعيد</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"الموسوعة اليهودية والصهيونية وإسرائيل"</strong> لعبد الوهاب المسيري</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"التطهير العرقي في فلسطين"</strong> لإيلان بابيه</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"غزة في أزمة"</strong> لنعوم تشومسكي وإيلان بابيه</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"حرب المائة عام على فلسطين"</strong> لرشيد الخالدي</p>", unsafe_allow_html=True)
+            
+            # Documentaries section
+            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>أفلام وثائقية</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"خمس كاميرات محطمة"</strong> (2011) لعماد برناط وغاي دافيدي</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"ملح هذا البحر"</strong> (2008) لآن ماري جاسر</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"غزة تقاتل من أجل الحرية"</strong> (2019) لآبي مارتن</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"احتلال 101"</strong> (2006) لسفيان عميش وعبد الله عميش</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"المطلوبون الـ18"</strong> (2014) لعامر الشوملي وبول كوان</p>", unsafe_allow_html=True)
+            
+            # Websites section
+            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>مواقع موثوقة</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.aljazeera.com/palestine-israel-conflict/' style='color: #1f77b4; text-decoration: underline;'>الجزيرة</a> - تغطية شاملة لقضايا الشرق الأوسط</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.btselem.org/' style='color: #1f77b4; text-decoration: underline;'>بتسيلم</a> - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.palestine-studies.org/' style='color: #1f77b4; text-decoration: underline;'>معهد الدراسات الفلسطينية</a> - أبحاث أكاديمية حول فلسطين</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.unrwa.org/' style='color: #1f77b4; text-decoration: underline;'>الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://electronicintifada.net/' style='color: #1f77b4; text-decoration: underline;'>الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>", unsafe_allow_html=True)
 
     # Footer
     if st.session_state.language == 'english':
