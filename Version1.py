@@ -910,8 +910,8 @@ def main():
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">تحدث مع الذكاء الاصطناعي حول فلسطين</h2>
-                <h3 style="font-weight: 600; margin-top: 15px; margin-bottom: 10px;">اطرح سؤالك</h3>
+   
+        
                 <p style="font-size: 1.05em;">احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضايا الإنسانية.</p>
             </div>
             """, unsafe_allow_html=True)
@@ -1036,13 +1036,12 @@ def main():
                 <h3 style="font-weight: 700; color: #1f77b4; margin: 20px 0 15px 0;">كيفية دعم غزة</h3>
                 
                 <ol style="padding-right: 20px; margin-bottom: 20px;">
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">مقاطعة المنتجات:</strong> تجنب شراء منتجات من الشركات التي تدعم إسرائيل</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">اختيار البدائل:</strong> استخدم البدائل المقترحة أو ابحث عن خيارات محلية</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">نشر الوعي:</strong> شارك المعلومات حول الوضع في غزة</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">التبرع:</strong> دعم المنظمات الإنسانية العاملة في غزة</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">المناصرة:</strong> اتصل بممثليك للمطالبة باتخاذ إجراءات</li>
-                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">الانضمام إلى الاحتجاجات:</strong> المشاركة في المظاهرات السلمية</li>
-                </ol>
+                    < تجنب شراء منتجات من الشركات التي تدعم إسرائيل>
+                    <استخدم البدائل المقترحة أو ابحث عن خيارات محلية>
+                    <شارك المعلومات حول الوضع في غزة>
+                    <دعم المنظمات الإنسانية العاملة في غزة>
+                    <تواصل مع ممثليك وزملائك للمطالبة باتخاذ إجراءات المناصرة>
+                    <المشاركة في المظاهرات السلمية>
                 
                 <p style="font-size: 1.05em; text-align: justify; font-style: italic;">تذكر أن الضغط الاقتصادي من خلال المقاطعة كان تاريخياً استراتيجية مقاومة لاعنفية فعالة.</p>
             </div>
