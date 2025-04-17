@@ -1,4 +1,4 @@
-import streamlit as st
+deimport streamlit as st
 import google.generativeai as genai
 import time
 import os
@@ -1068,7 +1068,7 @@ def main():
         if st.session_state.language == 'english':
             st.markdown("<div class='section-title'>Chat with AI about Palestine</div>", unsafe_allow_html=True)
             
-            # User input section with enhanced styling
+              # User input section with enhanced styling
             st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
             st.markdown("### Ask Your Question")
             st.markdown("Get accurate, detailed information about Palestine's history, current events, and humanitarian issues.")
@@ -1077,6 +1077,8 @@ def main():
             
             # Add a submit button for better UX
             submit_button = st.button("Get Answer")
+        else:  # Arabic
+            st.markdown("<div class='section-title' dir='rtl'> Chat with AI about Palestine </div>", unsafe_allow_html=True)
     
             
             
