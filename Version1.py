@@ -348,7 +348,11 @@ def get_educational_resources():
             {
                 "title": "The Nakba: Palestinian Exodus of 1948",
                 "description": "The Nakba (catastrophe in Arabic) refers to the mass expulsion and dispossession of Palestinians during the creation of the State of Israel in 1948. Over 750,000 Palestinians were forced to leave their homes, and more than 500 Palestinian villages were destroyed.",
-                "sources": ["Institute for Palestine Studies", "UN Archives", "Survivor testimonies"],
+                "sources": [
+                    {"name": "Institute for Palestine Studies", "url": "https://www.palestine-studies.org/"},
+                    {"name": "UN Archives", "url": "https://archives.un.org/"},
+                    {"name": "Palestinian Journeys", "url": "https://www.paljourneys.org/en/timeline/highlight/165/nakba"}
+                ],
                 "key_facts": [
                     "Over 750,000 Palestinians displaced",
                     "More than 500 Palestinian villages destroyed",
@@ -359,7 +363,11 @@ def get_educational_resources():
             {
                 "title": "The 1967 Occupation and Its Consequences",
                 "description": "In June 1967, Israel occupied the West Bank, East Jerusalem, the Gaza Strip, the Golan Heights, and the Sinai Peninsula during the Six-Day War. This occupation, which continues today (except for Sinai), has led to the expansion of illegal Israeli settlements and a system of military control over the Palestinian population.",
-                "sources": ["United Nations", "B'Tselem", "Human Rights Watch"],
+                "sources": [
+                    {"name": "United Nations", "url": "https://www.un.org/unispal/"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/"},
+                    {"name": "Human Rights Watch", "url": "https://www.hrw.org/middle-east/north-africa/israel/palestine"}
+                ],
                 "key_facts": [
                     "Over 600,000 Israeli settlers live illegally in the West Bank and East Jerusalem",
                     "More than 60% of the West Bank is under full Israeli control (Area C)",
@@ -370,7 +378,11 @@ def get_educational_resources():
             {
                 "title": "The Oslo Accords and the Failure of the Peace Process",
                 "description": "The Oslo Accords, signed in 1993-1995, were supposed to lead to a two-state solution within a five-year timeframe. However, they failed due to continued Israeli settlement expansion, violations of the agreements, and lack of political will to resolve fundamental issues such as Jerusalem, refugees, and borders.",
-                "sources": ["Oslo Accords documents", "United Nations", "Diplomatic analyses"],
+                "sources": [
+                    {"name": "Oslo Accords documents", "url": "https://peacemaker.un.org/israelopt-osloaccord93"},
+                    {"name": "United Nations", "url": "https://www.un.org/unispal/"},
+                    {"name": "Al Jazeera", "url": "https://www.aljazeera.com/features/2013/9/13/oslo-accords-the-road-to-nowhere"}
+                ],
                 "key_facts": [
                     "Division of the West Bank into Areas A, B, and C with different levels of control",
                     "Creation of the Palestinian Authority as an interim government",
@@ -381,7 +393,12 @@ def get_educational_resources():
             {
                 "title": "The Gaza Blockade Since 2007",
                 "description": "Since 2007, the Gaza Strip has been under a land, air, and sea blockade imposed by Israel and Egypt. This blockade has created a catastrophic humanitarian crisis, limiting access to food, medicine, electricity, and clean water for more than 2 million Palestinians living in this coastal enclave.",
-                "sources": ["UNRWA", "WHO", "OCHA", "Oxfam"],
+                "sources": [
+                    {"name": "UNRWA", "url": "https://www.unrwa.org/where-we-work/gaza-strip"},
+                    {"name": "WHO", "url": "https://www.who.int/health-topics/occupied-palestinian-territory"},
+                    {"name": "OCHA", "url": "https://www.ochaopt.org/location/gaza-strip"},
+                    {"name": "Oxfam", "url": "https://www.oxfam.org/en/what-we-do/countries/occupied-palestinian-territory-and-israel"}
+                ],
                 "key_facts": [
                     "Over 2 million people live in an area of 365 km²",
                     "More than 95% of water is unfit for human consumption",
@@ -395,7 +412,12 @@ def get_educational_resources():
             {
                 "title": "The Apartheid System in Occupied Palestine",
                 "description": "Numerous human rights organizations, including Amnesty International, Human Rights Watch, and B'Tselem, have concluded that Israel practices apartheid against Palestinians. This system includes discriminatory laws, territorial segregation, movement restrictions, and unequal allocation of resources.",
-                "sources": ["Amnesty International", "Human Rights Watch", "B'Tselem", "Al-Haq"],
+                "sources": [
+                    {"name": "Amnesty International", "url": "https://www.amnesty.org/en/latest/campaigns/2022/02/israels-system-of-apartheid/"},
+                    {"name": "Human Rights Watch", "url": "https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/publications/fulltext/202101_this_is_apartheid"},
+                    {"name": "Al-Haq", "url": "https://www.alhaq.org/"}
+                ],
                 "key_facts": [
                     "Two separate legal systems in the West Bank: civil law for settlers, military law for Palestinians",
                     "More than 65 discriminatory laws against Palestinian citizens of Israel",
@@ -406,7 +428,11 @@ def get_educational_resources():
             {
                 "title": "Administrative Detention and Political Prisoners",
                 "description": "Israel extensively uses administrative detention to imprison Palestinians without charge or trial, based on 'secret evidence.' Thousands of Palestinians, including children, are detained in conditions that often violate international law.",
-                "sources": ["Addameer", "International Committee of the Red Cross", "UNICEF"],
+                "sources": [
+                    {"name": "Addameer", "url": "https://www.addameer.org/"},
+                    {"name": "International Committee of the Red Cross", "url": "https://www.icrc.org/en/where-we-work/middle-east/israel-and-occupied-territories"},
+                    {"name": "UNICEF", "url": "https://www.unicef.org/sop/"}
+                ],
                 "key_facts": [
                     "More than 800,000 Palestinians detained since 1967",
                     "Approximately 500-700 Palestinian children arrested each year",
@@ -417,7 +443,11 @@ def get_educational_resources():
             {
                 "title": "Restrictions on Freedom of Movement",
                 "description": "Palestinians face a complex system of movement restrictions including checkpoints, the separation wall, settler-only roads, and a permit system that severely limits their ability to move freely in their own territory.",
-                "sources": ["OCHA", "B'Tselem", "Machsom Watch"],
+                "sources": [
+                    {"name": "OCHA", "url": "https://www.ochaopt.org/theme/movement-and-access"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/freedom_of_movement"},
+                    {"name": "Machsom Watch", "url": "https://machsomwatch.org/en"}
+                ],
                 "key_facts": [
                     "More than 700 physical obstacles in the West Bank (checkpoints, roadblocks, etc.)",
                     "The separation wall extends for 712 km, 85% of which is inside the West Bank",
@@ -428,7 +458,12 @@ def get_educational_resources():
             {
                 "title": "Home Demolitions and Forced Displacement",
                 "description": "Israel regularly practices Palestinian home demolitions, either as punitive measures or under the pretext of lacking building permits (which are systematically denied to Palestinians). These practices constitute serious violations of international humanitarian law.",
-                "sources": ["OCHA", "B'Tselem", "Al-Haq", "Norwegian Refugee Council"],
+                "sources": [
+                    {"name": "OCHA", "url": "https://www.ochaopt.org/data/demolition"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/topic/planning_and_building"},
+                    {"name": "Al-Haq", "url": "https://www.alhaq.org/"},
+                    {"name": "Norwegian Refugee Council", "url": "https://www.nrc.no/countries/middle-east/palestine/"}
+                ],
                 "key_facts": [
                     "More than 55,000 Palestinian homes demolished since 1967",
                     "Less than 2% of building permit applications approved for Palestinians in Area C",
@@ -441,7 +476,11 @@ def get_educational_resources():
             {
                 "title": "Palestinian Cultural Heritage",
                 "description": "Palestinian culture is rich and diverse, with traditions dating back thousands of years. It includes distinctive cuisine, traditional arts such as embroidery, pottery, and calligraphy, as well as a rich literary and musical tradition.",
-                "sources": ["Arab World Institute", "Palestinian Museum", "UNESCO"],
+                "sources": [
+                    {"name": "Arab World Institute", "url": "https://www.imarabe.org/en"},
+                    {"name": "Palestinian Museum", "url": "https://www.palmuseum.org/"},
+                    {"name": "UNESCO", "url": "https://en.unesco.org/countries/palestine"}
+                ],
                 "key_facts": [
                     "Palestinian embroidery (tatreez) is inscribed on UNESCO's Intangible Cultural Heritage list",
                     "The olive tree is a central symbol of Palestinian identity and resistance",
@@ -452,7 +491,11 @@ def get_educational_resources():
             {
                 "title": "Palestinian Diaspora",
                 "description": "Following the 1948 Nakba and ongoing occupation, a significant Palestinian diaspora has formed worldwide. These communities maintain strong ties to their homeland and play a crucial role in preserving Palestinian identity and advocating for Palestinian rights.",
-                "sources": ["UNRWA", "Institute for Palestine Studies", "Badil"],
+                "sources": [
+                    {"name": "UNRWA", "url": "https://www.unrwa.org/"},
+                    {"name": "Institute for Palestine Studies", "url": "https://www.palestine-studies.org/"},
+                    {"name": "Badil", "url": "https://www.badil.org/"}
+                ],
                 "key_facts": [
                     "More than 7 million Palestinian refugees and displaced persons worldwide",
                     "Significant Palestinian communities in Jordan, Lebanon, Syria, Chile, and the United States",
@@ -463,7 +506,11 @@ def get_educational_resources():
             {
                 "title": "Cultural and Artistic Resistance",
                 "description": "In the face of occupation, Palestinians have developed various forms of cultural and artistic resistance. Palestinian art, music, literature, and cinema serve to preserve national identity, document the realities of occupation, and express aspirations for freedom and self-determination.",
-                "sources": ["Palestinian Film Festival", "Dar Yusuf Nasri Jacir for Art and Research", "Edward Said Institute"],
+                "sources": [
+                    {"name": "Palestinian Film Festival", "url": "https://www.palestinefilminstitute.org/"},
+                    {"name": "Dar Yusuf Nasri Jacir for Art and Research", "url": "https://darjacir.com/"},
+                    {"name": "Edward Said Institute", "url": "https://www.edwardsaid.org/"}
+                ],
                 "key_facts": [
                     "Emergence of internationally recognized Palestinian cinema (Elia Suleiman, Hany Abu-Assad)",
                     "Street art and graffiti on the separation wall as a form of visual protest",
@@ -474,7 +521,11 @@ def get_educational_resources():
             {
                 "title": "Education and Academic Resistance",
                 "description": "Despite obstacles imposed by the occupation, Palestinians place high value on education. Palestinian universities are centers of knowledge production and intellectual resistance, although they are often targeted by Israeli forces.",
-                "sources": ["Birzeit University", "Right to Education Campaign", "PACBI"],
+                "sources": [
+                    {"name": "Birzeit University", "url": "https://www.birzeit.edu/en"},
+                    {"name": "Right to Education Campaign", "url": "https://right2edu.birzeit.edu/"},
+                    {"name": "PACBI", "url": "https://bdsmovement.net/pacbi"}
+                ],
                 "key_facts": [
                     "Literacy rates among the highest in the Arab world despite occupation",
                     "Palestinian universities regularly subjected to raids, closures, and restrictions",
@@ -487,7 +538,10 @@ def get_educational_resources():
             {
                 "title": "The BDS Movement (Boycott, Divestment, Sanctions)",
                 "description": "Launched in 2005 by Palestinian civil society, the BDS movement calls for non-violent measures to pressure Israel to comply with international law and Palestinian rights. Inspired by the South African anti-apartheid movement, it has gained significant global support.",
-                "sources": ["BDS National Committee", "Palestinian Campaign for the Academic and Cultural Boycott of Israel (PACBI)"],
+                "sources": [
+                    {"name": "BDS National Committee", "url": "https://bdsmovement.net/"},
+                    {"name": "Palestinian Campaign for the Academic and Cultural Boycott of Israel (PACBI)", "url": "https://bdsmovement.net/pacbi"}
+                ],
                 "key_facts": [
                     "Three main demands: end of occupation, equality for Palestinian citizens of Israel, right of return for refugees",
                     "Notable successes including divestment by pension funds and universities",
@@ -498,7 +552,11 @@ def get_educational_resources():
             {
                 "title": "Non-violent Popular Resistance",
                 "description": "Palestinians have a long tradition of non-violent popular resistance against occupation, including peaceful demonstrations, sit-ins, and non-violent direct actions. These movements are often violently suppressed by Israeli forces.",
-                "sources": ["Popular Struggle Coordination Committee", "Stop the Wall Campaign", "Al-Haq"],
+                "sources": [
+                    {"name": "Popular Struggle Coordination Committee", "url": "https://popularstruggle.org/"},
+                    {"name": "Stop the Wall Campaign", "url": "https://www.stopthewall.org/"},
+                    {"name": "Al-Haq", "url": "https://www.alhaq.org/"}
+                ],
                 "key_facts": [
                     "Villages like Bil'in, Ni'lin, and Nabi Saleh known for their weekly demonstrations against the wall",
                     "Use of video documentation and social media to expose violations",
@@ -509,7 +567,11 @@ def get_educational_resources():
             {
                 "title": "International Solidarity",
                 "description": "The solidarity movement with Palestine has developed globally, involving civil society organizations, unions, religious groups, students, and human rights activists who support the Palestinian struggle for justice and self-determination.",
-                "sources": ["Palestine Solidarity Campaign", "Jewish Voice for Peace", "BDS Movement"],
+                "sources": [
+                    {"name": "Palestine Solidarity Campaign", "url": "https://www.palestinecampaign.org/"},
+                    {"name": "Jewish Voice for Peace", "url": "https://jewishvoiceforpeace.org/"},
+                    {"name": "BDS Movement", "url": "https://bdsmovement.net/"}
+                ],
                 "key_facts": [
                     "International Day of Solidarity with the Palestinian People celebrated on November 29",
                     "Divestment campaigns in universities and religious institutions",
@@ -520,7 +582,11 @@ def get_educational_resources():
             {
                 "title": "International Recognition of the State of Palestine",
                 "description": "The diplomatic struggle for recognition of the State of Palestine is an important form of political resistance. To date, more than 140 countries have recognized the State of Palestine, although most Western powers have not yet done so.",
-                "sources": ["United Nations", "Palestine Liberation Organization", "Palestinian Ministry of Foreign Affairs"],
+                "sources": [
+                    {"name": "United Nations", "url": "https://www.un.org/unispal/"},
+                    {"name": "Palestine Liberation Organization", "url": "https://www.nad.ps/en"},
+                    {"name": "Palestinian Ministry of Foreign Affairs", "url": "http://www.mofa.pna.ps/en/"}
+                ],
                 "key_facts": [
                     "In 2012, Palestine obtained non-member observer state status at the UN",
                     "Membership in various international organizations, including the International Criminal Court",
@@ -638,249 +704,18 @@ def get_boycott_companies():
 
 # App UI with enhanced professional features
 def main():
+    # Use Streamlit's built-in theme system instead of custom CSS
     st.set_page_config(
         page_title="Palestina-AI", 
         page_icon="🕊️", 
-        layout="wide"
+        layout="wide",
+        initial_sidebar_state="expanded",
+        menu_items={
+            'Get Help': 'https://www.palestineai.org/help',
+            'Report a bug': 'https://www.palestineai.org/bug',
+            'About': 'Palestina AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company'
+        }
     )
-
-    # Custom CSS for a more professional look with dark mode compatibility
-    st.markdown("""
-    <style>
-    .main {
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
-    
-    :root {
-        --primary-color: #1f77b4;
-        --secondary-color: #2ca02c;
-        --danger-color: #d62728;
-        --background-color: #f8f9fa;
-        --card-background: #ffffff;
-        --text-color: #333333;
-        --border-color: #f0f0f0;
-        --quote-color: #1f77b4;
-        --footer-color: #666666;
-    }
-    
-   
-    
-    .stApp {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    .stTextInput > div > div > input {
-        border-radius: 10px;
-    }
-    
-    .stButton > button {
-        border-radius: 10px;
-        background-color: var(--primary-color);
-        color: white;
-        font-weight: bold;
-    }
-    
-    .stExpander {
-        border-radius: 10px;
-        border: 1px solid var(--border-color);
-        background-color: var(--card-background);
-    }
-    
-    h1, h2, h3 {
-        color: var(--primary-color);
-    }
-    
-    .quote-box {
-        border-left: 4px solid var(--quote-color);
-        padding-left: 15px;
-        margin-top: 20px;
-        font-size: 1.2em;
-        font-weight: bold;
-        color: var(--quote-color);
-    }
-    
-    .quote-author {
-        text-align: right;
-        color: var(--text-color);
-        font-style: italic;
-    }
-    
-    .team-member {
-        padding: 5px 0;
-        border-bottom: 1px solid var(--border-color);
-        color: var(--text-color);
-    }
-    
-    .boycott-category {
-        font-weight: bold;
-        color: var(--danger-color);
-        margin-top: 10px;
-    }
-    
-    .boycott-company {
-        margin-left: 15px;
-        padding: 2px 0;
-        color: var(--text-color);
-    }
-    
-    .boycott-alternative {
-        margin-left: 15px;
-        padding: 2px 0;
-        color: var(--secondary-color);
-    }
-    
-    .footer {
-        text-align: center;
-        margin-top: 30px;
-        padding: 10px;
-        font-size: 0.8em;
-        color: var(--footer-color);
-    }
-    
-    .company-card {
-        background-color: var(--card-background);
-        border-radius: 10px;
-        padding: 15px;
-        margin-bottom: 15px;
-        border-left: 4px solid var(--danger-color);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .company-name {
-        font-weight: bold;
-        font-size: 1.1em;
-        margin-bottom: 5px;
-        color: var(--text-color);
-    }
-    
-    .company-reason {
-        margin-bottom: 10px;
-        font-style: italic;
-        color: var(--text-color);
-    }
-    
-    .company-action {
-        font-weight: bold;
-        color: var(--danger-color);
-        margin-bottom: 5px;
-    }
-    
-    .company-alternatives {
-        color: var(--secondary-color);
-    }
-    
-    .resource-card {
-        background-color: var(--card-background);
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        border-left: 5px solid var(--primary-color);
-    }
-    
-    .resource-title {
-        color: var(--primary-color);
-        font-size: 1.3em;
-        margin-bottom: 10px;
-    }
-    
-    .resource-description {
-        margin-bottom: 15px;
-        line-height: 1.6;
-        color: var(--text-color);
-    }
-    
-    .resource-facts {
-        background-color: rgba(31, 119, 180, 0.1);
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        color: var(--text-color);
-    }
-    
-    .resource-sources {
-        font-style: italic;
-        color: var(--footer-color);
-        font-size: 0.9em;
-    }
-    
-    .fact-item {
-        margin-bottom: 5px;
-        padding-left: 20px;
-        position: relative;
-        color: var(--text-color);
-    }
-    
-    .fact-item:before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: var(--primary-color);
-    }
-    
-    .section-title {
-        color: var(--primary-color);
-        font-size: 2em;
-        margin: 30px 0 20px 0;
-        padding-bottom: 10px;
-        border-bottom: 2px solid var(--border-color);
-    }
-    
-    .subsection-title {
-        color: var(--text-color);
-        font-size: 1.5em;
-        margin: 25px 0 15px 0;
-    }
-    
-    .chat-container {
-        background-color: var(--card-background);
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        margin-bottom: 30px;
-    }
-    
-    /* Improved sidebar button styling */
-    .sidebar-button {
-        background-color: var(--primary-color);
-        color: white;
-        border-radius: 10px;
-        padding: 12px 20px;
-        font-weight: bold;
-        margin: 8px 0;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.3s;
-        width: 100%;
-        border: none;
-        display: inline-block;
-        font-size: 16px;
-    }
-    
-    .sidebar-button:hover {
-        background-color: #145a8d;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    /* Language selector styling */
-    .language-selector {
-        margin-top: 15px;
-        margin-bottom: 25px;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: var(--card-background);
-        border: 1px solid var(--border-color);
-    }
-    
-    .language-title {
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: var(--primary-color);
-    }
-    </style>
-    """, unsafe_allow_html=True)
 
     # Create session state variables if they don't exist
     if 'show_chat' not in st.session_state:
@@ -890,6 +725,7 @@ def main():
     if 'show_education' not in st.session_state:
         st.session_state.show_education = False
     if 'language' not in st.session_state:
+        # Set English as default language
         st.session_state.language = 'english'
 
     # Sidebar
@@ -898,7 +734,7 @@ def main():
         st.title("Palestine AI")
         
         # Language selector
-        st.markdown('<div class="language-title">Select Language</div>', unsafe_allow_html=True)
+        st.markdown('### Select Language')
         language_options = {
             'english': 'English / الإنجليزية',
             'arabic': 'Arabic / العربية'
@@ -919,7 +755,7 @@ def main():
         st.markdown("### Navigation")
         
         # Button to show chat
-        if st.button('Chat with Palestina Ai', key='chat_button', use_container_width=True):
+        if st.button('Chat with Palestina AI', key='chat_button', use_container_width=True):
             st.session_state.show_chat = True
             st.session_state.show_boycott = False
             st.session_state.show_education = False
@@ -963,7 +799,7 @@ def main():
             ]
             
             for member in team_members:
-                st.markdown(f"<div class='team-member'>• {member}</div>", unsafe_allow_html=True)
+                st.markdown(f"• {member}")
         
         # Help Section
         with st.expander("Help", expanded=True):
@@ -1007,13 +843,10 @@ def main():
         
         # Quote of the Day section in a professional style
         st.markdown("""
-        <div class="quote-box">
-            "The issue of Palestine is a trial that God has tested your conscience, resolve, wealth, and unity with."
-        </div>
-        <div class="quote-author">
-            — Al-Bashir Al-Ibrahimi
-        </div>
-        """, unsafe_allow_html=True)
+        > "The issue of Palestine is a trial that God has tested your conscience, resolve, wealth, and unity with."
+        >
+        > — Al-Bashir Al-Ibrahimi
+        """)
         
         # Information cards in a grid layout
         col1, col2 = st.columns(2)
@@ -1030,15 +863,15 @@ def main():
             The Palestinian people continue to face severe humanitarian challenges due to ongoing occupation and blockade, particularly in the Gaza Strip, where residents are deprived of access to essential resources and services. These actions constitute clear violations of human rights and international law, which guarantee the right of peoples to live freely and with dignity in their homeland.
             """)
     else:  # Arabic
-        st.title("Palestina AI - From the River To the sea")
+        st.title("Palestina AI - من النهر إلى البحر")
         
-        # Quote of the Day section in Arabic
+        # Quote of the Day section in Arabic with improved font styling
         st.markdown("""
-        <div class="quote-box" dir="rtl">
-            "إن قضية فلسطين محنةٌ امتحن الله بها ضمائركم وهممكم وأموالكم ووحدتكم."
-        </div>
-        <div class="quote-author" dir="rtl">
-            — البشير الإبراهيمي
+        <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+        <blockquote style="border-right: 4px solid #1f77b4; padding-right: 15px; margin-right: 0; font-size: 1.1em;">
+        <p style="font-weight: 600;">"إن قضية فلسطين محنةٌ امتحن الله بها ضمائركم وهممكم وأموالكم ووحدتكم."</p>
+        <footer style="text-align: left; font-style: italic; font-weight: 500;">— البشير الإبراهيمي</footer>
+        </blockquote>
         </div>
         """, unsafe_allow_html=True)
         
@@ -1047,30 +880,27 @@ def main():
         
         with col1:
             st.markdown("""
-            <div dir="rtl">
-            السياق التاريخي
-
-            فلسطين أرض ذات تاريخ عريق يمتد لآلاف السنين، وتؤكد الوثائق التاريخية أن الشعب الفلسطيني هو المالك الشرعي لهذه الأرض. كانت فلسطين موطنًا لسكانها الأصليين، الذين حافظوا على وجودهم وثقافتهم رغم محاولات المحو والتهجير على مر العصور.
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+            <h3 style="font-weight: 700; color: #1f77b4; margin-bottom: 15px;">السياق التاريخي</h3>
+            <p style="font-size: 1.05em; text-align: justify;">فلسطين أرض ذات تاريخ عريق يمتد لآلاف السنين، وتؤكد الوثائق التاريخية أن الشعب الفلسطيني هو المالك الشرعي لهذه الأرض. كانت فلسطين موطنًا لسكانها الأصليين، الذين حافظوا على وجودهم وثقافتهم رغم محاولات المحو والتهجير على مر العصور.</p>
             </div>
             """, unsafe_allow_html=True)
         
         with col2:
             st.markdown("""
-            <div dir="rtl">
-            الوضع الحالي
-
-            يستمر الشعب الفلسطيني في مواجهة تحديات إنسانية خطيرة بسبب الاحتلال المستمر والحصار، خاصة في قطاع غزة، حيث يُحرم السكان من الوصول إلى الموارد والخدمات الأساسية. تشكل هذه الإجراءات انتهاكات واضحة لحقوق الإنسان والقانون الدولي، الذي يضمن حق الشعوب في العيش بحرية وكرامة في وطنهم.
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+            <h3 style="font-weight: 700; color: #1f77b4; margin-bottom: 15px;">الوضع الحالي</h3>
+            <p style="font-size: 1.05em; text-align: justify;">يستمر الشعب الفلسطيني في مواجهة تحديات إنسانية خطيرة بسبب الاحتلال المستمر والحصار، خاصة في قطاع غزة، حيث يُحرم السكان من الوصول إلى الموارد والخدمات الأساسية. تشكل هذه الإجراءات انتهاكات واضحة لحقوق الإنسان والقانون الدولي، الذي يضمن حق الشعوب في العيش بحرية وكرامة في وطنهم.</p>
             </div>
             """, unsafe_allow_html=True)
 
     # Display content based on session state
     if st.session_state.show_chat:
         if st.session_state.language == 'english':
-            st.markdown("<div class='section-title'>Chat with AI about Palestine</div>", unsafe_allow_html=True)
+            st.header("Chat with AI about Palestine")
             
-              # User input section with enhanced styling
-            st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-            st.markdown("### Ask Your Question")
+            # User input section with enhanced styling
+            st.subheader("Ask Your Question")
             st.markdown("Get accurate, detailed information about Palestine's history, current events, and humanitarian issues.")
             
             user_question = st.text_input("", placeholder="Type your question about Palestine here...", key="text_question")
@@ -1078,41 +908,37 @@ def main():
             # Add a submit button for better UX
             submit_button = st.button("Get Answer")
         else:  # Arabic
-            st.markdown("<div class='section-title' dir='rtl'> Chat with AI about Palestine </div>", unsafe_allow_html=True)
-    
+            st.markdown("""
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">تحدث مع الذكاء الاصطناعي حول فلسطين</h2>
+                <h3 style="font-weight: 600; margin-top: 15px; margin-bottom: 10px;">اطرح سؤالك</h3>
+                <p style="font-size: 1.05em;">احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضايا الإنسانية.</p>
+            </div>
+            """, unsafe_allow_html=True)
             
-            
-            # User input section with enhanced styling
-            st.markdown("<div class='chat-container' dir='rtl'>", unsafe_allow_html=True)
-            st.markdown("<h3>Ask your question about plastine</h3>", unsafe_allow_html=True)
-            st.markdown("احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضية المركزية.", unsafe_allow_html=True)
-            
-            user_question = st.text_input("", placeholder="Put your question (Multi-language answes)", key="text_question_ar")
+            user_question = st.text_input("", placeholder="اكتب سؤالك عن فلسطين هنا...", key="text_question_ar")
             
             # Add a submit button for better UX
-            submit_button = st.button("Get answer")
+            submit_button = st.button("الحصول على إجابة")
 
         # Process the question when submitted
         if user_question and submit_button:
             # Check if the question is related to Palestine
             is_palestine = is_palestine_related(user_question)
             
-            with st.spinner("Generating comprehensive answer..." if st.session_state.language == 'english' else "Generating comprehensive answer..."):
+            with st.spinner("Generating comprehensive answer..." if st.session_state.language == 'english' else "جاري إنشاء إجابة شاملة..."):
                 answer = ask_about_palestine(user_question)
                 
                 # Create a container with better styling for the answer
                 answer_container = st.container()
                 with answer_container:
-                    st.markdown("<div style='background-color: rgba(31, 119, 180, 0.1); padding: 20px; border-radius: 10px; border-left: 5px solid var(--primary-color);'>", unsafe_allow_html=True)
                     # Typing effect for response
                     with st.empty():  # Create an empty placeholder to display the typing effect
                         typing_effect(answer)
-                    st.markdown("</div>", unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
     
     elif st.session_state.show_boycott:
         if st.session_state.language == 'english':
-            st.markdown("<div class='section-title'>Boycott Information</div>", unsafe_allow_html=True)
+            st.header("Boycott Information")
             
             st.markdown("""
             The boycott movement aims to apply economic and political pressure on Israel to comply with international law and Palestinian rights. 
@@ -1130,19 +956,13 @@ def main():
             # Display detailed boycott information for each category
             for i, (category, tab) in enumerate(zip(boycott_data.keys(), boycott_tabs)):
                 with tab:
-                    st.markdown(f"### {category}")
+                    st.subheader(f"{category}")
                     
                     for company in boycott_data[category]["companies"]:
-                        st.markdown(f"""
-                        <div class="company-card">
-                            <div class="company-name">{company['name']}</div>
-                            <div class="company-reason">{company['reason']}</div>
-                            <div class="company-action">Recommended action: {company['action']}</div>
-                            <div class="company-alternatives">
-                                <strong>Alternatives:</strong> {', '.join(company['alternatives'])}
-                            </div>
-                        </div>
-                        """, unsafe_allow_html=True)
+                        with st.expander(f"{company['name']}", expanded=False):
+                            st.markdown(f"**Reason for boycott:** {company['reason']}")
+                            st.markdown(f"**Recommended action:** {company['action']}")
+                            st.markdown(f"**Alternatives:** {', '.join(company['alternatives'])}")
             
             st.markdown("""
             ### How to Support Gaza
@@ -1175,14 +995,14 @@ def main():
             For more information, visit [the official BDS movement website](https://bdsmovement.net/).
             """)
         else:  # Arabic
-            st.markdown("<div class='section-title' dir='rtl'>معلومات المقاطعة</div>", unsafe_allow_html=True)
-            
             st.markdown("""
-            <div dir="rtl">
-            تهدف حركة المقاطعة إلى ممارسة ضغط اقتصادي وسياسي على إسرائيل للامتثال للقانون الدولي وحقوق الفلسطينيين.
-            هذا الشكل من المقاومة اللاعنفية مستوحى من حركة مناهضة الفصل العنصري في جنوب أفريقيا وقد اكتسب دعمًا عالميًا كبيرًا.
-            
-            فيما يلي قائمة مفصلة بالشركات التي تدعم إسرائيل، مع شرح لتورطها والبدائل التي يمكنك استخدامها بدلاً منها.
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">معلومات المقاطعة</h2>
+                
+                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">تهدف حركة المقاطعة إلى ممارسة ضغط اقتصادي وسياسي على إسرائيل للامتثال للقانون الدولي وحقوق الفلسطينيين.
+                هذا الشكل من المقاومة اللاعنفية مستوحى من حركة مناهضة الفصل العنصري في جنوب أفريقيا وقد اكتسب دعمًا عالميًا كبيرًا.</p>
+                
+                <p style="font-size: 1.05em; text-align: justify;">فيما يلي قائمة مفصلة بالشركات التي تدعم إسرائيل، مع شرح لتورطها والبدائل التي يمكنك استخدامها بدلاً منها.</p>
             </div>
             """, unsafe_allow_html=True)
             
@@ -1195,58 +1015,66 @@ def main():
             # Display detailed boycott information for each category
             for i, (category, tab) in enumerate(zip(boycott_data.keys(), boycott_tabs)):
                 with tab:
-                    st.markdown(f"<h3 dir='rtl'>{category}</h3>", unsafe_allow_html=True)
+                    st.markdown(f"""
+                    <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                        <h3 style="font-weight: 700; color: #1f77b4; margin-bottom: 15px;">{category}</h3>
+                    </div>
+                    """, unsafe_allow_html=True)
                     
                     for company in boycott_data[category]["companies"]:
-                        st.markdown(f"""
-                        <div class="company-card" dir="rtl">
-                            <div class="company-name">{company['name']}</div>
-                            <div class="company-reason">{company['reason']}</div>
-                            <div class="company-action">الإجراء الموصى به: {company['action']}</div>
-                            <div class="company-alternatives">
-                                <strong>البدائل:</strong> {', '.join(company['alternatives'])}
+                        with st.expander(f"{company['name']}", expanded=False):
+                            st.markdown(f"""
+                            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                <p style="margin-bottom: 10px;"><strong style="color: #d62728; font-weight: 600;">سبب المقاطعة:</strong> {company['reason']}</p>
+                                <p style="margin-bottom: 10px;"><strong style="color: #2ca02c; font-weight: 600;">الإجراء الموصى به:</strong> {company['action']}</p>
+                                <p><strong style="color: #1f77b4; font-weight: 600;">البدائل:</strong> {', '.join(company['alternatives'])}</p>
                             </div>
-                        </div>
-                        """, unsafe_allow_html=True)
+                            """, unsafe_allow_html=True)
             
             st.markdown("""
-            <div dir="rtl">
-            **كيفية دعم غزة**
-            
-            1. **مقاطعة المنتجات**: تجنب شراء منتجات من الشركات التي تدعم إسرائيل
-            2. **اختيار البدائل**: استخدم البدائل المقترحة أو ابحث عن خيارات محلية
-            3. **نشر الوعي**: شارك المعلومات حول الوضع في غزة
-            4. **التبرع**: دعم المنظمات الإنسانية العاملة في غزة
-            5. **المناصرة**: اتصل بممثليك للمطالبة باتخاذ إجراءات
-            6. **الانضمام إلى الاحتجاجات**: المشاركة في المظاهرات السلمية
-            
-            تذكر أن الضغط الاقتصادي من خلال المقاطعة كان تاريخياً استراتيجية مقاومة لاعنفية فعالة.
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                <h3 style="font-weight: 700; color: #1f77b4; margin: 20px 0 15px 0;">كيفية دعم غزة</h3>
+                
+                <ol style="padding-right: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">مقاطعة المنتجات:</strong> تجنب شراء منتجات من الشركات التي تدعم إسرائيل</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">اختيار البدائل:</strong> استخدم البدائل المقترحة أو ابحث عن خيارات محلية</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">نشر الوعي:</strong> شارك المعلومات حول الوضع في غزة</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">التبرع:</strong> دعم المنظمات الإنسانية العاملة في غزة</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">المناصرة:</strong> اتصل بممثليك للمطالبة باتخاذ إجراءات</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">الانضمام إلى الاحتجاجات:</strong> المشاركة في المظاهرات السلمية</li>
+                </ol>
+                
+                <p style="font-size: 1.05em; text-align: justify; font-style: italic;">تذكر أن الضغط الاقتصادي من خلال المقاطعة كان تاريخياً استراتيجية مقاومة لاعنفية فعالة.</p>
             </div>
             """, unsafe_allow_html=True)
             
             # Add information about the BDS movement in Arabic
             st.markdown("""
-            <div dir="rtl">
-            **حركة المقاطعة وسحب الاستثمارات وفرض العقوبات (BDS)**
-            
-            تم إطلاق حركة المقاطعة في عام 2005 من قبل المجتمع المدني الفلسطيني. وهي تدعو إلى ثلاثة إجراءات رئيسية:
-            
-            1. **المقاطعة**: رفض شراء المنتجات والخدمات من الشركات المتواطئة في الاحتلال
-            2. **سحب الاستثمارات**: سحب الاستثمارات من الشركات والمؤسسات التي تستفيد من الاحتلال
-            3. **العقوبات**: الضغط من أجل فرض عقوبات على إسرائيل حتى تمتثل للقانون الدولي
-            
-            لحركة المقاطعة ثلاثة مطالب أساسية:
-            1. إنهاء الاحتلال والاستعمار لجميع الأراضي العربية
-            2. الاعتراف بالحقوق الأساسية للمواطنين العرب الفلسطينيين في إسرائيل للمساواة الكاملة
-            3. احترام وحماية وتعزيز حقوق اللاجئين الفلسطينيين في العودة إلى ديارهم وممتلكاتهم
-            
-            لمزيد من المعلومات، قم بزيارة [الموقع الرسمي لحركة المقاطعة](https://bdsmovement.net/).
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                <h3 style="font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0;">حركة المقاطعة وسحب الاستثمارات وفرض العقوبات (BDS)</h3>
+                
+                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">تم إطلاق حركة المقاطعة في عام 2005 من قبل المجتمع المدني الفلسطيني. وهي تدعو إلى ثلاثة إجراءات رئيسية:</p>
+                
+                <ol style="padding-right: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">المقاطعة:</strong> رفض شراء المنتجات والخدمات من الشركات المتواطئة في الاحتلال</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">سحب الاستثمارات:</strong> سحب الاستثمارات من الشركات والمؤسسات التي تستفيد من الاحتلال</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">العقوبات:</strong> الضغط من أجل فرض عقوبات على إسرائيل حتى تمتثل للقانون الدولي</li>
+                </ol>
+                
+                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">لحركة المقاطعة ثلاثة مطالب أساسية:</p>
+                <ol style="padding-right: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 8px;">إنهاء الاحتلال والاستعمار لجميع الأراضي العربية</li>
+                    <li style="margin-bottom: 8px;">الاعتراف بالحقوق الأساسية للمواطنين العرب الفلسطينيين في إسرائيل للمساواة الكاملة</li>
+                    <li style="margin-bottom: 8px;">احترام وحماية وتعزيز حقوق اللاجئين الفلسطينيين في العودة إلى ديارهم وممتلكاتهم</li>
+                </ol>
+                
+                <p style="font-size: 1.05em; text-align: justify;">لمزيد من المعلومات، قم بزيارة <a href="https://bdsmovement.net/" style="color: #1f77b4; font-weight: 600;">الموقع الرسمي لحركة المقاطعة</a>.</p>
             </div>
             """, unsafe_allow_html=True)
     
     elif st.session_state.show_education:
         if st.session_state.language == 'english':
-            st.markdown("<div class='section-title'>Educational Resources on Palestine</div>", unsafe_allow_html=True)
+            st.header("Educational Resources on Palestine")
             
             st.markdown("""
             This section provides educational resources to help you learn more about Palestine, its history, culture, and current situation.
@@ -1262,29 +1090,19 @@ def main():
             # Display educational resources for each category
             for i, (category, tab) in enumerate(zip(resources.keys(), education_tabs)):
                 with tab:
-                    st.markdown(f"### {category}")
+                    st.subheader(f"{category}")
                     
                     for resource in resources[category]:
-                        st.markdown(f"""
-                        <div class="resource-card">
-                            <div class="resource-title">{resource['title']}</div>
-                            <div class="resource-description">{resource['description']}</div>
-                            <div class="resource-facts">
-                                <strong>Key Facts:</strong>
-                                <div style="margin-top: 10px;">
-                        """, unsafe_allow_html=True)
-                        
-                        for fact in resource['key_facts']:
-                            st.markdown(f'<div class="fact-item">{fact}</div>', unsafe_allow_html=True)
-                        
-                        st.markdown(f"""
-                                </div>
-                            </div>
-                            <div class="resource-sources">
-                                <strong>Sources:</strong> {', '.join(resource['sources'])}
-                            </div>
-                        </div>
-                        """, unsafe_allow_html=True)
+                        with st.expander(f"{resource['title']}", expanded=False):
+                            st.markdown(f"{resource['description']}")
+                            
+                            st.markdown("**Key Facts:**")
+                            for fact in resource['key_facts']:
+                                st.markdown(f"- {fact}")
+                            
+                            st.markdown("**Sources:**")
+                            for source in resource['sources']:
+                                st.markdown(f"- [{source['name']}]({source['url']})")
             
             # Add recommended reading and viewing section
             st.markdown("""
@@ -1312,12 +1130,12 @@ def main():
             - [Electronic Intifada](https://electronicintifada.net/) - News, commentary, analysis, and reference materials about Palestine
             """)
         else:  # Arabic
-            st.markdown("<div class='section-title' dir='rtl'>موارد تعليمية عن فلسطين</div>", unsafe_allow_html=True)
-            
             st.markdown("""
-            <div dir="rtl">
-            يوفر هذا القسم موارد تعليمية لمساعدتك على معرفة المزيد عن فلسطين وتاريخها وثقافتها ووضعها الحالي.
-            تستند المعلومات المقدمة هنا إلى مصادر موثوقة، بما في ذلك تقارير من منظمات حقوق الإنسان، ووثائق الأمم المتحدة، والدراسات الأكاديمية، والشهادات المباشرة.
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">موارد تعليمية عن فلسطين</h2>
+                
+                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">يوفر هذا القسم موارد تعليمية لمساعدتك على معرفة المزيد عن فلسطين وتاريخها وثقافتها ووضعها الحالي.
+                تستند المعلومات المقدمة هنا إلى مصادر موثوقة، بما في ذلك تقارير من منظمات حقوق الإنسان، ووثائق الأمم المتحدة، والدراسات الأكاديمية، والشهادات المباشرة.</p>
             </div>
             """, unsafe_allow_html=True)
             
@@ -1330,63 +1148,92 @@ def main():
             # Display educational resources for each category
             for i, (category, tab) in enumerate(zip(resources.keys(), education_tabs)):
                 with tab:
-                    st.markdown(f"<h3 dir='rtl'>{category}</h3>", unsafe_allow_html=True)
+                    st.markdown(f"""
+                    <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                        <h3 style="font-weight: 700; color: #1f77b4; margin-bottom: 15px;">{category}</h3>
+                    </div>
+                    """, unsafe_allow_html=True)
                     
                     for resource in resources[category]:
-                        st.markdown(f"""
-                        <div class="resource-card" dir="rtl">
-                            <div class="resource-title">{resource['title']}</div>
-                            <div class="resource-description">{resource['description']}</div>
-                            <div class="resource-facts">
-                                <strong>حقائق رئيسية:</strong>
-                                <div style="margin-top: 10px;">
-                        """, unsafe_allow_html=True)
-                        
-                        for fact in resource['key_facts']:
-                            st.markdown(f'<div class="fact-item">{fact}</div>', unsafe_allow_html=True)
-                        
-                        st.markdown(f"""
+                        with st.expander(f"{resource['title']}", expanded=False):
+                            st.markdown(f"""
+                            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">{resource['description']}</p>
+                                
+                                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">حقائق رئيسية:</h4>
+                                <ul style="padding-right: 20px; margin-bottom: 15px;">
+                            """, unsafe_allow_html=True)
+                            
+                            for fact in resource['key_facts']:
+                                st.markdown(f"""
+                                <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                    <li style="margin-bottom: 5px;">{fact}</li>
                                 </div>
+                                """, unsafe_allow_html=True)
+                            
+                            st.markdown(f"""
+                            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                </ul>
+                                
+                                <h4 style="font-weight: 600; color: #1f77b4; margin: 15px 0 10px 0;">المصادر:</h4>
+                                <ul style="padding-right: 20px;">
                             </div>
-                            <div class="resource-sources">
-                                <strong>المصادر:</strong> {', '.join(resource['sources'])}
+                            """, unsafe_allow_html=True)
+                            
+                            for source in resource['sources']:
+                                st.markdown(f"""
+                                <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                    <li style="margin-bottom: 5px;"><a href="{source['url']}" style="color: #1f77b4; text-decoration: underline;">{source['name']}</a></li>
+                                </div>
+                                """, unsafe_allow_html=True)
+                                
+                            st.markdown("""
+                            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                </ul>
                             </div>
-                        </div>
-                        """, unsafe_allow_html=True)
+                            """, unsafe_allow_html=True)
             
             # Add recommended reading and viewing section in Arabic
             st.markdown("""
-            <div dir="rtl">
-            ### قراءات ومشاهدات موصى بها
-            
-             ** كتب **
-            - **"مسألة فلسطين"** لإدوارد سعيد
-            - ** الموسوعة اليهودية والصهيونية وإسرائيل  عبد الوهاب المسيرى**.
-            - **"التطهير العرقي في فلسطين"** لإيلان بابيه
-            - **"غزة في أزمة"** لنعوم تشومسكي وإيلان بابيه
-            - **"حرب المائة عام على فلسطين"** لرشيد الخالدي
-            
-             **أفلام وثائقية**
-            - **"خمس كاميرات محطمة"** (2011) لعماد برناط وغاي دافيدي
-            - **"ملح هذا البحر"** (2008) لآن ماري جاسر
-            - **"غزة تقاتل من أجل الحرية"** (2019) لآبي مارتن
-            - **"احتلال 101"** (2006) لسفيان عميش وعبد الله عميش
-            - **"المطلوبون الـ18"** (2014) لعامر الشوملي وبول كوان
-            
-            #### مواقع موثوقة
-            - [الجزيرة](https://www.aljazeera.com/palestine-israel-conflict/) - تغطية شاملة لقضايا الشرق الأوسط
-            - [بتسيلم](https://www.btselem.org/) - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة
-            - [معهد الدراسات الفلسطينية](https://www.palestine-studies.org/) - أبحاث أكاديمية حول فلسطين
-            - [الأونروا](https://www.unrwa.org/) - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين
-            - [الانتفاضة الإلكترونية](https://electronicintifada.net/) - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين
+            <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                <h3 style="font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0;">قراءات ومشاهدات موصى بها</h3>
+                
+                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">كتب</h4>
+                <ul style="padding-right: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"مسألة فلسطين"</strong> لإدوارد سعيد</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"الموسوعة اليهودية والصهيونية وإسرائيل"</strong> لعبد الوهاب المسيري</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"التطهير العرقي في فلسطين"</strong> لإيلان بابيه</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"غزة في أزمة"</strong> لنعوم تشومسكي وإيلان بابيه</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"حرب المائة عام على فلسطين"</strong> لرشيد الخالدي</li>
+                </ul>
+                
+                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">أفلام وثائقية</h4>
+                <ul style="padding-right: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"خمس كاميرات محطمة"</strong> (2011) لعماد برناط وغاي دافيدي</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"ملح هذا البحر"</strong> (2008) لآن ماري جاسر</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"غزة تقاتل من أجل الحرية"</strong> (2019) لآبي مارتن</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"احتلال 101"</strong> (2006) لسفيان عميش وعبد الله عميش</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"المطلوبون الـ18"</strong> (2014) لعامر الشوملي وبول كوان</li>
+                </ul>
+                
+                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">مواقع موثوقة</h4>
+                <ul style="padding-right: 20px; margin-bottom: 20px;">
+                    <li style="margin-bottom: 8px;"><a href="https://www.aljazeera.com/palestine-israel-conflict/" style="color: #1f77b4; text-decoration: underline;">الجزيرة</a> - تغطية شاملة لقضايا الشرق الأوسط</li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.btselem.org/" style="color: #1f77b4; text-decoration: underline;">بتسيلم</a> - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة</li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.palestine-studies.org/" style="color: #1f77b4; text-decoration: underline;">معهد الدراسات الفلسطينية</a> - أبحاث أكاديمية حول فلسطين</li>
+                    <li style="margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</li>
+                    <li style="margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</li>
+                </ul>
             </div>
             """, unsafe_allow_html=True)
 
     # Footer
     if st.session_state.language == 'english':
-        st.markdown("<div class='footer'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+        st.markdown("---")
+        st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
     else:  # Arabic
-        st.markdown("<div class='footer'>Palestina AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+        st.markdown("---")
+        st.markdown("<div style='text-align: center;' dir='rtl'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
