@@ -910,8 +910,7 @@ def main():
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-   
-        
+               
                 <p style="font-size: 1.05em;">احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضايا الإنسانية.</p>
             </div>
             """, unsafe_allow_html=True)
@@ -938,14 +937,14 @@ def main():
     
     elif st.session_state.show_boycott:
         if st.session_state.language == 'english':
-            st.header("Boycott Information")
-            
             st.markdown("""
-            The boycott movement aims to apply economic and political pressure on Israel to comply with international law and Palestinian rights. 
-            This form of non-violent resistance is inspired by the South African anti-apartheid movement and has gained significant global support.
+            <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">Boycott Information</h2>
             
-            Below is a detailed list of companies that support Israel, with explanations of their involvement and alternatives you can use instead.
-            """)
+            <p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 15px;">The boycott movement aims to apply economic and political pressure on Israel to comply with international law and Palestinian rights. 
+            This form of non-violent resistance is inspired by the South African anti-apartheid movement and has gained significant global support.</p>
+            
+            <p style="font-size: 1.05em; line-height: 1.6;">Below is a detailed list of companies that support Israel, with explanations of their involvement and alternatives you can use instead.</p>
+            """, unsafe_allow_html=True)
             
             # Get boycott data
             boycott_data = get_boycott_data()
@@ -956,44 +955,56 @@ def main():
             # Display detailed boycott information for each category
             for i, (category, tab) in enumerate(zip(boycott_data.keys(), boycott_tabs)):
                 with tab:
-                    st.subheader(f"{category}")
+                    st.markdown(f"""
+                    <h3 style="font-weight: 700; color: #1f77b4; margin-bottom: 15px;">{category}</h3>
+                    """, unsafe_allow_html=True)
                     
                     for company in boycott_data[category]["companies"]:
                         with st.expander(f"{company['name']}", expanded=False):
-                            st.markdown(f"**Reason for boycott:** {company['reason']}")
-                            st.markdown(f"**Recommended action:** {company['action']}")
-                            st.markdown(f"**Alternatives:** {', '.join(company['alternatives'])}")
+                            st.markdown(f"""
+                            <div style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                <p style="margin-bottom: 10px;"><strong style="color: #d62728; font-weight: 600;">Reason for boycott:</strong> {company['reason']}</p>
+                                <p style="margin-bottom: 10px;"><strong style="color: #2ca02c; font-weight: 600;">Recommended action:</strong> {company['action']}</p>
+                                <p><strong style="color: #1f77b4; font-weight: 600;">Alternatives:</strong> {', '.join(company['alternatives'])}</p>
+                            </div>
+                            """, unsafe_allow_html=True)
             
             st.markdown("""
-            ### How to Support Gaza
+            <h3 style="font-weight: 700; color: #1f77b4; margin: 20px 0 15px 0;">How to Support Gaza</h3>
             
-            1. **Boycott Products**: Avoid purchasing products from companies supporting Israel
-            2. **Choose Alternatives**: Use the suggested alternatives or find local options
-            3. **Raise Awareness**: Share information about the situation in Gaza
-            4. **Donate**: Support humanitarian organizations working in Gaza
-            5. **Advocate**: Contact your representatives to demand action
-            6. **Join Protests**: Participate in peaceful demonstrations
+            <ol style="padding-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Boycott Products</strong>: Avoid purchasing products from companies supporting Israel</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Choose Alternatives</strong>: Use the suggested alternatives or find local options</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Raise Awareness</strong>: Share information about the situation in Gaza</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Donate</strong>: Support humanitarian organizations working in Gaza</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Advocate</strong>: Contact your representatives to demand action</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Join Protests</strong>: Participate in peaceful demonstrations</li>
+            </ol>
             
-            Remember that economic pressure through boycotts has historically been an effective non-violent resistance strategy.
-            """)
+            <p style="font-size: 1.05em; line-height: 1.6; font-style: italic;">Remember that economic pressure through boycotts has historically been an effective non-violent resistance strategy.</p>
+            """, unsafe_allow_html=True)
             
             # Add information about the BDS movement
             st.markdown("""
-            ### The BDS Movement (Boycott, Divestment, Sanctions)
+            <h3 style="font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0;">The BDS Movement (Boycott, Divestment, Sanctions)</h3>
             
-            The BDS movement was launched in 2005 by Palestinian civil society. It calls for three main actions:
+            <p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 15px;">The BDS movement was launched in 2005 by Palestinian civil society. It calls for three main actions:</p>
             
-            1. **Boycott**: Refusing to purchase products and services from companies complicit in the occupation
-            2. **Divestment**: Withdrawing investments from companies and institutions that profit from the occupation
-            3. **Sanctions**: Pressuring for sanctions against Israel until it complies with international law
+            <ol style="padding-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Boycott</strong>: Refusing to purchase products and services from companies complicit in the occupation</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Divestment</strong>: Withdrawing investments from companies and institutions that profit from the occupation</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">Sanctions</strong>: Pressuring for sanctions against Israel until it complies with international law</li>
+            </ol>
             
-            The BDS movement has three fundamental demands:
-            1. End the occupation and colonization of all Arab lands
-            2. Recognize the fundamental rights of Arab-Palestinian citizens of Israel to full equality
-            3. Respect, protect, and promote the rights of Palestinian refugees to return to their homes and properties
+            <p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 15px;">The BDS movement has three fundamental demands:</p>
+            <ol style="padding-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;">End the occupation and colonization of all Arab lands</li>
+                <li style="margin-bottom: 8px;">Recognize the fundamental rights of Arab-Palestinian citizens of Israel to full equality</li>
+                <li style="margin-bottom: 8px;">Respect, protect, and promote the rights of Palestinian refugees to return to their homes and properties</li>
+            </ol>
             
-            For more information, visit [the official BDS movement website](https://bdsmovement.net/).
-            """)
+            <p style="font-size: 1.05em; line-height: 1.6;">For more information, visit <a href="https://bdsmovement.net/" style="color: #1f77b4; text-decoration: underline;">the official BDS movement website</a>.</p>
+            """, unsafe_allow_html=True)
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
@@ -1036,12 +1047,13 @@ def main():
                 <h3 style="font-weight: 700; color: #1f77b4; margin: 20px 0 15px 0;">كيفية دعم غزة</h3>
                 
                 <ol style="padding-right: 20px; margin-bottom: 20px;">
-                    < تجنب شراء منتجات من الشركات التي تدعم إسرائيل>
-                    <استخدم البدائل المقترحة أو ابحث عن خيارات محلية>
-                    <شارك المعلومات حول الوضع في غزة>
-                    <دعم المنظمات الإنسانية العاملة في غزة>
-                    <تواصل مع ممثليك وزملائك للمطالبة باتخاذ إجراءات المناصرة>
-                    <المشاركة في المظاهرات السلمية>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">مقاطعة المنتجات:</strong> تجنب شراء منتجات من الشركات التي تدعم إسرائيل</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">اختيار البدائل:</strong> استخدم البدائل المقترحة أو ابحث عن خيارات محلية</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">نشر الوعي:</strong> شارك المعلومات حول الوضع في غزة</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">التبرع:</strong> دعم المنظمات الإنسانية العاملة في غزة</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">المناصرة:</strong> اتصل بممثليك للمطالبة باتخاذ إجراءات</li>
+                    <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">الانضمام إلى الاحتجاجات:</strong> المشاركة في المظاهرات السلمية</li>
+                </ol>
                 
                 <p style="font-size: 1.05em; text-align: justify; font-style: italic;">تذكر أن الضغط الاقتصادي من خلال المقاطعة كان تاريخياً استراتيجية مقاومة لاعنفية فعالة.</p>
             </div>
@@ -1073,12 +1085,12 @@ def main():
     
     elif st.session_state.show_education:
         if st.session_state.language == 'english':
-            st.header("Educational Resources on Palestine")
-            
             st.markdown("""
-            This section provides educational resources to help you learn more about Palestine, its history, culture, and current situation.
-            The information presented here is based on reliable sources, including reports from human rights organizations, United Nations documents, academic studies, and direct testimonies.
-            """)
+            <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">Educational Resources on Palestine</h2>
+            
+            <p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 15px;">This section provides educational resources to help you learn more about Palestine, its history, culture, and current situation.
+            The information presented here is based on reliable sources, including reports from human rights organizations, United Nations documents, academic studies, and direct testimonies.</p>
+            """, unsafe_allow_html=True)
             
             # Get educational resources
             resources = get_educational_resources()
@@ -1089,45 +1101,73 @@ def main():
             # Display educational resources for each category
             for i, (category, tab) in enumerate(zip(resources.keys(), education_tabs)):
                 with tab:
-                    st.subheader(f"{category}")
+                    st.markdown(f"""
+                    <h3 style="font-weight: 700; color: #1f77b4; margin-bottom: 15px;">{category}</h3>
+                    """, unsafe_allow_html=True)
                     
                     for resource in resources[category]:
                         with st.expander(f"{resource['title']}", expanded=False):
-                            st.markdown(f"{resource['description']}")
+                            st.markdown(f"""
+                            <div style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
+                                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">{resource['description']}</p>
+                                
+                                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Key Facts:</h4>
+                                <ul style="padding-left: 20px; margin-bottom: 15px;">
+                            """, unsafe_allow_html=True)
                             
-                            st.markdown("**Key Facts:**")
                             for fact in resource['key_facts']:
-                                st.markdown(f"- {fact}")
+                                st.markdown(f"""
+                                <li style="margin-bottom: 8px;">{fact}</li>
+                                """, unsafe_allow_html=True)
                             
-                            st.markdown("**Sources:**")
+                            st.markdown(f"""
+                                </ul>
+                                
+                                <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Sources:</h4>
+                                <ul style="padding-left: 20px;">
+                            """, unsafe_allow_html=True)
+                            
                             for source in resource['sources']:
-                                st.markdown(f"- [{source['name']}]({source['url']})")
+                                st.markdown(f"""
+                                <li style="margin-bottom: 8px;"><a href="{source['url']}" style="color: #1f77b4; text-decoration: underline;">{source['name']}</a></li>
+                                """, unsafe_allow_html=True)
+                                
+                            st.markdown("""
+                                </ul>
+                            </div>
+                            """, unsafe_allow_html=True)
             
             # Add recommended reading and viewing section
             st.markdown("""
-            ### Recommended Reading and Viewing
+            <h3 style="font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0;">Recommended Reading and Viewing</h3>
             
-            #### Books
-            - **"The Question of Palestine"** by Edward Said
-            - **"Palestine: A Modern History"** by Ilan Pappé
-            - **"The Ethnic Cleansing of Palestine"** by Ilan Pappé
-            - **"Gaza in Crisis"** by Noam Chomsky and Ilan Pappé
-            - **"The Hundred Years' War on Palestine"** by Rashid Khalidi
+            <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Books</h4>
+            <ul style="padding-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Question of Palestine"</strong> by Edward Said</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Palestine: A Modern History"</strong> by Ilan Pappé</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Ethnic Cleansing of Palestine"</strong> by Ilan Pappé</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Gaza in Crisis"</strong> by Noam Chomsky and Ilan Pappé</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Hundred Years' War on Palestine"</strong> by Rashid Khalidi</li>
+            </ul>
             
-            #### Documentaries
-            - **"5 Broken Cameras"** (2011) by Emad Burnat and Guy Davidi
-            - **"The Salt of This Sea"** (2008) by Annemarie Jacir
-            - **"Gaza Fight for Freedom"** (2019) by Abby Martin
-            - **"Occupation 101"** (2006) by Sufyan Omeish and Abdallah Omeish
-            - **"The Wanted 18"** (2014) by Amer Shomali and Paul Cowan
+            <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Documentaries</h4>
+            <ul style="padding-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"5 Broken Cameras"</strong> (2011) by Emad Burnat and Guy Davidi</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Salt of This Sea"</strong> (2008) by Annemarie Jacir</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Gaza Fight for Freedom"</strong> (2019) by Abby Martin</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Occupation 101"</strong> (2006) by Sufyan Omeish and Abdallah Omeish</li>
+                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Wanted 18"</strong> (2014) by Amer Shomali and Paul Cowan</li>
+            </ul>
             
-            #### Reliable Websites
-            - [Al Jazeera](https://www.aljazeera.com/palestine-israel-conflict/) - Comprehensive coverage of Middle East issues
-            - [B'Tselem](https://www.btselem.org/) - Israeli Information Center for Human Rights in the Occupied Territories
-            - [Institute for Palestine Studies](https://www.palestine-studies.org/) - Academic research on Palestine
-            - [UNRWA](https://www.unrwa.org/) - UN Relief and Works Agency for Palestine Refugees
-            - [Electronic Intifada](https://electronicintifada.net/) - News, commentary, analysis, and reference materials about Palestine
-            """)
+            <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Reliable Websites</h4>
+            <ul style="padding-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 8px;"><a href="https://www.aljazeera.com/palestine-israel-conflict/" style="color: #1f77b4; text-decoration: underline;">Al Jazeera</a> - Comprehensive coverage of Middle East issues</li>
+                <li style="margin-bottom: 8px;"><a href="https://www.btselem.org/" style="color: #1f77b4; text-decoration: underline;">B'Tselem</a> - Israeli Information Center for Human Rights in the Occupied Territories</li>
+                <li style="margin-bottom: 8px;"><a href="https://www.palestine-studies.org/" style="color: #1f77b4; text-decoration: underline;">Institute for Palestine Studies</a> - Academic research on Palestine</li>
+                <li style="margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">UNRWA</a> - UN Relief and Works Agency for Palestine Refugees</li>
+                <li style="margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">Electronic Intifada</a> - News, commentary, analysis, and reference materials about Palestine</li>
+            </ul>
+            """, unsafe_allow_html=True)
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
