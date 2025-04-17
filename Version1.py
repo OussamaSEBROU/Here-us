@@ -4,7 +4,7 @@ import os
 import base64
 from PIL import Image
 import io
-google-generativeai
+import google.generativeai as genai
 
 # Page configuration
 st.set_page_config(
