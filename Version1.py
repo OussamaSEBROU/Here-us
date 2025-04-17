@@ -639,7 +639,7 @@ def get_boycott_companies():
 # App UI with enhanced professional features
 def main():
     st.set_page_config(
-        page_title="Palestine-AI", 
+        page_title="Palestina-AI", 
         page_icon="🕊️", 
         layout="wide"
     )
@@ -656,10 +656,10 @@ def main():
         --primary-color: #1f77b4;
         --secondary-color: #2ca02c;
         --danger-color: #d62728;
-        --background-color: #ffffff;
+        --background-color: #f8f9fa;
         --card-background: #ffffff;
         --text-color: #333333;
-        --border-color: #e6e6e6;
+        --border-color: #f0f0f0;
         --quote-color: #1f77b4;
         --footer-color: #666666;
     }
@@ -668,10 +668,10 @@ def main():
         --primary-color: #4a9ced;
         --secondary-color: #5fd35f;
         --danger-color: #ff5b5b;
-        --background-color: #0e1117;
+        --background-color: #f8f9fa;
         --card-background: #1e2129;
         --text-color: #f0f2f6;
-        --border-color: #4a4a4a;
+        --border-color: #f0f0f0;
         --quote-color: #4a9ced;
         --footer-color: #cccccc;
     }
@@ -908,7 +908,7 @@ def main():
         st.title("Palestine AI")
         
         # Language selector
-        st.markdown('<div class="language-title">Select Language / اختر اللغة</div>', unsafe_allow_html=True)
+        st.markdown('<div class="language-title">Select Language</div>', unsafe_allow_html=True)
         language_options = {
             'english': 'English / الإنجليزية',
             'arabic': 'Arabic / العربية'
@@ -929,19 +929,19 @@ def main():
         st.markdown("### Navigation")
         
         # Button to show chat
-        if st.button('💬 Chat with AI', key='chat_button', use_container_width=True):
+        if st.button('Chat with Palestina Ai', key='chat_button', use_container_width=True):
             st.session_state.show_chat = True
             st.session_state.show_boycott = False
             st.session_state.show_education = False
         
         # Button to show boycott information
-        if st.button('🚫 Boycott Information', key='boycott_button', use_container_width=True):
+        if st.button('Boycott Information', key='boycott_button', use_container_width=True):
             st.session_state.show_chat = False
             st.session_state.show_boycott = True
             st.session_state.show_education = False
         
         # Button to show educational resources
-        if st.button('📚 Educational Resources', key='education_button', use_container_width=True):
+        if st.button('Educational Resources', key='education_button', use_container_width=True):
             st.session_state.show_chat = False
             st.session_state.show_boycott = False
             st.session_state.show_education = True
@@ -993,7 +993,7 @@ def main():
         
         # About Us Section
         with st.expander("About Us", expanded=False):
-            st.markdown("#### Palestine AI Chat")
+            st.markdown("#### Palestina AI")
             st.markdown("This app was developed to provide in-depth, AI-powered insights into the Palestinian cause.")
             st.markdown("""
             Version: 1.2.0
@@ -1040,12 +1040,12 @@ def main():
             The Palestinian people continue to face severe humanitarian challenges due to ongoing occupation and blockade, particularly in the Gaza Strip, where residents are deprived of access to essential resources and services. These actions constitute clear violations of human rights and international law, which guarantee the right of peoples to live freely and with dignity in their homeland.
             """)
     else:  # Arabic
-        st.title("فلسطين الذكاء الاصطناعي - من النهر إلى البحر")
+        st.title("Palestina AI - From the River To the sea")
         
         # Quote of the Day section in Arabic
         st.markdown("""
         <div class="quote-box" dir="rtl">
-            "قضية فلسطين هي اختبار اختبر الله به ضميرك وعزيمتك وثروتك ووحدتك."
+            "إن قضية فلسطين محنةٌ امتحن الله بها ضمائركم وهممكم وأموالكم ووحدتكم."
         </div>
         <div class="quote-author" dir="rtl">
             — البشير الإبراهيمي
@@ -1058,7 +1058,7 @@ def main():
         with col1:
             st.markdown("""
             <div dir="rtl">
-            ### السياق التاريخي
+            ###السياق التاريخي
             فلسطين أرض ذات تاريخ عريق يمتد لآلاف السنين، وتؤكد الوثائق التاريخية أن الشعب الفلسطيني هو المالك الشرعي لهذه الأرض. كانت فلسطين موطنًا لسكانها الأصليين، الذين حافظوا على وجودهم وثقافتهم رغم محاولات المحو والتهجير على مر العصور.
             </div>
             """, unsafe_allow_html=True)
@@ -1066,7 +1066,7 @@ def main():
         with col2:
             st.markdown("""
             <div dir="rtl">
-            ### الوضع الحالي
+            ###الوضع الحالي
             يستمر الشعب الفلسطيني في مواجهة تحديات إنسانية خطيرة بسبب الاحتلال المستمر والحصار، خاصة في قطاع غزة، حيث يُحرم السكان من الوصول إلى الموارد والخدمات الأساسية. تشكل هذه الإجراءات انتهاكات واضحة لحقوق الإنسان والقانون الدولي، الذي يضمن حق الشعوب في العيش بحرية وكرامة في وطنهم.
             </div>
             """, unsafe_allow_html=True)
@@ -1090,20 +1090,20 @@ def main():
             
             # User input section with enhanced styling
             st.markdown("<div class='chat-container' dir='rtl'>", unsafe_allow_html=True)
-            st.markdown("<h3>اطرح سؤالك</h3>", unsafe_allow_html=True)
-            st.markdown("احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضايا الإنسانية.", unsafe_allow_html=True)
+            st.markdown("<h3>Ask your question about plastine</h3>", unsafe_allow_html=True)
+            st.markdown("احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضية المركزية.", unsafe_allow_html=True)
             
-            user_question = st.text_input("", placeholder="اكتب سؤالك عن فلسطين هنا...", key="text_question_ar")
+            user_question = st.text_input("", placeholder="Put your question (Multi-language answes)", key="text_question_ar")
             
             # Add a submit button for better UX
-            submit_button = st.button("الحصول على إجابة")
+            submit_button = st.button("Get answer")
 
         # Process the question when submitted
         if user_question and submit_button:
             # Check if the question is related to Palestine
             is_palestine = is_palestine_related(user_question)
             
-            with st.spinner("Generating comprehensive answer..." if st.session_state.language == 'english' else "جاري إنشاء إجابة شاملة..."):
+            with st.spinner("Generating comprehensive answer..." if st.session_state.language == 'english' else "Generating comprehensive answer..."):
                 answer = ask_about_palestine(user_question)
                 
                 # Create a container with better styling for the answer
@@ -1217,7 +1217,7 @@ def main():
             
             st.markdown("""
             <div dir="rtl">
-            ### كيفية دعم غزة
+            ###كيفية دعم غزة
             
             1. **مقاطعة المنتجات**: تجنب شراء منتجات من الشركات التي تدعم إسرائيل
             2. **اختيار البدائل**: استخدم البدائل المقترحة أو ابحث عن خيارات محلية
@@ -1233,7 +1233,7 @@ def main():
             # Add information about the BDS movement in Arabic
             st.markdown("""
             <div dir="rtl">
-            ### حركة المقاطعة وسحب الاستثمارات وفرض العقوبات (BDS)
+            ###حركة المقاطعة وسحب الاستثمارات وفرض العقوبات (BDS)
             
             تم إطلاق حركة المقاطعة في عام 2005 من قبل المجتمع المدني الفلسطيني. وهي تدعو إلى ثلاثة إجراءات رئيسية:
             
@@ -1367,7 +1367,7 @@ def main():
             
             #### كتب
             - **"مسألة فلسطين"** لإدوارد سعيد
-            - **"فلسطين: تاريخ حديث"** لإيلان بابيه
+            - ** الموسوعة اليهودية والصهيونية وإسرائيل لـ عبد الوهاب المسيرى.
             - **"التطهير العرقي في فلسطين"** لإيلان بابيه
             - **"غزة في أزمة"** لنعوم تشومسكي وإيلان بابيه
             - **"حرب المائة عام على فلسطين"** لرشيد الخالدي
@@ -1392,7 +1392,7 @@ def main():
     if st.session_state.language == 'english':
         st.markdown("<div class='footer'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
     else:  # Arabic
-        st.markdown("<div class='footer' dir='rtl'>الذكاء الاصطناعي لفلسطين - تم تطويره بواسطة مدرسة الكلم-إمرؤ هايت بالتعاون مع شركة إرينوف</div>", unsafe_allow_html=True)
+        st.markdown("<div class='footer'>Palestina AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
