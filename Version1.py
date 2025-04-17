@@ -362,14 +362,14 @@ def get_boycott_data():
     
     return boycott_data
 
-# CSS styles for ChatGPT-like interface
+# CSS styles for ChatGPT-like interface with professional black, red, and blue color scheme
 def apply_styles():
     st.markdown("""
     <style>
         /* Global styles */
         body {
             font-family: 'Söhne', 'Segoe UI', sans-serif;
-            color: #1a1a1a;
+            color: #000000;
             background-color: #f7f7f8;
         }
         
@@ -385,7 +385,7 @@ def apply_styles():
             font-weight: bold;
             text-align: center;
             margin-bottom: 2rem;
-            color: #202123;
+            color: #000000;
         }
         
         /* Sidebar styles */
@@ -460,7 +460,7 @@ def apply_styles():
         
         .send-button {
             margin-left: 0.5rem;
-            background-color: #10a37f;
+            background-color: #0000FF;
             color: white;
             border: none;
             border-radius: 0.25rem;
@@ -468,26 +468,52 @@ def apply_styles():
             cursor: pointer;
         }
         
-        /* Button styles */
+        /* Button styles - Professional look */
         .stButton button {
-            border-radius: 0.5rem;
+            border-radius: 4px;
             padding: 0.75rem 1.5rem;
             font-size: 1rem;
             font-weight: 500;
             transition: all 0.2s ease;
             border: 1px solid rgba(0,0,0,0.1);
             background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .stButton button:hover {
             background-color: #f0f0f0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Primary button */
+        .primary-btn button {
+            background-color: #0000FF;
+            color: white;
+            border: none;
+        }
+        
+        .primary-btn button:hover {
+            background-color: #0000CC;
+        }
+        
+        /* Secondary button */
+        .secondary-btn button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+        }
+        
+        .secondary-btn button:hover {
+            background-color: #CC0000;
         }
         
         /* Quick action buttons */
         .quick-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
             margin-top: 20px;
             margin-bottom: 20px;
             justify-content: center;
@@ -499,16 +525,18 @@ def apply_styles():
             padding: 12px 20px;
             background-color: #ffffff;
             border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 25px;
+            border-radius: 4px;
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
-            color: #202123;
+            color: #000000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .action-button:hover {
             background-color: #f0f0f0;
             transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .action-icon {
@@ -531,23 +559,23 @@ def apply_styles():
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
-            color: #202123;
+            color: #000000;
         }
         
         .welcome-subtitle {
             font-size: 1.2rem;
-            color: #6e6e80;
+            color: #000000;
             margin-bottom: 2rem;
             max-width: 600px;
         }
         
         /* Palestine cause description */
         .cause-description {
-            background-color: rgba(16, 163, 127, 0.1);
+            background-color: rgba(0, 0, 255, 0.1);
             padding: 1.5rem;
             border-radius: 0.5rem;
             margin-bottom: 2rem;
-            border-left: 4px solid #10a37f;
+            border-left: 4px solid #0000FF;
         }
         
         /* Sidebar navigation */
@@ -587,13 +615,14 @@ def apply_styles():
             font-weight: bold;
             margin-top: 1rem;
             margin-bottom: 1rem;
-            color: #202123;
+            color: #000000;
             border-bottom: 1px solid rgba(0,0,0,0.1);
             padding-bottom: 0.5rem;
         }
         
         .section-content {
             margin-bottom: 2rem;
+            color: #000000;
         }
         
         /* Card styles */
@@ -602,24 +631,25 @@ def apply_styles():
             border-radius: 0.5rem;
             padding: 1.5rem;
             margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: all 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .card-title {
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
-            color: #202123;
+            color: #000000;
         }
         
         .card-content {
-            color: #353740;
+            color: #000000;
         }
         
         /* Team member card */
@@ -630,7 +660,8 @@ def apply_styles():
             border-radius: 0.5rem;
             padding: 1rem;
             margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .team-avatar {
@@ -647,10 +678,11 @@ def apply_styles():
         .team-name {
             font-weight: bold;
             margin-bottom: 0.25rem;
+            color: #000000;
         }
         
         .team-role {
-            color: #6e6e80;
+            color: #000000;
             font-size: 0.9rem;
         }
         
@@ -660,7 +692,8 @@ def apply_styles():
             border-radius: 0.5rem;
             padding: 1.5rem;
             margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .form-group {
@@ -671,6 +704,7 @@ def apply_styles():
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
+            color: #000000;
         }
         
         .form-input {
@@ -692,7 +726,7 @@ def apply_styles():
         }
         
         .form-submit {
-            background-color: #10a37f;
+            background-color: #0000FF;
             color: white;
             border: none;
             border-radius: 0.25rem;
@@ -700,10 +734,13 @@ def apply_styles():
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .form-submit:hover {
-            background-color: #0d8c6d;
+            background-color: #0000CC;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         /* Help section */
@@ -712,18 +749,19 @@ def apply_styles():
             border-radius: 0.5rem;
             padding: 1.5rem;
             margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .help-question {
             font-weight: bold;
             margin-bottom: 0.5rem;
-            color: #202123;
+            color: #000000;
             cursor: pointer;
         }
         
         .help-answer {
-            color: #353740;
+            color: #000000;
             padding-top: 0.5rem;
         }
         
@@ -735,31 +773,35 @@ def apply_styles():
             margin-bottom: 1rem;
             background-color: #FFFFFF;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .company-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .company-name {
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
-            color: #202123;
+            color: #000000;
         }
         
         .company-reason {
             margin-bottom: 0.5rem;
+            color: #000000;
         }
         
         .company-action {
             font-weight: bold;
             margin-bottom: 0.5rem;
+            color: #FF0000;
         }
         
         .company-alternatives {
             font-style: italic;
+            color: #0000FF;
         }
         
         .category-title {
@@ -767,7 +809,7 @@ def apply_styles():
             font-weight: bold;
             margin-top: 1rem;
             margin-bottom: 1rem;
-            color: #202123;
+            color: #000000;
             border-bottom: 1px solid rgba(0,0,0,0.1);
             padding-bottom: 0.5rem;
         }
@@ -776,10 +818,84 @@ def apply_styles():
         .footer {
             text-align: center;
             padding: 1rem;
-            color: #6e6e80;
+            color: #000000;
             font-size: 0.9rem;
             border-top: 1px solid rgba(0,0,0,0.1);
             margin-top: 2rem;
+        }
+        
+        /* Chat interface improvements */
+        .chat-message {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .user-chat-message {
+            background-color: rgba(0, 0, 255, 0.1);
+            border-left: 3px solid #0000FF;
+            margin-left: 2rem;
+            margin-right: 0;
+        }
+        
+        .assistant-chat-message {
+            background-color: #ffffff;
+            border-left: 3px solid #FF0000;
+            margin-left: 0;
+            margin-right: 2rem;
+        }
+        
+        .chat-input-container {
+            display: flex;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            padding: 0.5rem;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .chat-input {
+            flex-grow: 1;
+            padding: 0.75rem;
+            border: none;
+            background: transparent;
+            font-size: 1rem;
+            color: #000000;
+        }
+        
+        .chat-input:focus {
+            outline: none;
+        }
+        
+        .chat-send-button {
+            background-color: #0000FF;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .chat-send-button:hover {
+            background-color: #0000CC;
+        }
+        
+        /* Source citation */
+        .source-citation {
+            font-size: 0.9rem;
+            color: #0000FF;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        /* Highlight important text */
+        .highlight-text {
+            color: #FF0000;
+            font-weight: bold;
         }
         
         /* Responsive adjustments */
@@ -821,7 +937,7 @@ apply_styles()
 
 # Sidebar
 with st.sidebar:
-    st.markdown('<div style="text-align: center; margin-bottom: 1rem;"><h2>Here Us!</h2><h3>From the River To the Sea</h3></div>', unsafe_allow_html=True)
+    st.markdown('<div style="text-align: center; margin-bottom: 1rem;"><h2 style="color: #FF0000;">Here Us!</h2><h3 style="color: #0000FF;">From the River To the Sea</h3></div>', unsafe_allow_html=True)
     
     # Logo in sidebar
     st.image("https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg", width=200)
@@ -829,36 +945,70 @@ with st.sidebar:
     # Navigation options
     st.markdown("### Navigation")
     
-    # Create sidebar navigation
-    if st.button("🏠 Home"):
-        st.session_state.page = 'home'
+    # Create sidebar navigation with improved styling
+    col1, col2 = st.columns(2)
     
-    if st.button("❓ Knowledge & Analysis"):
-        st.session_state.page = 'knowledge'
+    with col1:
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("🏠 Home"):
+            st.session_state.page = 'home'
+        st.markdown('</div>', unsafe_allow_html=True)
     
-    if st.button("🖼️ Generate Image"):
-        st.session_state.page = 'image'
+    with col2:
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("❓ Knowledge"):
+            st.session_state.page = 'knowledge'
+        st.markdown('</div>', unsafe_allow_html=True)
     
-    if st.button("✊ How to Support"):
-        st.session_state.page = 'support'
+    col1, col2 = st.columns(2)
     
+    with col1:
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("🖼️ Images"):
+            st.session_state.page = 'image'
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("✊ Support"):
+            st.session_state.page = 'support'
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
     if st.button("🛒 Boycott Guide"):
         st.session_state.page = 'boycott'
+    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown("---")
     
     # Additional sections
-    if st.button("📚 Help"):
-        st.session_state.page = 'help'
+    col1, col2 = st.columns(2)
     
-    if st.button("ℹ️ About Us"):
-        st.session_state.page = 'about'
+    with col1:
+        st.markdown('<div class="secondary-btn">', unsafe_allow_html=True)
+        if st.button("📚 Help"):
+            st.session_state.page = 'help'
+        st.markdown('</div>', unsafe_allow_html=True)
     
-    if st.button("👥 Team"):
-        st.session_state.page = 'team'
+    with col2:
+        st.markdown('<div class="secondary-btn">', unsafe_allow_html=True)
+        if st.button("ℹ️ About Us"):
+            st.session_state.page = 'about'
+        st.markdown('</div>', unsafe_allow_html=True)
     
-    if st.button("📧 Contact"):
-        st.session_state.page = 'contact'
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown('<div class="secondary-btn">', unsafe_allow_html=True)
+        if st.button("👥 Team"):
+            st.session_state.page = 'team'
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown('<div class="secondary-btn">', unsafe_allow_html=True)
+        if st.button("📧 Contact"):
+            st.session_state.page = 'contact'
+        st.markdown('</div>', unsafe_allow_html=True)
 
 # Main content based on selected page
 if st.session_state.page == 'home':
@@ -870,34 +1020,42 @@ if st.session_state.page == 'home':
     # Palestine cause description
     st.markdown('<div class="cause-description">', unsafe_allow_html=True)
     st.markdown("""
-    <p><strong>The Palestinian Cause</strong> is a struggle for justice, freedom, and self-determination. It represents the Palestinian people's ongoing effort to secure their fundamental rights, including the right to return to their homeland, freedom from occupation, and the establishment of an independent state.</p>
+    <p><strong class="highlight-text">The Palestinian Cause</strong> is a struggle for justice, freedom, and self-determination. It represents the Palestinian people's ongoing effort to secure their fundamental rights, including the right to return to their homeland, freedom from occupation, and the establishment of an independent state.</p>
     
     <p>For decades, Palestinians have faced displacement, occupation, and systematic violations of their human rights. This platform aims to provide accurate information, raise awareness, and offer ways to support the Palestinian people in their pursuit of justice and dignity.</p>
     
-    <p>From the river to the sea, Palestine will be free.</p>
+    <p><strong class="highlight-text">From the river to the sea, Palestine will be free.</strong></p>
     """, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # Quick action buttons
+    # Quick action buttons with improved styling
     st.markdown('<div class="quick-actions">', unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        if st.button("❓ Ask a Question"):
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("❓ Ask a Question", key="home_ask"):
             st.session_state.page = 'knowledge'
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with col2:
-        if st.button("🖼️ Create Image"):
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("🖼️ Create Image", key="home_image"):
             st.session_state.page = 'image'
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with col3:
-        if st.button("✊ Support"):
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("✊ Support", key="home_support"):
             st.session_state.page = 'support'
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with col4:
-        if st.button("🛒 Boycott"):
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        if st.button("🛒 Boycott", key="home_boycott"):
             st.session_state.page = 'boycott'
+        st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
@@ -915,96 +1073,123 @@ elif st.session_state.page == 'knowledge':
         st.markdown("1. Set the environment variable GOOGLE_API_KEY with your Gemini API key")
         st.markdown("2. Restart the application")
     else:
-        # ChatGPT-like interface
-        st.markdown('<div class="chat-container">', unsafe_allow_html=True)
+        # Improved chat interface
+        st.markdown('<div style="padding: 20px; background-color: #f8f9fa; border-radius: 10px; margin-bottom: 20px;">', unsafe_allow_html=True)
         
         # Display chat history
-        for message in st.session_state.chat_history:
-            if message["role"] == "user":
-                st.markdown(f"""
-                <div class="user-message">
-                    <div class="message-avatar" style="background-color: #5436DA;">👤</div>
-                    <div class="message-content">{message["content"]}</div>
-                </div>
-                """, unsafe_allow_html=True)
-            else:
-                st.markdown(f"""
-                <div class="assistant-message">
-                    <div class="message-avatar" style="background-color: #10a37f;">🇵🇸</div>
-                    <div class="message-content">{message["content"]}</div>
-                </div>
-                """, unsafe_allow_html=True)
+        if not st.session_state.chat_history:
+            st.markdown('<p style="color: #666; text-align: center; padding: 20px;">Ask a question about Palestine to start the conversation.</p>', unsafe_allow_html=True)
+        else:
+            for message in st.session_state.chat_history:
+                if message["role"] == "user":
+                    st.markdown(f"""
+                    <div class="chat-message user-chat-message">
+                        <strong style="color: #0000FF;">You:</strong>
+                        <div>{message["content"]}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                else:
+                    st.markdown(f"""
+                    <div class="chat-message assistant-chat-message">
+                        <strong style="color: #FF0000;">Palestine AI:</strong>
+                        <div>{message["content"]}</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+        
+        # Chat input with improved styling
+        st.markdown('<div class="chat-input-container">', unsafe_allow_html=True)
+        
+        col1, col2 = st.columns([5, 1])
+        
+        with col1:
+            question = st.text_input("", placeholder="Ask about Palestine...", key="knowledge_input", label_visibility="collapsed")
+        
+        with col2:
+            st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+            send_button = st.button("Send", key="knowledge_send")
+            st.markdown('</div>', unsafe_allow_html=True)
         
         st.markdown('</div>', unsafe_allow_html=True)
         
-        # Input area
-        question = st.text_input("Ask about Palestine:", placeholder="Example: What is the history of Palestine?", key="knowledge_input")
-        
-        if st.button("Send", key="knowledge_send"):
-            if question:
-                # Add user message to chat history
-                st.session_state.chat_history.append({"role": "user", "content": question})
-                
-                # Check if question is related to Palestine
-                is_palestine = is_palestine_related(question)
-                
-                with st.spinner("Generating answer..."):
-                    if is_palestine:
-                        # Prompt for Gemini with specific instructions
-                        prompt = f"""
-                        As an educational assistant on the Palestinian cause, provide a detailed, 
-                        historical, and factual answer to the following question: "{question}"
-                        
-                        Your answer should:
-                        1. Be informative and based on verifiable historical facts
-                        2. Include references to reliable sources like Al Jazeera, Metras, and AA.com
-                        3. Present different perspectives when relevant
-                        4. Be structured in a clear and educational manner
-                        5. Avoid bias or misinformation
-                        
-                        Also provide a list of recommended sources at the end.
-                        """
-                    else:
-                        prompt = question  # Not used, but needed for function call
-                    
-                    response = generate_text_response(prompt, is_palestine)
-                    
-                    # Add assistant response to chat history
-                    st.session_state.chat_history.append({"role": "assistant", "content": response})
-                
-                # Rerun to update the chat display
-                st.experimental_rerun()
-        
-        # Search sources button
-        if st.button("Search Sources", key="search_sources"):
-            if question:
-                # Check if question is related to Palestine
-                is_palestine = is_palestine_related(question)
-                
+        if send_button and question:
+            # Add user message to chat history
+            st.session_state.chat_history.append({"role": "user", "content": question})
+            
+            # Check if question is related to Palestine
+            is_palestine = is_palestine_related(question)
+            
+            with st.spinner("Generating answer..."):
                 if is_palestine:
-                    with st.spinner("Searching for sources..."):
-                        sources = search_reliable_sources(question)
-                        st.session_state.sources = sources
-                        
-                        # Format sources as a message
-                        if sources:
-                            sources_text = "### Reliable Sources\n\n"
-                            for source in sources:
-                                sources_text += f"**{source['title']}**\n"
-                                sources_text += f"{source['snippet']}\n"
-                                sources_text += f"*{source['source']}* - [View Source]({source['url']})\n\n"
-                            
-                            # Add assistant response to chat history
-                            st.session_state.chat_history.append({"role": "assistant", "content": sources_text})
-                        else:
-                            # Add assistant response to chat history
-                            st.session_state.chat_history.append({"role": "assistant", "content": "No sources found. Try rephrasing your question."})
+                    # Prompt for Gemini with specific instructions
+                    prompt = f"""
+                    As an educational assistant on the Palestinian cause, provide a detailed, 
+                    historical, and factual answer to the following question: "{question}"
+                    
+                    Your answer should:
+                    1. Be informative and based on verifiable historical facts
+                    2. Include references to reliable sources like Al Jazeera, Metras, and AA.com
+                    3. Present different perspectives when relevant
+                    4. Be structured in a clear and educational manner
+                    5. Avoid bias or misinformation
+                    
+                    Also provide a list of recommended sources at the end.
+                    """
                 else:
-                    # Add assistant response to chat history
-                    st.session_state.chat_history.append({"role": "assistant", "content": "Sorry, I'm trained only to answer questions about the Palestinian cause and related topics. Please ask a question related to Palestine, its history, culture, or current situation."})
+                    prompt = question  # Not used, but needed for function call
                 
-                # Rerun to update the chat display
-                st.experimental_rerun()
+                response = generate_text_response(prompt, is_palestine)
+                
+                # Add assistant response to chat history
+                st.session_state.chat_history.append({"role": "assistant", "content": response})
+            
+            # Rerun to update the chat display
+            st.experimental_rerun()
+        
+        # Search sources button with improved styling
+        st.markdown('<div style="display: flex; justify-content: center; margin-top: 20px;">', unsafe_allow_html=True)
+        st.markdown('<div class="secondary-btn">', unsafe_allow_html=True)
+        search_sources_button = st.button("Search Reliable Sources", key="search_sources")
+        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        if search_sources_button:
+            if st.session_state.chat_history and any(msg["role"] == "user" for msg in st.session_state.chat_history):
+                # Get the last user question
+                last_user_messages = [msg for msg in st.session_state.chat_history if msg["role"] == "user"]
+                if last_user_messages:
+                    question = last_user_messages[-1]["content"]
+                    
+                    # Check if question is related to Palestine
+                    is_palestine = is_palestine_related(question)
+                    
+                    if is_palestine:
+                        with st.spinner("Searching for reliable sources..."):
+                            sources = search_reliable_sources(question)
+                            st.session_state.sources = sources
+                            
+                            # Format sources as a message
+                            if sources:
+                                sources_text = "<strong style='color: #0000FF;'>Reliable Sources:</strong><br><br>"
+                                for source in sources:
+                                    sources_text += f"<strong>{source['title']}</strong><br>"
+                                    sources_text += f"{source['snippet']}<br>"
+                                    sources_text += f"<span class='source-citation'>{source['source']} - <a href='{source['url']}' target='_blank'>View Source</a></span><br><br>"
+                                
+                                # Add assistant response to chat history
+                                st.session_state.chat_history.append({"role": "assistant", "content": sources_text})
+                            else:
+                                # Add assistant response to chat history
+                                st.session_state.chat_history.append({"role": "assistant", "content": "No sources found. Try rephrasing your question."})
+                    else:
+                        # Add assistant response to chat history
+                        st.session_state.chat_history.append({"role": "assistant", "content": "Sorry, I'm trained only to answer questions about the Palestinian cause and related topics. Please ask a question related to Palestine, its history, culture, or current situation."})
+                    
+                    # Rerun to update the chat display
+                    st.experimental_rerun()
+            else:
+                st.warning("Please ask a question first.")
+        
+        st.markdown('</div>', unsafe_allow_html=True)
 
 # Section 2: Generate Awareness Image
 elif st.session_state.page == 'image':
@@ -1019,7 +1204,9 @@ elif st.session_state.page == 'image':
         st.markdown("1. Set the environment variable GOOGLE_API_KEY with your Gemini API key")
         st.markdown("2. Restart the application")
     else:
-        # Image customization options
+        # Image customization options with improved styling
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        
         col1, col2, col3 = st.columns(3)
         
         with col1:
@@ -1064,7 +1251,15 @@ elif st.session_state.page == 'image':
             placeholder="Example: A historical map of Palestine showing territorial changes over time"
         )
         
-        if st.button("Generate Image"):
+        st.markdown('<div style="display: flex; justify-content: center; margin-top: 20px;">', unsafe_allow_html=True)
+        st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+        generate_button = st.button("Generate Image")
+        st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        if generate_button:
             if image_prompt:
                 # Check if prompt is related to Palestine
                 is_palestine = is_palestine_related(image_prompt)
@@ -1075,22 +1270,29 @@ elif st.session_state.page == 'image':
                         if image_data:
                             st.image(image_data, caption=image_prompt, use_column_width=True)
                             
-                            # Add button to save image to gallery
-                            if st.button("Save to Gallery"):
-                                # Add image to gallery
-                                st.session_state.gallery.append({
-                                    "image": image_data,
-                                    "prompt": image_prompt,
-                                    "style": style,
-                                    "theme": theme
-                                })
-                                st.success("Image saved to gallery!")
+                            col1, col2 = st.columns(2)
+                            
+                            with col1:
+                                st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
+                                if st.button("Save to Gallery"):
+                                    # Add image to gallery
+                                    st.session_state.gallery.append({
+                                        "image": image_data,
+                                        "prompt": image_prompt,
+                                        "style": style,
+                                        "theme": theme
+                                    })
+                                    st.success("Image saved to gallery!")
+                                st.markdown('</div>', unsafe_allow_html=True)
                                 
-                            # Add download link
-                            st.markdown(
-                                get_image_download_link(image_data, f"palestine_image_{len(st.session_state.gallery)}.png", "Download Image"),
-                                unsafe_allow_html=True
-                            )
+                            with col2:
+                                st.markdown('<div class="secondary-btn">', unsafe_allow_html=True)
+                                # Add download link
+                                st.markdown(
+                                    get_image_download_link(image_data, f"palestine_image_{len(st.session_state.gallery)}.png", "Download Image"),
+                                    unsafe_allow_html=True
+                                )
+                                st.markdown('</div>', unsafe_allow_html=True)
                         else:
                             st.error(error or "Please enter a description to generate an image.")
                 else:
@@ -1100,7 +1302,7 @@ elif st.session_state.page == 'image':
         
         # Display image gallery
         if st.session_state.gallery:
-            st.markdown("### Image Gallery")
+            st.markdown('<div class="section-header">Image Gallery</div>', unsafe_allow_html=True)
             st.markdown("Here are some examples of previously generated images:")
             
             # Display images in grid
@@ -1110,9 +1312,13 @@ elif st.session_state.page == 'image':
                     st.image(img_data["image"], caption=img_data["prompt"], use_column_width=True)
             
             # Button to clear gallery
+            st.markdown('<div style="display: flex; justify-content: center; margin-top: 20px;">', unsafe_allow_html=True)
+            st.markdown('<div class="secondary-btn">', unsafe_allow_html=True)
             if st.button("Clear Gallery"):
                 st.session_state.gallery = []
                 st.experimental_rerun()
+            st.markdown('</div>', unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
 
 # Section 3: How to Support the Palestinian Cause
 elif st.session_state.page == 'support':
@@ -1121,13 +1327,13 @@ elif st.session_state.page == 'support':
     st.markdown("There are many ways to support the Palestinian cause. Here are some concrete actions you can take:")
     
     # Education and awareness
-    st.markdown("### 1. Educate Yourself and Raise Awareness")
+    st.markdown('<h3 style="color: #0000FF;">1. Educate Yourself and Raise Awareness</h3>', unsafe_allow_html=True)
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.markdown('<div class="card-title">Understanding to better act</div>', unsafe_allow_html=True)
     st.markdown('<div class="card-content">Education is the essential first step to effectively support the Palestinian cause. By informing yourself about the history, culture, and current situation in Palestine, you can help raise awareness among those around you and combat misinformation.</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    st.markdown("#### Recommended Educational Resources")
+    st.markdown('<h4 style="color: #000000;">Recommended Educational Resources</h4>', unsafe_allow_html=True)
     
     # Educational resources
     education_resources = [
@@ -1163,18 +1369,18 @@ elif st.session_state.page == 'support':
         <div class="card">
             <div class="card-title">{resource['title']}</div>
             <div class="card-content">{resource['description']}</div>
-            <a href="{resource['url']}" target="_blank">Visit website</a>
+            <a href="{resource['url']}" target="_blank" style="color: #0000FF;">Visit website</a>
         </div>
         """, unsafe_allow_html=True)
     
     # Boycott, Divestment, and Sanctions (BDS)
-    st.markdown("### 2. Support the BDS Movement")
+    st.markdown('<h3 style="color: #0000FF;">2. Support the BDS Movement</h3>', unsafe_allow_html=True)
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.markdown('<div class="card-title">A global non-violent movement</div>', unsafe_allow_html=True)
     st.markdown('<div class="card-content">The BDS (Boycott, Divestment, and Sanctions) movement is a global non-violent campaign aimed at exerting economic and political pressure on Israel until it complies with international law and Palestinian rights.</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    st.markdown("#### Current BDS Campaigns")
+    st.markdown('<h4 style="color: #000000;">Current BDS Campaigns</h4>', unsafe_allow_html=True)
     
     # Current BDS campaigns
     bds_campaigns = [
@@ -1215,18 +1421,18 @@ elif st.session_state.page == 'support':
     
     st.markdown("""
     <div class="card">
-    <p>For more information on current BDS campaigns and how to participate, visit the official BDS movement website: <a href="https://bdsmovement.net/" target="_blank">bdsmovement.net</a></p>
+    <p>For more information on current BDS campaigns and how to participate, visit the official BDS movement website: <a href="https://bdsmovement.net/" target="_blank" style="color: #0000FF;">bdsmovement.net</a></p>
     </div>
     """, unsafe_allow_html=True)
     
     # Donations and financial support
-    st.markdown("### 3. Donate")
+    st.markdown('<h3 style="color: #0000FF;">3. Donate</h3>', unsafe_allow_html=True)
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.markdown('<div class="card-title">Direct financial support</div>', unsafe_allow_html=True)
     st.markdown('<div class="card-content">Financial donations are essential to support humanitarian, medical, and educational organizations working directly with Palestinians. Your contribution can help provide medical care, education, and humanitarian aid.</div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    st.markdown("#### Recommended Organizations for Donations")
+    st.markdown('<h4 style="color: #000000;">Recommended Organizations for Donations</h4>', unsafe_allow_html=True)
     
     # Recommended organizations for donations
     donation_orgs = [
@@ -1262,7 +1468,7 @@ elif st.session_state.page == 'support':
         <div class="card">
             <div class="card-title">{org['title']}</div>
             <div class="card-content">{org['description']}</div>
-            <a href="{org['url']}" target="_blank">Donate</a>
+            <a href="{org['url']}" target="_blank" style="color: #0000FF;">Donate</a>
         </div>
         """, unsafe_allow_html=True)
 
@@ -1276,7 +1482,7 @@ elif st.session_state.page == 'boycott':
     boycott_data = get_boycott_data()
     
     # Boycott categories
-    st.markdown("### Boycott Categories")
+    st.markdown('<h3 style="color: #0000FF;">Boycott Categories</h3>', unsafe_allow_html=True)
     
     # Category selection
     category_options = list(boycott_data.keys())
@@ -1301,8 +1507,8 @@ elif st.session_state.page == 'boycott':
     
     st.markdown("---")
     st.markdown("""
-    **Note: This list is regularly updated. For more detailed information, visit** [boycott.thewitness.news](https://boycott.thewitness.news).
-    """)
+    <p style="text-align: center;"><strong>Note:</strong> This list is regularly updated. For more detailed information, visit <a href="https://boycott.thewitness.news" target="_blank" style="color: #0000FF;">boycott.thewitness.news</a>.</p>
+    """, unsafe_allow_html=True)
 
 # Help section
 elif st.session_state.page == 'help':
@@ -1314,7 +1520,7 @@ elif st.session_state.page == 'help':
     faqs = [
         {
             "question": "How can I use the Knowledge & Analysis section?",
-            "answer": "The Knowledge & Analysis section allows you to ask questions about Palestine and receive detailed, educational responses. Simply type your question in the input field and click 'Send'. You can also search for reliable sources related to your question by clicking the 'Search Sources' button."
+            "answer": "The Knowledge & Analysis section allows you to ask questions about Palestine and receive detailed, educational responses. Simply type your question in the input field and click 'Send'. You can also search for reliable sources related to your question by clicking the 'Search Reliable Sources' button."
         },
         {
             "question": "How does the image generation work?",
@@ -1326,7 +1532,7 @@ elif st.session_state.page == 'help':
         },
         {
             "question": "How can I verify the information provided by this platform?",
-            "answer": "We encourage users to verify information through multiple sources. The platform provides references to reliable sources in its responses, and you can use the 'Search Sources' feature to find additional information. We recommend cross-checking information with reputable news outlets, academic sources, and human rights organizations."
+            "answer": "We encourage users to verify information through multiple sources. The platform provides references to reliable sources in its responses, and you can use the 'Search Reliable Sources' feature to find additional information. We recommend cross-checking information with reputable news outlets, academic sources, and human rights organizations."
         },
         {
             "question": "How can I contribute to this platform?",
@@ -1348,25 +1554,25 @@ elif st.session_state.page == 'help':
         """, unsafe_allow_html=True)
     
     # Additional help resources
-    st.markdown("### Additional Resources")
+    st.markdown('<h3 style="color: #0000FF;">Additional Resources</h3>', unsafe_allow_html=True)
     
     st.markdown("""
     <div class="card">
         <div class="card-title">BDS Movement Official Website</div>
         <div class="card-content">Learn more about the Boycott, Divestment, and Sanctions movement and how to participate.</div>
-        <a href="https://bdsmovement.net/" target="_blank">Visit website</a>
+        <a href="https://bdsmovement.net/" target="_blank" style="color: #0000FF;">Visit website</a>
     </div>
     
     <div class="card">
         <div class="card-title">Palestine Legal</div>
         <div class="card-content">Information about legal rights when advocating for Palestinian rights.</div>
-        <a href="https://palestinelegal.org/" target="_blank">Visit website</a>
+        <a href="https://palestinelegal.org/" target="_blank" style="color: #0000FF;">Visit website</a>
     </div>
     
     <div class="card">
         <div class="card-title">Al-Haq</div>
         <div class="card-content">Palestinian human rights organization with resources on international law and human rights violations.</div>
-        <a href="https://www.alhaq.org/" target="_blank">Visit website</a>
+        <a href="https://www.alhaq.org/" target="_blank" style="color: #0000FF;">Visit website</a>
     </div>
     """, unsafe_allow_html=True)
 
@@ -1384,7 +1590,7 @@ elif st.session_state.page == 'about':
             
             <p>This platform uses AI technology to make information about Palestine more accessible and to help people engage with the cause in meaningful ways. We believe that education and awareness are powerful tools for change, and we are committed to using technology to advance the Palestinian cause.</p>
             
-            <p>From the river to the sea, Palestine will be free.</p>
+            <p><strong class="highlight-text">From the river to the sea, Palestine will be free.</strong></p>
         </div>
     </div>
     
@@ -1392,11 +1598,11 @@ elif st.session_state.page == 'about':
         <div class="card-title">Our Values</div>
         <div class="card-content">
             <ul>
-                <li><strong>Truth and Accuracy:</strong> We are committed to providing factual, well-researched information about Palestine.</li>
-                <li><strong>Justice and Equality:</strong> We believe in the principles of justice, equality, and human rights for all people.</li>
-                <li><strong>Solidarity:</strong> We stand in solidarity with the Palestinian people in their struggle for freedom and self-determination.</li>
-                <li><strong>Education:</strong> We believe in the power of education to challenge misconceptions and inspire action.</li>
-                <li><strong>Nonviolence:</strong> We advocate for nonviolent resistance and peaceful means of achieving justice.</li>
+                <li><strong style="color: #0000FF;">Truth and Accuracy:</strong> We are committed to providing factual, well-researched information about Palestine.</li>
+                <li><strong style="color: #0000FF;">Justice and Equality:</strong> We believe in the principles of justice, equality, and human rights for all people.</li>
+                <li><strong style="color: #0000FF;">Solidarity:</strong> We stand in solidarity with the Palestinian people in their struggle for freedom and self-determination.</li>
+                <li><strong style="color: #0000FF;">Education:</strong> We believe in the power of education to challenge misconceptions and inspire action.</li>
+                <li><strong style="color: #0000FF;">Nonviolence:</strong> We advocate for nonviolent resistance and peaceful means of achieving justice.</li>
             </ul>
         </div>
     </div>
@@ -1460,14 +1666,14 @@ elif st.session_state.page == 'team':
             <img src="{member['image']}" class="team-avatar" alt="{member['name']}">
             <div class="team-info">
                 <div class="team-name">{member['name']}</div>
-                <div class="team-role">{member['role']}</div>
+                <div class="team-role" style="color: #0000FF;">{member['role']}</div>
                 <div>{member['bio']}</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
     
     # Join the team
-    st.markdown("### Join Our Team")
+    st.markdown('<h3 style="color: #0000FF;">Join Our Team</h3>', unsafe_allow_html=True)
     
     st.markdown("""
     <div class="card">
@@ -1477,11 +1683,11 @@ elif st.session_state.page == 'team':
             
             <p>We're particularly interested in:</p>
             <ul>
-                <li>Content creators with knowledge of Palestinian history and current events</li>
-                <li>Developers with experience in AI and web development</li>
-                <li>Designers who can create impactful visual content</li>
-                <li>Translators who can help make our content accessible in multiple languages</li>
-                <li>Community organizers who can help spread awareness</li>
+                <li><strong style="color: #0000FF;">Content creators</strong> with knowledge of Palestinian history and current events</li>
+                <li><strong style="color: #0000FF;">Developers</strong> with experience in AI and web development</li>
+                <li><strong style="color: #0000FF;">Designers</strong> who can create impactful visual content</li>
+                <li><strong style="color: #0000FF;">Translators</strong> who can help make our content accessible in multiple languages</li>
+                <li><strong style="color: #0000FF;">Community organizers</strong> who can help spread awareness</li>
             </ul>
             
             <p>To express interest in joining our team, please contact us through our Contact page.</p>
@@ -1495,7 +1701,7 @@ elif st.session_state.page == 'contact':
     
     st.markdown("We'd love to hear from you! Reach out with questions, feedback, or suggestions.")
     
-    # Contact form
+    # Contact form with improved styling
     st.markdown('<div class="contact-form">', unsafe_allow_html=True)
     
     name = st.text_input("Name")
@@ -1503,23 +1709,27 @@ elif st.session_state.page == 'contact':
     subject = st.text_input("Subject")
     message = st.text_area("Message")
     
+    st.markdown('<div style="display: flex; justify-content: center; margin-top: 20px;">', unsafe_allow_html=True)
+    st.markdown('<div class="primary-btn">', unsafe_allow_html=True)
     if st.button("Send Message"):
         if name and email and subject and message:
             st.success(f"Thank you for your message, {name}! We'll get back to you soon at {email}.")
             st.info("Note: This is a demo form. In a production environment, this would send an email to our team.")
         else:
             st.error("Please fill in all fields.")
+    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('</div>', unsafe_allow_html=True)
     
     # Direct contact
-    st.markdown("### Direct Contact")
+    st.markdown('<h3 style="color: #0000FF;">Direct Contact</h3>', unsafe_allow_html=True)
     
     st.markdown("""
     <div class="card">
         <div class="card-title">Email</div>
         <div class="card-content">
-            <p>For general inquiries: <a href="mailto:oussama.sebrou@gmail.com">oussama.sebrou@gmail.com</a></p>
+            <p>For general inquiries: <a href="mailto:oussama.sebrou@gmail.com" style="color: #0000FF;">oussama.sebrou@gmail.com</a></p>
         </div>
     </div>
     
@@ -1528,9 +1738,9 @@ elif st.session_state.page == 'contact':
         <div class="card-content">
             <p>Follow us on social media for updates and news:</p>
             <ul>
-                <li>Twitter: <a href="https://twitter.com" target="_blank">@HereUsPalestine</a></li>
-                <li>Instagram: <a href="https://instagram.com" target="_blank">@hereus_palestine</a></li>
-                <li>Facebook: <a href="https://facebook.com" target="_blank">Here Us Palestine</a></li>
+                <li>Twitter: <a href="https://twitter.com" target="_blank" style="color: #0000FF;">@HereUsPalestine</a></li>
+                <li>Instagram: <a href="https://instagram.com" target="_blank" style="color: #0000FF;">@hereus_palestine</a></li>
+                <li>Facebook: <a href="https://facebook.com" target="_blank" style="color: #0000FF;">Here Us Palestine</a></li>
             </ul>
         </div>
     </div>
@@ -1540,6 +1750,6 @@ elif st.session_state.page == 'contact':
 st.markdown("""
 <div class="footer">
     <p>Here Us! From the River To the Sea © 2025 | Created with ❤️ for Palestine</p>
-    <p>Contact: <a href="mailto:oussama.sebrou@gmail.com">oussama.sebrou@gmail.com</a></p>
+    <p>Contact: <a href="mailto:oussama.sebrou@gmail.com" style="color: #0000FF;">oussama.sebrou@gmail.com</a></p>
 </div>
 """, unsafe_allow_html=True)
