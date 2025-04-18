@@ -1208,19 +1208,19 @@ def main():
             
             # Books section
             st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>كتب</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"مسألة فلسطين"</strong> لإدوارد سعيد</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"الموسوعة اليهودية والصهيونية وإسرائيل"</strong> لعبد الوهاب المسيري</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"التطهير العرقي في فلسطين"</strong> لإيلان بابيه</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"غزة في أزمة"</strong> لنعوم تشومسكي وإيلان بابيه</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"حرب المائة عام على فلسطين"</strong> لرشيد الخالدي</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'مسألة فلسطين'</strong> لإدوارد سعيد</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'الموسوعة اليهودية والصهيونية وإسرائيل'</strong> لعبد الوهاب المسيري</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'التطهير العرقي في فلسطين'</strong> لإيلان بابيه</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'غزة في أزمة'</strong> لنعوم تشومسكي وإيلان بابيه</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'حرب المائة عام على فلسطين'</strong> لرشيد الخالدي</p>", unsafe_allow_html=True)
             
             # Documentaries section
             st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>أفلام وثائقية</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"خمس كاميرات محطمة"</strong> (2011) لعماد برناط وغاي دافيدي</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"ملح هذا البحر"</strong> (2008) لآن ماري جاسر</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"غزة تقاتل من أجل الحرية"</strong> (2019) لآبي مارتن</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"احتلال 101"</strong> (2006) لسفيان عميش وعبد الله عميش</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"المطلوبون الـ18"</strong> (2014) لعامر الشوملي وبول كوان</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'خمس كاميرات محطمة'</strong> (2011) لعماد برناط وغاي دافيدي</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'ملح هذا البحر'</strong> (2008) لآن ماري جاسر</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'غزة تقاتل من أجل الحرية'</strong> (2019) لآبي مارتن</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'احتلال 101'</strong> (2006) لسفيان عميش وعبد الله عميش</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>'المطلوبون الـ18'</strong> (2014) لعامر الشوملي وبول كوان</p>", unsafe_allow_html=True)
             
             # Websites section
             st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>مواقع موثوقة</h4>", unsafe_allow_html=True)
@@ -1236,7 +1236,7 @@ def main():
         st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
     else:  # Arabic
         st.markdown("---")
-        st.markdown("<div style='text-align: center;' dir='rtl'>Palestine AI - تم تطويره بواسطة مدرسة الكلم-إمرو هايت بالتعاون مع شركة Erinov</div>", unsafe_allow_html=True)
+        st.markdown("<div style='text-align: center;' dir='rtl'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
