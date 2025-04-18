@@ -1230,7 +1230,12 @@ st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://
 st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</p>', unsafe_allow_html=True)
 st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>', unsafe_allow_html=True)
 
+  
+
     # Footer
+if "language" not in st.session_state:
+    st.session_state.language = "arabic"
+
 if st.session_state.language == 'english':
     st.markdown("---")
     st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
