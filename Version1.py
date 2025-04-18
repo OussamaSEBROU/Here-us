@@ -1223,12 +1223,12 @@ st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="fo
 st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"المطلوبون الـ18"</strong> (2014) لعامر الشوملي وبول كوان</p>', unsafe_allow_html=True)
             
             # Websites section
-            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>مواقع موثوقة</h4>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.aljazeera.com/palestine-israel-conflict/' style='color: #1f77b4; text-decoration: underline;'>الجزيرة</a> - تغطية شاملة لقضايا الشرق الأوسط</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.btselem.org/' style='color: #1f77b4; text-decoration: underline;'>بتسيلم</a> - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.palestine-studies.org/' style='color: #1f77b4; text-decoration: underline;'>معهد الدراسات الفلسطينية</a> - أبحاث أكاديمية حول فلسطين</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.unrwa.org/' style='color: #1f77b4; text-decoration: underline;'>الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</p>", unsafe_allow_html=True)
-            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://electronicintifada.net/' style='color: #1f77b4; text-decoration: underline;'>الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>", unsafe_allow_html=True)
+st.markdown('<h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;">مواقع موثوقة</h4>', unsafe_allow_html=True)
+st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.aljazeera.com/palestine-israel-conflict/" style="color: #1f77b4; text-decoration: underline;">الجزيرة</a> - تغطية شاملة لقضايا الشرق الأوسط</p>', unsafe_allow_html=True)
+st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.btselem.org/" style="color: #1f77b4; text-decoration: underline;">بتسيلم</a> - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة</p>', unsafe_allow_html=True)
+st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.palestine-studies.org/" style="color: #1f77b4; text-decoration: underline;">معهد الدراسات الفلسطينية</a> - أبحاث أكاديمية حول فلسطين</p>', unsafe_allow_html=True)
+st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</p>', unsafe_allow_html=True)
+st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>', unsafe_allow_html=True)
 
     # Footer
     if st.session_state.language == 'english':
