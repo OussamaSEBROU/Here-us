@@ -1207,41 +1207,36 @@ def main():
             st.markdown("<h3 style='font-weight: 700; color: #1f77b4; margin: 25px 0 15px 0; text-align: right;'>قراءات ومشاهدات موصى بها</h3>", unsafe_allow_html=True)
             
             # Books section
-st.markdown('<h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;">كتب</h4>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"مسألة فلسطين"</strong> لإدوارد سعيد</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"الموسوعة اليهودية والصهيونية وإسرائيل"</strong> لعبد الوهاب المسيري</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"التطهير العرقي في فلسطين"</strong> لإيلان بابيه</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"غزة في أزمة"</strong> لنعوم تشومسكي وإيلان بابيه</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"حرب المائة عام على فلسطين"</strong> لرشيد الخالدي</p>', unsafe_allow_html=True)
-
-# Documentaries section
-st.markdown('<h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;">أفلام وثائقية</h4>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"خمس كاميرات محطمة"</strong> (2011) لعماد برناط وغاي دافيدي</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"ملح هذا البحر"</strong> (2008) لآن ماري جاسر</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"غزة تقاتل من أجل الحرية"</strong> (2019) لآبي مارتن</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"احتلال 101"</strong> (2006) لسفيان عميش وعبد الله عميش</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><strong style="font-weight: 600;">"المطلوبون الـ18"</strong> (2014) لعامر الشوملي وبول كوان</p>', unsafe_allow_html=True)
+            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>كتب</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"مسألة فلسطين"</strong> لإدوارد سعيد</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"الموسوعة اليهودية والصهيونية وإسرائيل"</strong> لعبد الوهاب المسيري</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"التطهير العرقي في فلسطين"</strong> لإيلان بابيه</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"غزة في أزمة"</strong> لنعوم تشومسكي وإيلان بابيه</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"حرب المائة عام على فلسطين"</strong> لرشيد الخالدي</p>", unsafe_allow_html=True)
+            
+            # Documentaries section
+            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>أفلام وثائقية</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"خمس كاميرات محطمة"</strong> (2011) لعماد برناط وغاي دافيدي</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"ملح هذا البحر"</strong> (2008) لآن ماري جاسر</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"غزة تقاتل من أجل الحرية"</strong> (2019) لآبي مارتن</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"احتلال 101"</strong> (2006) لسفيان عميش وعبد الله عميش</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><strong style='font-weight: 600;'>"المطلوبون الـ18"</strong> (2014) لعامر الشوملي وبول كوان</p>", unsafe_allow_html=True)
             
             # Websites section
-st.markdown('<h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;">مواقع موثوقة</h4>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.aljazeera.com/palestine-israel-conflict/" style="color: #1f77b4; text-decoration: underline;">الجزيرة</a> - تغطية شاملة لقضايا الشرق الأوسط</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.btselem.org/" style="color: #1f77b4; text-decoration: underline;">بتسيلم</a> - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.palestine-studies.org/" style="color: #1f77b4; text-decoration: underline;">معهد الدراسات الفلسطينية</a> - أبحاث أكاديمية حول فلسطين</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</p>', unsafe_allow_html=True)
-st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>', unsafe_allow_html=True)
-
-  
+            st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>مواقع موثوقة</h4>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.aljazeera.com/palestine-israel-conflict/' style='color: #1f77b4; text-decoration: underline;'>الجزيرة</a> - تغطية شاملة لقضايا الشرق الأوسط</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.btselem.org/' style='color: #1f77b4; text-decoration: underline;'>بتسيلم</a> - مركز المعلومات الإسرائيلي لحقوق الإنسان في الأراضي المحتلة</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.palestine-studies.org/' style='color: #1f77b4; text-decoration: underline;'>معهد الدراسات الفلسطينية</a> - أبحاث أكاديمية حول فلسطين</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.unrwa.org/' style='color: #1f77b4; text-decoration: underline;'>الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</p>", unsafe_allow_html=True)
+            st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://electronicintifada.net/' style='color: #1f77b4; text-decoration: underline;'>الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>", unsafe_allow_html=True)
 
     # Footer
-if "language" not in st.session_state:
-    st.session_state.language = "arabic"
-
-if st.session_state.language == 'english':
-    st.markdown("---")
-    st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
-else:  # Arabic
-    st.markdown("---")
-    st.markdown("<div style='text-align: center; direction: rtl;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+    if st.session_state.language == 'english':
+        st.markdown("---")
+        st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+    else:  # Arabic
+        st.markdown("---")
+        st.markdown("<div style='text-align: center;' dir='rtl'>Palestine AI - تم تطويره بواسطة مدرسة الكلم-إمرو هايت بالتعاون مع شركة Erinov</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
