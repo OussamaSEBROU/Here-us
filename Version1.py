@@ -1231,12 +1231,12 @@ st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://
 st.markdown('<p style="text-align: right; margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>', unsafe_allow_html=True)
 
     # Footer
-    if st.session_state.language == 'english':
-        st.markdown("---")
-        st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
-    else:  # Arabic
-        st.markdown("---")
-        st.markdown("<div style='text-align: center;' dir='rtl'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+if st.session_state.language == 'english':
+    st.markdown("---")
+    st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+else:  # Arabic
+    st.markdown("---")
+    st.markdown("<div style='text-align: center; direction: rtl;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
