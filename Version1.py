@@ -841,12 +841,13 @@ def main():
     if st.session_state.language == 'english':
         st.title("Palestine AI - From the river to the sea")
         
-        # Quote of the Day section in a professional style
+        # Quote of the Day section in a professional style with blue color for big title
         st.markdown("""
-        > "The issue of Palestine is a trial that God has tested your conscience, resolve, wealth, and unity with."
-        >
-        > — Al-Bashir Al-Ibrahimi
-        """)
+        <blockquote style="border-left: 4px solid #1f77b4; padding-left: 15px; margin-left: 0; font-size: 1.1em;">
+        <p style="color: #1f77b4; font-weight: 600; font-size: 1.3em;">"The issue of Palestine is a trial that God has tested your conscience, resolve, wealth, and unity with."</p>
+        <footer style="text-align: right; font-style: italic; font-weight: 500;">— Al-Bashir Al-Ibrahimi</footer>
+        </blockquote>
+        """, unsafe_allow_html=True)
         
         # Information cards in a grid layout
         col1, col2 = st.columns(2)
@@ -863,13 +864,16 @@ def main():
             The Palestinian people continue to face severe humanitarian challenges due to ongoing occupation and blockade, particularly in the Gaza Strip, where residents are deprived of access to essential resources and services. These actions constitute clear violations of human rights and international law, which guarantee the right of peoples to live freely and with dignity in their homeland.
             """)
     else:  # Arabic
-        st.title("Palestina AI - من النهر إلى البحر")
+        # Title with blue color for Arabic
+        st.markdown("""
+        <h1 style="color: #1f77b4; font-weight: 700;">فلسطين AI - من النهر إلى البحر</h1>
+        """, unsafe_allow_html=True)
         
-        # Quote of the Day section in Arabic with improved font styling
+        # Quote of the Day section in Arabic with improved font styling and blue color for quote
         st.markdown("""
         <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
         <blockquote style="border-right: 4px solid #1f77b4; padding-right: 15px; margin-right: 0; font-size: 1.1em;">
-        <p style="font-weight: 600;">"إن قضية فلسطين محنةٌ امتحن الله بها ضمائركم وهممكم وأموالكم ووحدتكم."</p>
+        <p style="color: #1f77b4; font-weight: 600; font-size: 1.3em;">"إن قضية فلسطين محنةٌ امتحن الله بها ضمائركم وهممكم وأموالكم ووحدتكم."</p>
         <footer style="text-align: left; font-style: italic; font-weight: 500;">— البشير الإبراهيمي</footer>
         </blockquote>
         </div>
@@ -897,7 +901,9 @@ def main():
     # Display content based on session state
     if st.session_state.show_chat:
         if st.session_state.language == 'english':
-            st.header("Chat with AI about Palestine")
+            st.markdown("""
+            <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">Chat with AI about Palestine</h2>
+            """, unsafe_allow_html=True)
             
             # User input section with enhanced styling
             st.subheader("Ask Your Question")
@@ -918,7 +924,7 @@ def main():
             
             user_question = st.text_input("", placeholder="اكتب سؤالك عن فلسطين هنا...", key="text_question_ar")
             
-            # Add a submit button for better UX
+            # Add a submit button for better UX with Arabic text
             submit_button = st.button("الحصول على إجابة")
 
         # Process the question when submitted
@@ -1230,13 +1236,9 @@ def main():
             st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://www.unrwa.org/' style='color: #1f77b4; text-decoration: underline;'>الأونروا</a> - وكالة الأمم المتحدة لإغاثة وتشغيل اللاجئين الفلسطينيين</p>", unsafe_allow_html=True)
             st.markdown("<p style='text-align: right; margin-bottom: 8px;'><a href='https://electronicintifada.net/' style='color: #1f77b4; text-decoration: underline;'>الانتفاضة الإلكترونية</a> - أخبار وتعليقات وتحليلات ومواد مرجعية حول فلسطين</p>", unsafe_allow_html=True)
 
-    # Footer
-    if st.session_state.language == 'english':
-        st.markdown("---")
-        st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
-    else:  # Arabic
-        st.markdown("---")
-        st.markdown("<div style='text-align: center;' dir='rtl'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
+    # Footer - always in English regardless of selected language
+    st.markdown("---")
+    st.markdown("<div style='text-align: center;'>Palestine AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
