@@ -101,6 +101,49 @@ def typing_effect(text, delay=0.003):
         time.sleep(delay)
 
 
+# Function to check if query is related to Palestine
+def is_palestine_related(query):
+    # List of keywords related to Palestine
+    palestine_keywords = [
+        "palestine", "palestinian", "gaza", "west bank", "jerusalem", "al-quds", 
+        "israel", "israeli", "occupation", "intifada", "nakba", "hamas", "fatah", 
+        "plo", "bds", "boycott", "settlement", "settler", "zionism", "zionist",
+        "al-aqsa", "dome of rock", "hebron", "ramallah", "bethlehem", "nablus",
+        "jenin", "rafah", "khan younis", "unrwa", "refugee", "right of return",
+        "oslo", "two-state", "one-state", "apartheid", "wall", "barrier",
+        "checkpoint", "blockade", "olive", "resistance", "martyr", "shahid",
+        "idf", "arab", "middle east", "levant", "holy land", "balfour",
+        "1948", "1967", "intifada", "uprising", "protest", "demonstration",
+        "solidarity", "human rights", "international law", "un resolution",
+        "occupation", "colonization", "annexation", "displacement", "demolition",
+        "prisoner", "detention", "administrative detention", "hunger strike",
+        "flotilla", "aid", "humanitarian", "ceasefire", "peace process",
+        "negotiation", "mediation", "conflict", "war", "attack", "bombing",
+        "airstrike", "rocket", "tunnel", "border", "crossing", "siege",
+        "sanction", "embargo", "economy", "water", "electricity", "infrastructure",
+        "education", "health", "culture", "heritage", "identity", "diaspora",
+        "return", "citizenship", "stateless", "nationality", "flag", "keffiyeh",
+        "olive tree", "key", "map", "border", "1948", "1967", "partition",
+        "resolution", "un", "unesco", "icj", "icc", "amnesty", "hrw", "btselem",
+        "pchr", "al haq", "adalah", "badil", "passia", "miftah", "pngo",
+        "pflp", "dflp", "jihad", "islamic", "christian", "muslim", "jew",
+        "holy site", "temple mount", "haram al-sharif", "church of nativity",
+        "ibrahimi mosque", "cave of patriarchs", "rachel's tomb", "joseph's tomb",
+        "from the river to the sea", "free palestine", "save palestine"
+    ]
+    
+    query_lower = query.lower()
+    
+    # Check if any of the keywords are in the query
+    for keyword in palestine_keywords:
+        if keyword in query_lower:
+            return True
+    
+    return False
+
+
+
+
 # Function to get detailed boycott data
 def get_boycott_data_EN():
     # Predefined boycott data based on research
