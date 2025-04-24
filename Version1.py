@@ -1143,6 +1143,10 @@ def main():
             
             for member in team_members:
                 st.markdown(f"• {member}")
+                st.markdown("---") 
+                st.markdown("Supervised by Mr.Oussama SEBROU")
+
+
         
         # Help Section
         with st.expander("Help", expanded=True):
