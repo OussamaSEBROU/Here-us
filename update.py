@@ -8,7 +8,7 @@ import io
 import base64
 
 # Configure Gemini with your API key
-google_api_key = os.getenv("AIzaSyChkuipfn1VLK_YifhIxm6aSxJj-IP96so")
+google_api_key = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=google_api_key)
 
 # Load Gemini models
