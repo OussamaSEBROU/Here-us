@@ -352,7 +352,156 @@ def get_boycott_data_AR():
 
 
 # Function to get educational resources about Palestine
-def get_educational_resources():
+
+def get_educational_resources_AR():
+    resources = {
+        "History": [
+            {
+                "title": "The Nakba: Palestinian Exodus of 1948",
+                "description1": "النكبة (كارثة بالعربية) تشير إلى التهجير الجماعي وتجريد الفلسطينيين من ممتلكاتهم أثناء إنشاء دولة إسرائيل في عام 1948. أُجبر أكثر من 750,000 فلسطيني على مغادرة منازلهم، وتم تدمير أكثر من 500 قرية فلسطينية.",
+                "sources": [
+                    {"name": "Institute for Palestine Studies", "url": "https://www.palestine-studies.org/"},
+                    {"name": "UN Archives", "url": "https://archives.un.org/"},
+                    {"name": "Palestinian Journeys", "url": "https://www.paljourneys.org/en/timeline/highlight/165/nakba"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "تم تهجير أكثر من 750,000 فلسطيني",
+                    "تم تدمير أكثر من 500 قرية فلسطينية",
+                    "مصادرة 78٪ من الأراضي الفلسطينية التاريخية",
+                    "إنشاء أطول أزمة لاجئين غير محلولة في العالم"
+                ]
+            },
+            {
+                "title": "The 1967 Occupation and Its Consequences",
+                "description1": "في يونيو 1967، احتلت إسرائيل الضفة الغربية، والقدس الشرقية، وقطاع غزة، ومرتفعات الجولان، وشبه جزيرة سيناء خلال حرب الأيام الستة. هذا الاحتلال، الذي لا يزال مستمرًا حتى اليوم (باستثناء سيناء)، أدى إلى توسع المستوطنات الإسرائيلية غير القانونية ونظام من السيطرة العسكرية على السكان الفلسطينيين.",
+                "sources": [
+                    {"name": "United Nations", "url": "https://www.un.org/unispal/"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/"},
+                    {"name": "Human Rights Watch", "url": "https://www.hrw.org/middle-east/north-africa/israel/palestine"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "أكثر من 600,000 مستوطن إسرائيلي يعيشون بشكل غير قانوني في الضفة الغربية والقدس الشرقية",
+                    "أكثر من 60٪ من الضفة الغربية تحت السيطرة الإسرائيلية الكاملة (المنطقة ج)",
+                    "أكثر من 700 كم من الجدار الفاصل، والذي اعتبرته محكمة العدل الدولية غير قانوني",
+                    "أكثر من 65 قرارًا من الأمم المتحدة تدين الاحتلال، وجميعها تم تجاهلها من قبل إسرائيل"
+                ]
+            }
+        ],
+        "Human_Rights": [
+            {
+                "title": "Israeli Military Detention of Palestinian Children",
+                "description1": "تستمر إسرائيل في احتجاز الأطفال الفلسطينيين في السجون العسكرية، حيث يتم محاكمتهم أمام محاكم عسكرية. كثير من هؤلاء الأطفال يتم اعتقالهم من منازلهم ليلاً وتعرضهم للاعتداءات الجسدية والنفسية أثناء الاعتقال.",
+                "sources": [
+                    {"name": "Defense for Children International - Palestine", "url": "https://www.dci-palestine.org/"},
+                    {"name": "Amnesty International", "url": "https://www.amnesty.org/en/countries/middle-east-and-north-africa/israel-and-occupied-palestinian-territories/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "تم احتجاز أكثر من 100,000 طفل فلسطيني منذ عام 1967",
+                    "تحكم المحاكم العسكرية الإسرائيلية على الأطفال بعقوبات قاسية قد تصل إلى السجن لعدة سنوات",
+                    "يتعرض الأطفال الفلسطينيون للتعذيب الجسدي والنفسي أثناء الاحتجاز"
+                ]
+            },
+            {
+                "title": "Israeli Settler Violence Against Palestinians",
+                "description1": "العنف من قبل المستوطنين الإسرائيليين ضد الفلسطينيين يشمل الهجمات على الأشخاص والممتلكات. تتصاعد هذه الهجمات في الأراضي الفلسطينية المحتلة دون محاسبة، حيث تشهد المنطقة انتهاكات لحقوق الإنسان يومية.",
+                "sources": [
+                    {"name": "Human Rights Watch", "url": "https://www.hrw.org/middle-east/north-africa/israel/palestine"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "أكثر من 100 هجوم من قبل المستوطنين الإسرائيليين سنويًا ضد الفلسطينيين",
+                    "المستوطنات الإسرائيلية غير القانونية تُعتبر بؤرًا للعنف ضد الفلسطينيين",
+                    "غالبًا ما تمر الهجمات من قبل المستوطنين دون محاسبة من السلطات الإسرائيلية"
+                ]
+            }
+        ],
+        "Culture": [
+            {
+                "title": "Palestinian Cultural Heritage and Identity",
+                "description1": "تتميز الثقافة الفلسطينية بتاريخ طويل من الفنون، والموسيقى، والآداب، والحرف اليدوية. رغم كل محاولات الطمس الثقافي، ظل الفلسطينيون يتمسكون بهويتهم من خلال الاحتفاظ بتقاليدهم وأغانيهم ورقصاتهم.",
+                "sources": [
+                    {"name": "Palestinian Museum", "url": "https://www.palmuseum.org/"},
+                    {"name": "Palestinian Heritage Foundation", "url": "https://www.palestinianheritage.org/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "الرقص الفلسطيني (الدبكة) هو جزء أساسي من الثقافة الفلسطينية",
+                    "تمثل الموسيقى الفلسطينية جزءًا كبيرًا من الهوية الوطنية الفلسطينية",
+                    "تتضمن الحرف اليدوية الفلسطينية أدوات منزلية وزخارف تمثل الحياة اليومية الفلسطينية"
+                ]
+            },
+            {
+                "title": "Palestinian Literature and Poetry",
+                "description1": "الأدب الفلسطيني يزخر بالكثير من الأعمال التي تعكس معاناة الشعب الفلسطيني وتاريخه. من بين أبرز الكتاب والشعراء الفلسطينيين: محمود درويش وغسان كنفاني.",
+                "sources": [
+                    {"name": "Maqalati", "url": "https://www.maqalati.com/"},
+                    {"name": "Palestinian Writers Union", "url": "https://www.pwu.ps/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "محمود درويش هو أحد أبرز الشعراء الفلسطينيين",
+                    "غسان كنفاني كان من أبرز الكتاب الفلسطينيين الذين ناضلوا من خلال الأدب",
+                    "تُعد قصيدة 'على هذه الأرض' لمحمود درويش واحدة من أشهر القصائد الفلسطينية"
+                ]
+            }
+        ],
+        "Resistance": [
+            {
+                "title": "The Palestinian Resistance Movement",
+                "description1": "تشكلت حركات المقاومة الفلسطينية منذ بداية الاحتلال الإسرائيلي، وهي تشمل العديد من الفصائل التي تسعى لاسترجاع حقوق الفلسطينيين وإنهاء الاحتلال.",
+                "sources": [
+                    {"name": "Palestinian Authority", "url": "https://www.palestine.gov/"},
+                    {"name": "Al-Qassam Brigades", "url": "https://www.qassam.ps/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "حركة حماس هي إحدى الفصائل الرئيسية في المقاومة الفلسطينية",
+                    "تأسست الجبهة الشعبية لتحرير فلسطين في عام 1967",
+                    "حركات المقاومة تواصل نضالها ضد الاحتلال الإسرائيلي من خلال العديد من الأنشطة السياسية والعسكرية"
+                ]
+            },
+            {
+                "title": "Non-Violent Resistance: Popular Struggle",
+                "description1": "يشمل النضال الشعبي الفلسطيني أساليب غير عنيفة مثل التظاهرات، والإضرابات، ووقفات الاحتجاج ضد الاحتلال الإسرائيلي والمستوطنات.",
+                "sources": [
+                    {"name": "Palestinian Center for Nonviolence", "url": "https://www.palestiniannonviolence.org/"},
+                    {"name": "International Solidarity Movement", "url": "https://palsolidarity.org/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "الاحتجاجات غير العنيفة هي جزء من استراتيجية النضال الفلسطيني",
+                    "العديد من الفلسطينيين يشاركون في مقاطعة المنتجات الإسرائيلية"
+                ]
+            }
+        ],
+        "Global_Recognition": [
+            {
+                "title": "International Recognition of Palestine",
+                "description1": "في عام 2012، حصلت فلسطين على صفة دولة غير عضو مراقب في الأمم المتحدة. منذ ذلك الحين، واصلت فلسطين حملات اعتراف من الدول الغربية والمنظمات الدولية.",
+                "key_facts": [
+                    "In 2012, Palestine obtained non-member observer state status at the UN",
+                    "Membership in various international organizations, including the International Criminal Court",
+                    "Recognition by more than 140 countries out of 193 UN member states",
+                    "Ongoing campaigns for recognition by Western countries"
+                ]
+            }
+        ]
+    }
+    return resources
+
+def get_educational_resources_EN():
     resources = {
         "History": [
             {
@@ -1100,7 +1249,7 @@ def main():
             """, unsafe_allow_html=True)
             
             # Get educational resources
-            resources = get_educational_resources()
+            resources = get_educational_resources_EN()
             
             # Create tabs for different categories
             education_tabs = st.tabs(list(resources.keys()))
@@ -1186,7 +1335,7 @@ def main():
             """, unsafe_allow_html=True)
             
             # Get educational resources
-            resources = get_educational_resources()
+            resources = get_educational_resources_AR()
             
             # Create tabs for different categories
             education_tabs = st.tabs(list(resources.keys()))
