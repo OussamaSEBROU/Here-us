@@ -490,7 +490,7 @@ def get_educational_resources_AR():
             {
                 "title": "International Recognition of Palestine",
                 "description1": "في عام 2012، حصلت فلسطين على صفة دولة غير عضو مراقب في الأمم المتحدة. منذ ذلك الحين، واصلت فلسطين حملات اعتراف من الدول الغربية والمنظمات الدولية.",
-                "key_facts": [
+                "key_facts1": [
                     "In 2012, Palestine obtained non-member observer state status at the UN",
                     "Membership in various international organizations, including the International Criminal Court",
                     "Recognition by more than 140 countries out of 193 UN member states",
