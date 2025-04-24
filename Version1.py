@@ -1486,29 +1486,29 @@ def main():
             
             <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Books</h4>
             <ul style="padding-left: 20px; margin-bottom: 20px;">
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Question of Palestine"</strong> by Edward Said</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Palestine: A Modern History"</strong> by Ilan Pappé</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Ethnic Cleansing of Palestine"</strong> by Ilan Pappé</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Gaza in Crisis"</strong> by Noam Chomsky and Ilan Pappé</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Hundred Years' War on Palestine"</strong> by Rashid Khalidi</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Question of Palestine"</strong> by Edward Said</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Palestine: A Modern History"</strong> by Ilan Pappé</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Ethnic Cleansing of Palestine"</strong> by Ilan Pappé</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Gaza in Crisis"</strong> by Noam Chomsky and Ilan Pappé</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Hundred Years' War on Palestine"</strong> by Rashid Khalidi</li>
             </ul>
             
             <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Documentaries</h4>
             <ul style="padding-left: 20px; margin-bottom: 20px;">
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"5 Broken Cameras"</strong> (2011) by Emad Burnat and Guy Davidi</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Salt of This Sea"</strong> (2008) by Annemarie Jacir</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Gaza Fight for Freedom"</strong> (2019) by Abby Martin</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Occupation 101"</strong> (2006) by Sufyan Omeish and Abdallah Omeish</li>
-                <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Wanted 18"</strong> (2014) by Amer Shomali and Paul Cowan</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"5 Broken Cameras"</strong> (2011) by Emad Burnat and Guy Davidi</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Salt of This Sea"</strong> (2008) by Annemarie Jacir</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Gaza Fight for Freedom"</strong> (2019) by Abby Martin</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"Occupation 101"</strong> (2006) by Sufyan Omeish and Abdallah Omeish</li>
+            <li style="margin-bottom: 8px;"><strong style="font-weight: 600;">"The Wanted 18"</strong> (2014) by Amer Shomali and Paul Cowan</li>
             </ul>
             
             <h4 style="font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0;">Reliable Websites</h4>
             <ul style="padding-left: 20px; margin-bottom: 20px;">
-                <li style="margin-bottom: 8px;"><a href="https://www.aljazeera.com/palestine-israel-conflict/" style="color: #1f77b4; text-decoration: underline;">Al Jazeera</a> - Comprehensive coverage of Middle East issues</li>
-                <li style="margin-bottom: 8px;"><a href="https://www.btselem.org/" style="color: #1f77b4; text-decoration: underline;">B'Tselem</a> - Israeli Information Center for Human Rights in the Occupied Territories</li>
-                <li style="margin-bottom: 8px;"><a href="https://www.palestine-studies.org/" style="color: #1f77b4; text-decoration: underline;">Institute for Palestine Studies</a> - Academic research on Palestine</li>
-                <li style="margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">UNRWA</a> - UN Relief and Works Agency for Palestine Refugees</li>
-                <li style="margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">Electronic Intifada</a> - News, commentary, analysis, and reference materials about Palestine</li>
+            <li style="margin-bottom: 8px;"><a href="https://www.aljazeera.com/palestine-israel-conflict/" style="color: #1f77b4; text-decoration: underline;">Al Jazeera</a> - Comprehensive coverage of Middle East issues</li>
+            <li style="margin-bottom: 8px;"><a href="https://www.btselem.org/" style="color: #1f77b4; text-decoration: underline;">B'Tselem</a> - Israeli Information Center for Human Rights in the Occupied Territories</li>
+            <li style="margin-bottom: 8px;"><a href="https://www.palestine-studies.org/" style="color: #1f77b4; text-decoration: underline;">Institute for Palestine Studies</a> - Academic research on Palestine</li>
+            <li style="margin-bottom: 8px;"><a href="https://www.unrwa.org/" style="color: #1f77b4; text-decoration: underline;">UNRWA</a> - UN Relief and Works Agency for Palestine Refugees</li>
+            <li style="margin-bottom: 8px;"><a href="https://electronicintifada.net/" style="color: #1f77b4; text-decoration: underline;">Electronic Intifada</a> - News, commentary, analysis, and reference materials about Palestine</li>
             </ul>
             """, unsafe_allow_html=True)
         else:  # Arabic
