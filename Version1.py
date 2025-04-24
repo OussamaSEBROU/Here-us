@@ -1353,7 +1353,7 @@ def main():
                         with st.expander(f"{resource['title']}", expanded=False):
                             st.markdown(f"""
                             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                                <p style="font-size: 1.05em; text-align: right; margin-bottom: 15px;">{resource['description']}</p>
+                                <p style="font-size: 1.05em; text-align: right; margin-bottom: 15px;">{resource['description1']}</p>
                             </div>
                             """, unsafe_allow_html=True)
                             
