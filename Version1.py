@@ -1359,7 +1359,7 @@ def main():
                             
                             st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>حقائق رئيسية:</h4>", unsafe_allow_html=True)
                             
-                            for fact in resource['key_facts']:
+                            for fact in resource['key_facts1']:
                                 st.markdown(f"<p style='text-align: right; margin-bottom: 5px;'>• {fact}</p>", unsafe_allow_html=True)
                             
                             st.markdown("<h4 style='font-weight: 600; color: #2ca02c; margin: 15px 0 10px 0; text-align: right;'>المصادر:</h4>", unsafe_allow_html=True)
