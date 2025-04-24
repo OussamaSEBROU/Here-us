@@ -1143,8 +1143,8 @@ def main():
             
             for member in team_members:
                 st.markdown(f"• {member}")
-                st.markdown("---") 
-                st.markdown("Supervised by Mr.Oussama SEBROU")
+            st.markdown("---") 
+            st.markdown("Supervised by Mr.Oussama SEBROU")
 
 
         
@@ -1249,14 +1249,14 @@ def main():
     if st.session_state.show_chat:
         if st.session_state.language == 'english':
             st.markdown("""
-            <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">Chat with AI about Palestine</h2>
+            <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 18px;">Chat with AI about Palestine</h2>
             """, unsafe_allow_html=True)
             
             # User input section with enhanced styling
             st.subheader("Ask Your Question")
             st.markdown("Get accurate, detailed information about Palestine's history, current events, and humanitarian issues.")
             
-            user_question = st.text_input("", placeholder="Type your question about Palestine here...", key="text_question")
+            user_question = st.text_input("", placeholder="Type your question using your language...", key="text_question")
             
             # Add a submit button for better UX
             submit_button = st.button("Get Answer")
@@ -1269,7 +1269,7 @@ def main():
             </div>
             """, unsafe_allow_html=True)
             
-            user_question = st.text_input("", placeholder="Type your question about Palestine here...", key="text_question_ar")
+            user_question = st.text_input("", placeholder="Type your question using your language...", key="text_question_ar")
             
             # Add a submit button for better UX with Arabic text
             submit_button = st.button("Get Answer")
@@ -1514,9 +1514,9 @@ def main():
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">موارد تعليمية عن فلسطين</h2>
+            <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">موارد تعليمية عن فلسطين</h2>
                 
-                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">يوفر هذا القسم موارد تعليمية لمساعدتك على معرفة المزيد عن فلسطين وتاريخها وثقافتها ووضعها الحالي.
+            <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">يوفر هذا القسم موارد تعليمية لمساعدتك على معرفة المزيد عن فلسطين وتاريخها وثقافتها ووضعها الحالي.
                 تستند المعلومات المقدمة هنا إلى مصادر موثوقة، بما في ذلك تقارير من منظمات حقوق الإنسان، ووثائق الأمم المتحدة، والدراسات الأكاديمية، والشهادات المباشرة.</p>
             </div>
             """, unsafe_allow_html=True)
