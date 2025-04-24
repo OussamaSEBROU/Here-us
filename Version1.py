@@ -34,7 +34,6 @@ Respond to the user question with:
 - Structure your response like a professional news article or academic report with clear sections
 - Base your information on trusted sources such as:
   * Al Jazeera (aljazeera.com) - Known for comprehensive coverage of Middle East issues
-  * Middle East Eye (middleeasteye.net) - Independent coverage of Middle East affairs
   * Metras (https://metras.co/) - Provides in-depth analysis on Palestinian affairs
   * Electronic Intifada (electronicintifada.net) - News and analysis on Palestine
   * Anadolu Agency (aa.com.tr) - Turkish state-run news agency with Middle East coverage
@@ -50,7 +49,7 @@ Respond to the user question with:
   * Palestinian academic institutions and research centers
   * Historical archives and primary source documents
 
-- Include specific citations when possible (e.g., "According to Al Jazeera's reporting on [date]..." or "As documented by Human Rights Watch in their 2023 report...")
+- Include specific citations when possible (e.g., "According to Al Jazeera's reporting on [date]..." or "As documented by Human Rights Watch in their  report...")
 - Provide factual, well-researched information on current events with accurate reporting
 - Include relevant statistics and data from credible sources when discussing the humanitarian situation
 - The answer should be in the same language as the input (be careful with this point)
@@ -101,48 +100,9 @@ def typing_effect(text, delay=0.003):
         placeholder.markdown(f"<div style='line-height: 1.5;'>{output}</div>", unsafe_allow_html=True)
         time.sleep(delay)
 
-# Function to check if query is related to Palestine
-def is_palestine_related(query):
-    # List of keywords related to Palestine
-    palestine_keywords = [
-        "palestine", "palestinian", "gaza", "west bank", "jerusalem", "al-quds", 
-        "israel", "israeli", "occupation", "intifada", "nakba", "hamas", "fatah", 
-        "plo", "bds", "boycott", "settlement", "settler", "zionism", "zionist",
-        "al-aqsa", "dome of rock", "hebron", "ramallah", "bethlehem", "nablus",
-        "jenin", "rafah", "khan younis", "unrwa", "refugee", "right of return",
-        "oslo", "two-state", "one-state", "apartheid", "wall", "barrier",
-        "checkpoint", "blockade", "olive", "resistance", "martyr", "shahid",
-        "idf", "arab", "middle east", "levant", "holy land", "balfour",
-        "1948", "1967", "intifada", "uprising", "protest", "demonstration",
-        "solidarity", "human rights", "international law", "un resolution",
-        "occupation", "colonization", "annexation", "displacement", "demolition",
-        "prisoner", "detention", "administrative detention", "hunger strike",
-        "flotilla", "aid", "humanitarian", "ceasefire", "peace process",
-        "negotiation", "mediation", "conflict", "war", "attack", "bombing",
-        "airstrike", "rocket", "tunnel", "border", "crossing", "siege",
-        "sanction", "embargo", "economy", "water", "electricity", "infrastructure",
-        "education", "health", "culture", "heritage", "identity", "diaspora",
-        "return", "citizenship", "stateless", "nationality", "flag", "keffiyeh",
-        "olive tree", "key", "map", "border", "1948", "1967", "partition",
-        "resolution", "un", "unesco", "icj", "icc", "amnesty", "hrw", "btselem",
-        "pchr", "al haq", "adalah", "badil", "passia", "miftah", "pngo",
-        "pflp", "dflp", "jihad", "islamic", "christian", "muslim", "jew",
-        "holy site", "temple mount", "haram al-sharif", "church of nativity",
-        "ibrahimi mosque", "cave of patriarchs", "rachel's tomb", "joseph's tomb",
-        "from the river to the sea", "free palestine", "save palestine"
-    ]
-    
-    query_lower = query.lower()
-    
-    # Check if any of the keywords are in the query
-    for keyword in palestine_keywords:
-        if keyword in query_lower:
-            return True
-    
-    return False
 
 # Function to get detailed boycott data
-def get_boycott_data():
+def get_boycott_data_EN():
     # Predefined boycott data based on research
     boycott_data = {
         "Food & Beverages": {
@@ -341,8 +301,207 @@ def get_boycott_data():
     
     return boycott_data
 
+
+def get_boycott_data_AR():
+    boycott_data = {
+        "Food & Beverages": {
+            "companies": [
+                {
+                    "name": "Starbucks",
+                    "reason1": "هاورد شولتز، مؤسس شركة ستاربكس والمساهم الأكبر فيها، يُعدّ من أبرز الداعمين للكيان الصهيوني، حيث يضخّ استثمارات بمليارات الدولارات في الاقتصاد الإسرائيلي، من بينها استثمار حديث بقيمة 1.7 مليار دولار في شركة أمن سيبراني إسرائيلية تُدعى 'Wiz'.",
+                    "action1": "لا تشتري منتجات ستاربكس. لا تبيع منتجات ستاربكس. لا تعمل في ستاربكس.",
+                    "alternatives1": ["Caffe Nero", "Local independent cafes", "Local Arab cafes"]
+                },
+                {
+                    "name": "Coca-Cola",
+                    "reason1": "تمتلك كوكا كولا مصنعًا للتعبئة في منطقة آتاروت الصناعية، وهي مستوطنة إسرائيلية غير قانونية في القدس الشرقية المحتلة. تستمر الشركة في دعم الاقتصاد الإسرائيلي رغم الانتهاكات الممنهجة لحقوق الإنسان.",
+                    "action1": "قاطع جميع منتجات كوكا كولا، بما في ذلك سبرايت، فانتا، والعلامات التجارية المرتبطة.",
+                    "alternatives1": ["Local beverage brands", "Homemade sparkling water", "Natural juices"]
+                },
+                {
+                    "name": "McDonald's",
+                    "reason1": "قدمت ماكدونالدز إسرائيل آلاف الوجبات المجانية للجنود الإسرائيليين أثناء العمليات العسكرية في غزة. وقد دعمت الامتيازات الإسرائيلية علنًا الإجراءات العسكرية ضد الفلسطينيين.",
+                    "action1": "لا تأكل في ماكدونالدز.",
+                    "alternatives1": ["Local restaurants", "Local fast food chains"]
+                },
+                {
+                    "name": "Nestlé",
+                    "reason1": "تعمل نستله في إسرائيل منذ عام 1995 وتمتلك منشآت إنتاج في مناطق متنازع عليها. وتواجه الشركة انتقادات لاستغلالها موارد المياه الفلسطينية.",
+                    "action1": "تجنب منتجات نستله، بما في ذلك المياه المعبأة، والحبوب، ومنتجات الألبان.",
+                    "alternatives1": ["Local brands", "Artisanal products", "Filtered tap water"]
+                },
+                {
+                    "name": "PepsiCo",
+                    "reason1": "تعمل شركة بيبسيكو في إسرائيل وتمتلك منشآت في أراضٍ متنازع عليها. وتواصل الشركة أنشطتها رغم الدعوات إلى المقاطعة.",
+                    "action1": "تجنب جميع منتجات بيبسيكو، بما في ذلك رقائق ليز، دوريتوس، ومشروبات بيبسي.",
+                    "alternatives1": ["Local beverages", "Locally manufactured snacks"]
+                },
+                {
+                    "name": "Sabra Hummus",
+                    "reason1": "شركة سابرا مشروع مشترك بين شركة بيبسيكو ومجموعة شتراوس الإسرائيلية، التي تدعم وحدات النخبة في الجيش الإسرائيلي المتورطة في انتهاكات حقوق الإنسان.",
+                    "action1": "لا تشترِ حمص سابرا.",
+                    "alternatives1": ["Homemade hummus", "Local Arab hummus brands"]
+                }
+            ]
+        }
+    }
+
+    return boycott_data
+
+
+
+
 # Function to get educational resources about Palestine
-def get_educational_resources():
+
+def get_educational_resources_AR():
+    resources = {
+        "History": [
+            {
+                "title": "The Nakba: Palestinian Exodus of 1948",
+                "description1": "النكبة (كارثة بالعربية) تشير إلى التهجير الجماعي وتجريد الفلسطينيين من ممتلكاتهم أثناء إنشاء دولة إسرائيل في عام 1948. أُجبر أكثر من 750,000 فلسطيني على مغادرة منازلهم، وتم تدمير أكثر من 500 قرية فلسطينية.",
+                "sources": [
+                    {"name": "Institute for Palestine Studies", "url": "https://www.palestine-studies.org/"},
+                    {"name": "UN Archives", "url": "https://archives.un.org/"},
+                    {"name": "Palestinian Journeys", "url": "https://www.paljourneys.org/en/timeline/highlight/165/nakba"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "تم تهجير أكثر من 750,000 فلسطيني",
+                    "تم تدمير أكثر من 500 قرية فلسطينية",
+                    "مصادرة 78٪ من الأراضي الفلسطينية التاريخية",
+                    "إنشاء أطول أزمة لاجئين غير محلولة في العالم"
+                ]
+            },
+            {
+                "title": "The 1967 Occupation and Its Consequences",
+                "description1": "في يونيو 1967، احتلت إسرائيل الضفة الغربية، والقدس الشرقية، وقطاع غزة، ومرتفعات الجولان، وشبه جزيرة سيناء خلال حرب الأيام الستة. هذا الاحتلال، الذي لا يزال مستمرًا حتى اليوم (باستثناء سيناء)، أدى إلى توسع المستوطنات الإسرائيلية غير القانونية ونظام من السيطرة العسكرية على السكان الفلسطينيين.",
+                "sources": [
+                    {"name": "United Nations", "url": "https://www.un.org/unispal/"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/"},
+                    {"name": "Human Rights Watch", "url": "https://www.hrw.org/middle-east/north-africa/israel/palestine"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "أكثر من 600,000 مستوطن إسرائيلي يعيشون بشكل غير قانوني في الضفة الغربية والقدس الشرقية",
+                    "أكثر من 60٪ من الضفة الغربية تحت السيطرة الإسرائيلية الكاملة (المنطقة ج)",
+                    "أكثر من 700 كم من الجدار الفاصل، والذي اعتبرته محكمة العدل الدولية غير قانوني",
+                    "أكثر من 65 قرارًا من الأمم المتحدة تدين الاحتلال، وجميعها تم تجاهلها من قبل إسرائيل"
+                ]
+            }
+        ],
+        "Human_Rights": [
+            {
+                "title": "Israeli Military Detention of Palestinian Children",
+                "description1": "تستمر إسرائيل في احتجاز الأطفال الفلسطينيين في السجون العسكرية، حيث يتم محاكمتهم أمام محاكم عسكرية. كثير من هؤلاء الأطفال يتم اعتقالهم من منازلهم ليلاً وتعرضهم للاعتداءات الجسدية والنفسية أثناء الاعتقال.",
+                "sources": [
+                    {"name": "Defense for Children International - Palestine", "url": "https://www.dci-palestine.org/"},
+                    {"name": "Amnesty International", "url": "https://www.amnesty.org/en/countries/middle-east-and-north-africa/israel-and-occupied-palestinian-territories/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "تم احتجاز أكثر من 100,000 طفل فلسطيني منذ عام 1967",
+                    "تحكم المحاكم العسكرية الإسرائيلية على الأطفال بعقوبات قاسية قد تصل إلى السجن لعدة سنوات",
+                    "يتعرض الأطفال الفلسطينيون للتعذيب الجسدي والنفسي أثناء الاحتجاز"
+                ]
+            },
+            {
+                "title": "Israeli Settler Violence Against Palestinians",
+                "description1": "العنف من قبل المستوطنين الإسرائيليين ضد الفلسطينيين يشمل الهجمات على الأشخاص والممتلكات. تتصاعد هذه الهجمات في الأراضي الفلسطينية المحتلة دون محاسبة، حيث تشهد المنطقة انتهاكات لحقوق الإنسان يومية.",
+                "sources": [
+                    {"name": "Human Rights Watch", "url": "https://www.hrw.org/middle-east/north-africa/israel/palestine"},
+                    {"name": "B'Tselem", "url": "https://www.btselem.org/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "أكثر من 100 هجوم من قبل المستوطنين الإسرائيليين سنويًا ضد الفلسطينيين",
+                    "المستوطنات الإسرائيلية غير القانونية تُعتبر بؤرًا للعنف ضد الفلسطينيين",
+                    "غالبًا ما تمر الهجمات من قبل المستوطنين دون محاسبة من السلطات الإسرائيلية"
+                ]
+            }
+        ],
+        "Culture": [
+            {
+                "title": "Palestinian Cultural Heritage and Identity",
+                "description1": "تتميز الثقافة الفلسطينية بتاريخ طويل من الفنون، والموسيقى، والآداب، والحرف اليدوية. رغم كل محاولات الطمس الثقافي، ظل الفلسطينيون يتمسكون بهويتهم من خلال الاحتفاظ بتقاليدهم وأغانيهم ورقصاتهم.",
+                "sources": [
+                    {"name": "Palestinian Museum", "url": "https://www.palmuseum.org/"},
+                    {"name": "Palestinian Heritage Foundation", "url": "https://www.palestinianheritage.org/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "الرقص الفلسطيني (الدبكة) هو جزء أساسي من الثقافة الفلسطينية",
+                    "تمثل الموسيقى الفلسطينية جزءًا كبيرًا من الهوية الوطنية الفلسطينية",
+                    "تتضمن الحرف اليدوية الفلسطينية أدوات منزلية وزخارف تمثل الحياة اليومية الفلسطينية"
+                ]
+            },
+            {
+                "title": "Palestinian Literature and Poetry",
+                "description1": "الأدب الفلسطيني يزخر بالكثير من الأعمال التي تعكس معاناة الشعب الفلسطيني وتاريخه. من بين أبرز الكتاب والشعراء الفلسطينيين: محمود درويش وغسان كنفاني.",
+                "sources": [
+                    {"name": "Maqalati", "url": "https://www.maqalati.com/"},
+                    {"name": "Palestinian Writers Union", "url": "https://www.pwu.ps/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "محمود درويش هو أحد أبرز الشعراء الفلسطينيين",
+                    "غسان كنفاني كان من أبرز الكتاب الفلسطينيين الذين ناضلوا من خلال الأدب",
+                    "تُعد قصيدة 'على هذه الأرض' لمحمود درويش واحدة من أشهر القصائد الفلسطينية"
+                ]
+            }
+        ],
+        "Resistance": [
+            {
+                "title": "The Palestinian Resistance Movement",
+                "description1": "تشكلت حركات المقاومة الفلسطينية منذ بداية الاحتلال الإسرائيلي، وهي تشمل العديد من الفصائل التي تسعى لاسترجاع حقوق الفلسطينيين وإنهاء الاحتلال.",
+                "sources": [
+                    {"name": "Palestinian Authority", "url": "https://www.palestine.gov/"},
+                    {"name": "Al-Qassam Brigades", "url": "https://www.qassam.ps/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "حركة حماس هي إحدى الفصائل الرئيسية في المقاومة الفلسطينية",
+                    "تأسست الجبهة الشعبية لتحرير فلسطين في عام 1967",
+                    "حركات المقاومة تواصل نضالها ضد الاحتلال الإسرائيلي من خلال العديد من الأنشطة السياسية والعسكرية"
+                ]
+            },
+            {
+                "title": "Non-Violent Resistance: Popular Struggle",
+                "description1": "يشمل النضال الشعبي الفلسطيني أساليب غير عنيفة مثل التظاهرات، والإضرابات، ووقفات الاحتجاج ضد الاحتلال الإسرائيلي والمستوطنات.",
+                "sources": [
+                    {"name": "Palestinian Center for Nonviolence", "url": "https://www.palestiniannonviolence.org/"},
+                    {"name": "International Solidarity Movement", "url": "https://palsolidarity.org/"},
+                    {"name": "Metras", "url": "https://metras.co"},
+                    {"name": "Anadolu Agency (Arabic)", "url": "https://www.aa.com.tr/ar"}
+                ],
+                "key_facts1": [
+                    "الاحتجاجات غير العنيفة هي جزء من استراتيجية النضال الفلسطيني",
+                    "العديد من الفلسطينيين يشاركون في مقاطعة المنتجات الإسرائيلية"
+                ]
+            }
+        ],
+        "Global_Recognition": [
+            {
+                "title": "International Recognition of Palestine",
+                "description1": "في عام 2012، حصلت فلسطين على صفة دولة غير عضو مراقب في الأمم المتحدة. منذ ذلك الحين، واصلت فلسطين حملات اعتراف من الدول الغربية والمنظمات الدولية.",
+                "key_facts": [
+                    "In 2012, Palestine obtained non-member observer state status at the UN",
+                    "Membership in various international organizations, including the International Criminal Court",
+                    "Recognition by more than 140 countries out of 193 UN member states",
+                    "Ongoing campaigns for recognition by Western countries"
+                ]
+            }
+        ]
+    }
+    return resources
+
+def get_educational_resources_EN():
     resources = {
         "History": [
             {
@@ -712,8 +871,8 @@ def main():
         initial_sidebar_state="expanded",
         menu_items={
             'Get Help': 'https://www.palestineai.org/help',
-            'Report a bug': 'https://www.palestineai.org/bug',
-            'About': 'Palestina AI - Developed by Elkalem-Imrou Height School in collaboration with Erinov Company'
+            'Report a bug': 'https://www.palestineai.org',
+            'About': 'Palestina AI - Developed by Elkalem-Imrou Height School student in collaboration with Erinov Company'
         }
     )
 
@@ -790,6 +949,7 @@ def main():
                 "Chihani Bouchera",
                 "Mehdia Abbouna",
                 "Rahma Elalouani",
+                "AbdeElrahman Daouad",
                 "Redouan Rekik Sadek",
                 "Abdellatif Abdelnour",
                 "Bahedi Bouchera",
@@ -832,14 +992,14 @@ def main():
             - Boycott Information and Support Resources
             - Educational Resources
             
-            © 2025 Palestine AI Team. All rights reserved.
+            © 2025 Palestina AI Team. All rights reserved.
             
             [Contact Us](mailto:your-email@example.com?subject=Palestine%20Info%20Bot%20Inquiry&body=Dear%20Palestine%20Info%20Bot%20Team,%0A%0AWe%20are%20writing%20to%20inquire%20about%20[your%20inquiry]%2C%20specifically%20[details%20of%20your%20inquiry].%0A%0A[Provide%20additional%20context%20and%20details%20here].%0A%0APlease%20let%20us%20know%20if%20you%20require%20any%20further%20information%20from%20our%20end.%0A%0ASincerely,%0A[Your%20Company%20Name]%0A[Your%20Name]%0A[Your%20Title]%0A[Your%20Phone%20Number]%0A[Your%20Email%20Address])
             """)
 
     # Main content area
     if st.session_state.language == 'english':
-        st.title("Palestine AI - From the river to the sea")
+        st.title("Palestina AI - From the river to the sea")
         
         # Quote of the Day section in a professional style with blue color for big title
         st.markdown("""
@@ -866,7 +1026,7 @@ def main():
     else:  # Arabic
         # Title with blue color for Arabic
         st.markdown("""
-        <h1 style="color: #1f77b4; font-weight: 700;">فلسطين AI - من النهر إلى البحر</h1>
+        <h1 style="font-weight: 700;">Palestina AI From the river to the sea</h1>
         """, unsafe_allow_html=True)
         
         # Quote of the Day section in Arabic with improved font styling and blue color for quote
@@ -916,23 +1076,23 @@ def main():
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">تحدث مع الذكاء الاصطناعي حول فلسطين</h2>
-                <h3 style="font-weight: 600; margin-top: 15px; margin-bottom: 10px;">اطرح سؤالك</h3>
-                <p style="font-size: 1.05em;">احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية والقضايا الإنسانية.</p>
+                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">Chat with AI about Palestine</h2>
+                <h3 style="font-weight: 600; margin-top: 15px; margin-bottom: 10px;">Ask Your Question</h3>
+                <p style="font-size: 1.05em;">احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية.</p>
             </div>
             """, unsafe_allow_html=True)
             
-            user_question = st.text_input("", placeholder="اكتب سؤالك عن فلسطين هنا...", key="text_question_ar")
+            user_question = st.text_input("", placeholder="Type your question about Palestine here...", key="text_question_ar")
             
             # Add a submit button for better UX with Arabic text
-            submit_button = st.button("الحصول على إجابة")
+            submit_button = st.button("Get Answer")
 
         # Process the question when submitted
         if user_question and submit_button:
             # Check if the question is related to Palestine
             is_palestine = is_palestine_related(user_question)
             
-            with st.spinner("Generating comprehensive answer..." if st.session_state.language == 'english' else "جاري إنشاء إجابة شاملة..."):
+            with st.spinner("Generating comprehensive answer..." if st.session_state.language == 'english' else "Generating comprehensive answer..."):
                 answer = ask_about_palestine(user_question)
                 
                 # Create a container with better styling for the answer
@@ -954,7 +1114,7 @@ def main():
             """, unsafe_allow_html=True)
             
             # Get boycott data
-            boycott_data = get_boycott_data()
+            boycott_data = get_boycott_data_EN()
             
             # Create tabs for different categories
             boycott_tabs = st.tabs(list(boycott_data.keys()))
@@ -1015,17 +1175,16 @@ def main():
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">معلومات المقاطعة</h2>
+            <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">معلومات المقاطعة</h2>
                 
-                <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">تهدف حركة المقاطعة إلى ممارسة ضغط اقتصادي وسياسي على إسرائيل للامتثال للقانون الدولي وحقوق الفلسطينيين.
-                هذا الشكل من المقاومة اللاعنفية مستوحى من حركة مناهضة الفصل العنصري في جنوب أفريقيا وقد اكتسب دعمًا عالميًا كبيرًا.</p>
-                
-                <p style="font-size: 1.05em; text-align: justify;">فيما يلي قائمة مفصلة بالشركات التي تدعم إسرائيل، مع شرح لتورطها والبدائل التي يمكنك استخدامها بدلاً منها.</p>
-            </div>
+            <p style="font-size: 1.05em; text-align: justify; margin-bottom: 15px;">تهدف حركة المقاطعة إلى ممارسة ضغط اقتصادي وسياسي على إسرائيل للامتثال للقانون الدولي وحقوق الفلسطينيين.
+            هذا الشكل من المقاومة اللاعنفية مستوحى من حركة مناهضة الفصل العنصري في جنوب أفريقيا وقد اكتسب دعمًا عالميًا كبيرًا.</p>                
+               
+            <p style="font-size: 1.05em; text-align: justify;">فيما يلي قائمة مفصلة بالشركات التي تدعم إسرائيل مع الشرح، لتورطها في الإبادة الجماعية، والبدائل التي يمكنك استخدامها بدلاً منها.</p>            </div>
             """, unsafe_allow_html=True)
             
             # Get boycott data
-            boycott_data = get_boycott_data()
+            boycott_data = get_boycott_data_AR()
             
             # Create tabs for different categories
             boycott_tabs = st.tabs(list(boycott_data.keys()))
@@ -1043,9 +1202,9 @@ def main():
                         with st.expander(f"{company['name']}", expanded=False):
                             st.markdown(f"""
                             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                                <p style="margin-bottom: 10px;"><strong style="color: #d62728; font-weight: 600;">سبب المقاطعة:</strong> {company['reason']}</p>
-                                <p style="margin-bottom: 10px;"><strong style="color: #2ca02c; font-weight: 600;">الإجراء الموصى به:</strong> {company['action']}</p>
-                                <p><strong style="color: #1f77b4; font-weight: 600;">البدائل:</strong> {', '.join(company['alternatives'])}</p>
+                                <p style="margin-bottom: 10px;"><strong style="color: #d62728; font-weight: 600;">سبب المقاطعة:</strong> {company['reason1']}</p>
+                                <p style="margin-bottom: 10px;"><strong style="color: #2ca02c; font-weight: 600;">الإجراء الموصى به:</strong> {company['action1']}</p>
+                                <p><strong style="color: #1f77b4; font-weight: 600;">البدائل:</strong> {', '.join(company['alternatives1'])}</p>
                             </div>
                             """, unsafe_allow_html=True)
             
@@ -1090,7 +1249,7 @@ def main():
             """, unsafe_allow_html=True)
             
             # Get educational resources
-            resources = get_educational_resources()
+            resources = get_educational_resources_EN()
             
             # Create tabs for different categories
             education_tabs = st.tabs(list(resources.keys()))
@@ -1176,7 +1335,7 @@ def main():
             """, unsafe_allow_html=True)
             
             # Get educational resources
-            resources = get_educational_resources()
+            resources = get_educational_resources_AR()
             
             # Create tabs for different categories
             education_tabs = st.tabs(list(resources.keys()))
