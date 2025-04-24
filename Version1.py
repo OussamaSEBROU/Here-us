@@ -1051,7 +1051,7 @@ def main():
         page_title="Palestina-AI", 
         page_icon="🕊️", 
         layout="wide",
-        initial_sidebar_state="expanded",
+        #initial_sidebar_state="expanded",
         menu_items={
             'Get Help': 'https://www.palestineai.org/help',
             'Report a bug': 'https://www.palestineai.org',
@@ -1149,7 +1149,7 @@ def main():
 
         
         # Help Section
-        with st.expander("Help", expanded=True):
+        with st.expander("Help", expanded=False):
             st.markdown("### How to Use the App")
             st.markdown("""
             - Ask Questions: You can ask anything related to Palestine's history, current events, or humanitarian issues.
@@ -1263,9 +1263,9 @@ def main():
         else:  # Arabic
             st.markdown("""
             <div dir="rtl" style="font-family: 'Arial', 'Helvetica', sans-serif; line-height: 1.6;">
-                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 20px;">Chat with AI about Palestine</h2>
+                <h2 style="font-weight: 700; color: #1f77b4; margin-bottom: 17px;">Chat with AI about Palestine</h2>
                 <h3 style="font-weight: 600; margin-top: 15px; margin-bottom: 10px;">Ask Your Question</h3>
-                <p style="font-size: 1.05em;">احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية.</p>
+                <p style="font-size: 1.05em;"> احصل على معلومات دقيقة ومفصلة حول تاريخ فلسطين والأحداث الجارية باستعمال الذكاء الاصطناعي.</p>
             </div>
             """, unsafe_allow_html=True)
             
